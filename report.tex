@@ -1,0 +1,248 @@
+\documentclass[12pt,a4paper,oneside]{book}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{algorithm2e}
+\usepackage{fancyhdr}
+\usepackage{algorithm2e}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usepackage{nicematrix}
+\usepackage{siunitx}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{bkthesis}
+
+\addbibresource{refs.bib}
+
+\title{Báo cáo thực tập ngoài trường} %Title of your type of project/Thesis (For example, Project 1, Milestone, Capstone...
+\subtitle{FPGA Implementation of LDPC Decoder Architecture for Wireless Communication Standards} %Title of your type of project/Thesis
+\csSupervise{ThS. Nguyễn Trung Hiếu} %Your supervise ofc
+\cstuname{Vũ Nhật Huy} %Your name
+\cstuid{2311267} %Your stu/id
+
+\cttime{\today} %Date
+\cttimeSpacing{5.25cm}
+
+\thesislayout
+
+\begin{document}
+
+\coverpage
+
+\frontmatter
+
+\pagestyle{fancy}
+
+\begin{acknowledgments}
+Write the Acknowledgment here.
+\end{acknowledgments}
+
+\newpage
+\begin{abstract}
+Write the abstract of your thesis here.
+\end{abstract}
+
+\tableofcontents
+%%\listofsymbols
+%\newpage
+\listoffigures
+%\newpage
+\listoftables
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Giới thiệu}
+\section{Motivation}
+The motivation section should address the following points:
+
+\begin{itemize}
+    \item The significance of your research topic.
+    \item The problem or gap in knowledge that your research addresses.
+    \item Why this problem is worth investigating?.
+    \item Any potential applications or impacts of your research.
+\end{itemize}
+
+\section{Related Works}
+In the related works section, you should:
+
+\begin{itemize}
+    \item Review existing literature and research relevant to your topic.
+    \item Discuss the findings and methodologies of previous studies.
+    \item Identify the gaps or limitations in existing research that your thesis aims to address.
+\end{itemize}
+
+Fig. \ref{fig:logoyrgb} illustrates an example Image in the report. The Image should have a caption, and the caption must be placed after the Image. The "label" for figures should begin with "fig:name" and the name should be related to the content of the figure.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.35\linewidth]{images/RGBtoYUV.pdf}  
+    \caption{The logo of the Department of Electronics in RGB and YCbCr color spaces}
+    \label{fig:logoyrgb}
+\end{figure}
+
+\section{Thesis Contributions}
+This section should outline the specific contributions of your thesis, such as:
+
+\begin{itemize}
+    \item New theories, models, or frameworks developed.
+    \item Novel methodologies or approaches proposed.
+    \item Significant findings or insights.
+    \item Practical implementations or applications.
+\end{itemize}
+
+\section{Thesis Structure}
+Provide a brief overview of the structure of your thesis, summarizing the content and purpose of each chapter.
+
+%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Lý thuyết}
+This chapter should cover foundational concepts and background information necessary for understanding your research. Include:
+
+\begin{itemize}
+    \item Basic theories and principles.
+    \item Key terminology and definitions.
+    \item Relevant technologies and tools.
+    \item Any assumptions or limitations.
+\end{itemize}
+
+Anything you want to cite should be cited with the "cite{}" command. For example, This is a sentence from \cite{networkworld2023idc} (A Website) or this is a sentence from \cite{xu2022improving} (A paper). You can put the citing bib in the file "refs.bib", you can write the bib information yourself, get it from Google Scholar, or use Zotero (free) the best bib library software. The cite name is usually automatically generated, but you can change it to some name you remember, but don't number it.
+
+Table \ref{tab:example} is an example table in the report. The Table also needs a caption, and the caption must be placed before the Table. The "label" for table should begin with "tab:name" and the name should be related to the content of the table. You could try to ask ChatGPT combine data to a \LaTeX \ table for you or use \url{https://www.tablesgenerator.com}. Here' another basic table, Table \ref{tab:basic}.
+
+\begin{table}[H]
+\caption{JPEG specification defined compression process}\label{tab:example}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|
+>{\columncolor[HTML]{FFCCC9}}l |
+>{\columncolor[HTML]{EFEFEF}}l |}
+\hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFCCC9}\textbf{Baseline}}                                                                                                                                                                              & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{Lossless}}                                                                                                                                   \\ \hline
+\begin{tabular}[c]{@{}l@{}}- DCT-based process\\ - 8-bit samples\\ - Sequential\\ - Huffman coding with up to 2 \\ AC tables and 2 DC tables\\ - Up to 4 components\end{tabular}                                                                & \begin{tabular}[c]{@{}l@{}}- Predictive process\\ - Between 2-bit and 16-bit samples\\ - Huffman or Arithmetic coding with up to \\4 AC tables and 4 DC tables\\ - Up to 4 components\end{tabular} \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{Extended DCT based}}                                                                                                                                                                    & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{Hierarchical}}                                                                                                                               \\ \hline
+\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}l@{}}- DCT-based process\\ - 8-bit or 12-bit samples\\ - Sequential or Progressive\\ - Huffman or Arithmetic coding with up to \\4 AC tables and 4 DC tables\\ - Up to 4 components\end{tabular} & \begin{tabular}[c]{@{}l@{}}- Extended DCT-based or lossless process\\ - Multiple Frames\\ - Up to 4 components\end{tabular}                                  \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Example Table}
+\label{tab:basic}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\ \hline
+Data 1            & Data 2            & Data 3            \\ \hline
+Data 4            & Data 5            & Data 6            \\ \hline
+Data 7            & Data 8            & Data 9            \\ \hline
+\end{tabular}
+\end{table}
+
+Pay attention to equation, it should use a "begin\{equation\}" and use its number. Then label it with "eq:name" a name that suggest to you the content. For example, see Equation \ref{eq:basic}.
+
+\begin{equation}
+    1 + 1 = 2
+    \label{eq:basic}
+\end{equation}
+
+Other than that, small math equation, note, ... should be written in dollar sign "\$\$" such as $a=b+c$. You can also write algorithm. Here is a basic example of pseudocode using the algorithm2e package, Algorithm \ref{alg:example}:
+
+\begin{algorithm}[H]
+\caption{Example Algorithm}
+\label{alg:example}
+\KwData{Input data}
+\KwResult{Output result}
+Initialization\;
+\While{condition}{
+    perform action\;
+    \eIf{condition}{
+        perform action 1\;
+    }{
+        perform action 2\;
+    }
+}
+\end{algorithm}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Thiết kế và thực hiện phần mềm}
+Detail the software development aspect of your project. Discuss:
+\begin{itemize}
+    \item The programming languages, tools, and frameworks used.
+    \item The design and architecture of your software solution.
+    \item Key algorithms and data structures.
+    \item Any challenges faced and how they were addressed.
+    \item Testing and validation procedures.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Thiết kế và thực hiện phần cứng}
+\section{Hardware Design}
+
+In this section, cover the hardware design aspects, including:
+\begin{itemize}
+    \item The choice of FPGA platform.
+    \item Design specifications and requirements.
+    \item The hardware architecture and components.
+    \item The design process, including schematic and layout considerations.
+    \item Any simulations or analyses performed to validate the design.
+\end{itemize}
+
+\section{Software Design}
+Discuss the software design that complements the hardware implementation. Include:
+\begin{itemize}
+    \item The development environment and tools used.
+    \item The integration between hardware and software.
+    \item Firmware or drivers developed for the FPGA.
+    \item Software algorithms and their implementation.
+    \item Testing and debugging procedures.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Hardware Simulation}
+This chapter should focus on the simulation aspect of your hardware design. Include:
+\begin{itemize}
+    \item The simulation tools and environments used.
+    \item Simulation models and parameters.
+    \item The process of running simulations and analyzing results.
+    \item Any optimizations or modifications made based on simulation outcomes.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Kết quả thực hiện}
+Present the results of your implementation. Discuss:
+\begin{itemize}
+    \item The performance metrics and evaluation criteria.
+    \item Results obtained from testing and validation.
+    \item Comparisons with existing solutions or benchmarks.
+    \item Analysis and interpretation of results.
+    \item Any unexpected findings or observations.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Kết luận và hướng phát triển}
+Summarize the key findings and contributions of your thesis. Include:
+\begin{itemize}
+    \item A recap of the research problem and objectives.
+    \item Main findings and their implications.
+    \item Limitations of your research.
+    \item Suggestions for future work and potential directions for further research.
+\end{itemize}
+
+%%%%%%%%%%References part%%%%%%%%%%%%%%%%%%%%%
+
+\printbibliography[title=References]
+
+\end{document}

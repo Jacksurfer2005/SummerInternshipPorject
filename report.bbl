@@ -1,0 +1,98 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{networkworld2023idc}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ba904d1f374f952ae144cc772a97872b}{%
+           family={World},
+           familyi={W\bibinitperiod},
+           given={Network},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{ba904d1f374f952ae144cc772a97872b}
+      \strng{fullhash}{ba904d1f374f952ae144cc772a97872b}
+      \strng{fullhashraw}{ba904d1f374f952ae144cc772a97872b}
+      \strng{bibnamehash}{ba904d1f374f952ae144cc772a97872b}
+      \strng{authorbibnamehash}{ba904d1f374f952ae144cc772a97872b}
+      \strng{authornamehash}{ba904d1f374f952ae144cc772a97872b}
+      \strng{authorfullhash}{ba904d1f374f952ae144cc772a97872b}
+      \strng{authorfullhashraw}{ba904d1f374f952ae144cc772a97872b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{IDC: Expect 175 zettabytes of Data Worldwide by 2025}}
+      \field{year}{accessed Dec. 1, 2023}
+      \verb{urlraw}
+      \verb https://www.networkworld.com/article/966746/idc-expect-175-zettabytes-of-data-worldwide-by-2025.html
+      \endverb
+      \verb{url}
+      \verb https://www.networkworld.com/article/966746/idc-expect-175-zettabytes-of-data-worldwide-by-2025.html
+      \endverb
+    \endentry
+    \entry{xu2022improving}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=05ed36bcb6a44b5b9e4d52219469373d}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bf31b43ec92728f81e73841a519d8da2}{%
+           family={Sarkar},
+           familyi={S\bibinitperiod},
+           given={Santanu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7266c8f88e24dbee8bce391e02663a0b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Huaxiong},
+           giveni={H\bibinitperiod}}}%
+        {{hash=273fa49190c75abb3f5d966e01d6e051}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{3cdd41d981feb2d3b1678d076d85297b}
+      \strng{fullhash}{145260c1380851ec0fec95efd609b93b}
+      \strng{fullhashraw}{145260c1380851ec0fec95efd609b93b}
+      \strng{bibnamehash}{145260c1380851ec0fec95efd609b93b}
+      \strng{authorbibnamehash}{145260c1380851ec0fec95efd609b93b}
+      \strng{authornamehash}{3cdd41d981feb2d3b1678d076d85297b}
+      \strng{authorfullhash}{145260c1380851ec0fec95efd609b93b}
+      \strng{authorfullhashraw}{145260c1380851ec0fec95efd609b93b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on the Theory and Application of Cryptology and Information Security}
+      \field{title}{Improving bounds on elliptic curve hidden number problem for ECDH key exchange}
+      \field{year}{2022}
+      \field{pages}{771\bibrangedash 799}
+      \range{pages}{29}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,275 @@
+\ProvidesPackage{bkthesis}
+
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese,main=vietnam]{babel}
+
+\RequirePackage{graphicx}
+\RequirePackage{geometry}
+
+\usepackage[super]{nth}
+\usepackage{titlesec}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{copyrightbox}
+\usepackage{url}
+\usepackage{subfig}
+\usepackage[newfloat]{minted}
+\usepackage{verbatimbox,caption,float,lipsum}
+\usepackage{lscape}
+\usepackage{fancyhdr}
+\usepackage{listings}
+
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+
+\usepackage{changepage}
+
+\usepackage[font=small]{caption}
+
+\usepackage{chngcntr}
+\counterwithin*{chapter}{part}
+
+\setcounter{secnumdepth}{6}
+
+\usepackage[absolute]{textpos}
+
+\usepackage{longtable}  % For creating multi-page tables
+\usepackage{array}      % For customizing column widths and alignments
+\usepackage{multirow}   % For merging cells in rows
+\usepackage{booktabs}   % For creating professional-looking tables
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep}
+
+\usepackage{etoolbox}
+
+% \usepackage[style=ext-numeric, backend=biber, alldates=terse,]{biblatex}
+\usepackage[style=ieee, backend=biber]{biblatex}
+
+\usepackage{pdflscape}
+\usepackage{geometry}
+\def\thesislayout{	% A4: 210 × 297
+	\geometry{
+		a4paper,
+		left=30mm,
+		top=25mm,
+		right=20mm,
+		bottom=25mm
+	}
+}
+
+\addto{\captionsenglish}{%
+  \renewcommand{\bibname}{References}
+}
+
+\renewcommand{\CRB@setcopyrightfont}{%
+\scriptsize
+\color{black}}
+
+\titleformat{\chapter}[display]
+  {\large\bfseries}
+  {}
+  {0cm}
+  {\thechapter.\ }
+  
+\titleformat{name=\chapter, numberless}[display]
+  {\large\bfseries}
+  {}
+  {0cm}
+  {\ }
+
+\titleclass{\subsubparagraph}{straight}[\subparagraph]
+\newcounter{subsubparagraph}
+\renewcommand{\thesubsubparagraph}{\alph{subsubparagraph}.}
+
+% minted
+\setminted{fontsize=\fontsize{11pt}{11pt}, frame=single, linenos, xleftmargin=20pt, breaklines}
+\setmintedinline{fontsize=\fontsize{13pt}{13pt}}
+\renewcommand\theFancyVerbLine{\normalsize\arabic{FancyVerbLine}}
+
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{name=Code}
+\renewcommand\lstlistingname{Code}
+\renewcommand\lstlistlistingname{List of Codes}
+
+\titlespacing*{\chapter}{0pt}{-50pt}{0pt}
+
+\titleclass{\part}{top}
+\titleformat{\part}
+  {\normalfont\Large\selectfont\bfseries}{\thepart.}{1em}{}
+\titlespacing*{\part}{0pt}{-25pt}{27.5pt}
+  
+\titleformat{\section}
+  {\normalfont\fontsize{13}{15.6}\selectfont\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\fontsize{13}{15.6}\selectfont\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{13}{15.6}\selectfont\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}
+{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titleformat{\subsubparagraph}
+{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcommand{\@sdeptname}{FACULTY OF ELECTRICAL AND ELECTRONICS ENGINEERING}
+\newcommand{\csdeptname}[1]{\renewcommand{\@sdeptname}{#1}}
+
+\newcommand{\@tname}{}
+\newcommand{\ctname}[1]{\renewcommand{\@tname}{#1}}
+
+\newcommand{\@stuname}{}
+\newcommand{\cstuname}[1]{\renewcommand{\@stuname}{#1}}
+
+\newcommand{\@stuid}{}
+\newcommand{\cstuid}[1]{\renewcommand{\@stuid}{#1}}
+
+\newcommand{\@sSubtitle}{}
+\newcommand{\subtitle}[1]{\renewcommand{\@sSubtitle}{#1}}
+
+\newcommand{\@sCouncil}{}
+\newcommand{\csCouncil}[1]{\renewcommand{\@sCouncil}{#1}}
+
+\newcommand{\@sReviewer}{}
+\newcommand{\csReviewer}[1]{\renewcommand{\@sReviewer}{#1}}
+	
+\newcommand{\@sSupervise}{}
+\newcommand{\csSupervise}[1]{\renewcommand{\@sSupervise}{#1}}
+	
+\newcommand{\@sTA}{}
+\newcommand{\csTA}[1]{\renewcommand{\@sTA}{#1}}
+	
+\newcommand{\@sClass}{}
+\newcommand{\csClass}[1]{\renewcommand{\@sClass}{#1}}
+	
+\newcommand{\@sGroup}{}
+\newcommand{\csGroup}[1]{\renewcommand{\@sGroup}{#1}}
+	
+\newcommand{\@sSubject}{}
+\newcommand{\csSubject}[1]{\renewcommand{\@sSubject}{#1}}
+
+\newcommand{\@ttime}{\today}
+\newcommand{\cttime}[1]{\renewcommand{\@ttime}{#1}}
+
+\newcommand{\@ttimeSpacing}{}
+\newcommand{\cttimeSpacing}[1]{\renewcommand{\@ttimeSpacing}{#1}}
+
+\newsavebox\thesmashminipage
+\newenvironment{smashminipage}
+  {\begin{lrbox}{\thesmashminipage}\begin{minipage}[t]{\textwidth}}
+  {\end{minipage}\end{lrbox}\smash{\usebox{\thesmashminipage}}\clearpage}
+
+\fancypagestyle{plain}{%
+\fancyhead{}  % Clears all page headers and footers
+\rhead{GVHD: \begin{otherlanguage}{vietnamese}\@sSupervise\end{otherlanguage}}  % Sets the right side header to show the page number
+\lhead{\@title}  % Clears the left side page header
+}
+
+\fancypagestyle{fancy}{%
+\fancyhead{}  % Clears all page headers and footers
+\rhead{GVHD: \begin{otherlanguage}{vietnamese}\@sSupervise\end{otherlanguage}}  % Sets the right side header to show the page number
+\lhead{\@title}  % Clears the left side page header
+}
+  
+\def\coverpage{
+
+\pagestyle{empty}
+
+\begin{smashminipage} 
+\begin{tikzpicture}[remember picture, overlay]
+\draw [line width=1pt]
+    ($ (current page.north west) + (3.15cm,-2.15cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.65cm,1.65cm) $); 
+\end{tikzpicture}
+
+\begin{adjustwidth}{13.5pt}{0pt} % Indentation
+\begin{center}
+\large
+ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH \\
+TRƯỜNG ĐẠI HỌC BÁCH KHOA \\
+KHOA ĐIỆN - ĐIỆN TỬ\\
+\textbf{--------------------  $\ast$  ---------------------}\\[1.5cm]
+\includegraphics[scale=0.1]{logobk.png}\\[1.5cm]
+{\fontsize{19pt}{1}\bfseries \selectfont \MakeUppercase\@title}\\[0.2cm]
+{\fontsize{17pt}{1}\bfseries\selectfont \@sSubtitle}\\[3cm]
+\begin{otherlanguage}{vietnamese}
+\begin{tabbing}
+	\hspace{2.5cm}GVHD\ \ \ \ \=: \ \textbf{\parbox[t]{9cm}{\@sSupervise}}\\
+    \@ifundefined{sTA}{}{
+        \hspace{2.5cm}TA \>: \ \textbf{\parbox[t]{9cm}{\@sTA}}\\
+    }
+    \@ifundefined{sSubject}{}{
+        \hspace{2.5cm}Subject \>: \ \textbf{\parbox[t]{12cm}{\@sSubject}}\\
+    }
+    \@ifundefined{sClass}{}{
+        \hspace{2.5cm}Class \>: \ \textbf{\parbox[t]{9cm}{\@sClass}}\\
+    }
+    \@ifundefined{sGroup}{}{
+        \hspace{2.5cm}Group \>: \ \textbf{\parbox[t]{9cm}{\@sGroup}}\\
+    }
+	\hspace{2.5cm}HỌ VÀ TÊN \>: \ \textbf{\parbox[t]{9cm}{\@stuname}}\\ 
+	\hspace{2.5cm}MSSV \>: \ \textbf{\parbox[t]{9cm}{\@stuid}}\\ 
+\end{tabbing}
+\end{otherlanguage}
+
+\vspace{\@ttimeSpacing}
+Ho Chi Minh City, \@ttime
+
+\end{center}
+\end{adjustwidth}
+
+\end{smashminipage}
+}
+
+\def\makeprintversion{}
+
+\makeatletter
+\newenvironment{acknowledgments}{
+  \begin{center}
+    {\large\bfseries Acknowledgements\vspace{\z@}}
+  \end{center}
+  \noindent
+}{%
+  \par
+  \hfill
+  \parbox{7cm}{
+    \begin{center}
+      Thành phố Hồ Chí Minh, \@ttime\\
+      Ký tên\\
+      \vspace{2cm}
+      \underline{\hspace{6cm}}
+    \end{center}
+  }
+  \par
+}
+\makeatother
+
+% Declaration
+\makeatletter
+\newenvironment{declaration}{
+	\small
+	\begin{center}
+	  {\bfseries DECLARATION\vspace{-.5em}\vspace{\z@}}
+	\end{center}
+	\quotation
+  }{}
+\makeatother	  
+
+
+% abstract
+\makeatletter
+\newenvironment{abstract}{
+	\begin{center}
+	  {\large\bfseries Abstract\vspace{\z@}}
+	\end{center}
+  }{}
+\makeatother
