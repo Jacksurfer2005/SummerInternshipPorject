@@ -37,14 +37,14 @@
 
 \pagestyle{fancy}
 
-\begin{acknowledgments}
-Write the Acknowledgment here.
-\end{acknowledgments}
+% \begin{acknowledgments}
+% Write the Acknowledgment here.
+% \end{acknowledgments}
 
-\newpage
-\begin{abstract}
-Write the abstract of your thesis here.
-\end{abstract}
+% \newpage
+% \begin{abstract}
+% Write the abstract of your thesis here.
+% \end{abstract}
 
 \tableofcontents
 %%\listofsymbols
@@ -58,115 +58,197 @@ Write the abstract of your thesis here.
 %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Giới thiệu}
-\section{Motivation}
-The motivation section should address the following points:
+\section{Động lực nghiên cứu}
+\qquad Mã kiểm tra chẵn lẻ mật độ thấp (Low-Density Parity-Check - LDPC) đóng vai trò quan trọng trong các hệ thống thông tin hiện đại nhờ khả năng sửa lỗi tối ưu, cho phép hiệu năng tiệm cận giới hạn Shannon đạt tới $0.0045\text{ dB}$ ở tỷ lệ lỗi bit $\text{BER} = 10^{-6}$ một cách đáng kinh ngạc. Nhờ đặc tính vượt trội này, mã LDPC đã trở thành một phần không thể thiếu trong các tiêu chuẩn truyền thông không dây băng thông rộng phổ biến như IEEE 802.11n/ad/ay/ax (Wifi), IEEE 802.16e (WiMAX), mạng di động thế hệ mới ETSI 5G, các tiêu chuẩn truyền hình kỹ thuật số như DVB-T2, DVB-S2, DVB-C2 và cũng như trong các công nghệ lưu trữ tiên tiến như ổ cứng thể rắn (SSD). 
 
+\qquad Trong thực tế triển khai, các ứng dụng truyền thông hiện đại đòi hỏi tốc độ dữ liệu ngày càng cao và khả năng tương thích linh hoạt với nhiều tiêu chuẩn khác nhau. Tuy nhiên, phần lớn các kiến trúc giải mã song song hiện nay chỉ được thiết kế cố định cho một tiêu chuẩn truyền thông duy nhất hoặc một chiều dài từ mã cụ thể, dẫn đến sự thiếu linh hoạt nghiêm trọng. Bên cạnh đó, các nghiên cứu trước đây thường lạm dụng tài nguyên bộ nhớ khối (BRAM) để lưu trữ các giá trị nội bộ mà chưa chú trọng đến việc tối ưu hóa cách thức lưu trữ ma trận kiểm tra chẵn lẻ thưa (Sparse Parity-Check Matrix), gây lãng phí tài nguyên phần cứng trên chip.  
+
+\qquad Việc giải quyết bài toán tối ưu hóa tài nguyên lưu trữ đồng thời tăng cường khả năng cấu hình cho bộ giải mã là vô cùng cấp thiết. Một kiến trúc giải mã QC-LDPC có thể tái cấu hình linh hoạt sẽ giúp giảm thiểu chi phí thiết kế phần cứng và đẩy nhanh tốc độ xử lý.  
+
+\qquad Kết quả của nghiên cứu này có thể ứng dụng trực tiếp vào các hệ thống hạ tầng viễn thông không dây tốc độ cao và các thiết bị lưu trữ thế hệ mới, đáp ứng đồng thời cả hai tiêu chuẩn phổ biến là WiMAX và WiFi trên cùng một nền tảng phần cứng.
+
+\section{Tình hình nghiên cứu}
+\qquad Trong thập kỷ qua, đã có rất nhiều công trình nghiên cứu về kiến trúc giải mã LDPC song song được công bố nhằm đáp ứng yêu cầu khắt khe về băng thông của các đặc tả kỹ thuật hiện đại. Các kiến trúc được đề xuất tiêu biểu trong các nghiên cứu trước đây đã chứng minh được hiệu năng xử lý ở các mức độ nhất định.  
+
+\qquad Phương pháp luận và kết quả của các nghiên cứu trước: Phần lớn các tác giả tập trung vào việc khai thác tính chất song song mã hóa để tăng băng thông và sử dụng rộng rãi bộ nhớ BRAM tích hợp để lưu trữ các giá trị tính toán nội bộ của bộ giải mã. 
+
+\qquad Hạn chế của các nghiên cứu trước và khoảng trống tri thức: Tính linh hoạt kém, ngoại trừ một số ít công trình cung cấp bộ giải mã vạn năng có khả năng tham số hóa, hầu hết các kiến trúc giải mã hiện tại đều bị giới hạn trong một khung tiêu chuẩn hoặc một chiều dài từ mã cố định. Khai thác tài nguyên chưa tối ưu, rất ít kiến trúc chú ý đến cách thức lưu trữ hiệu quả ma trận thưa. Việc lưu trữ ma trận kiểm tra một cách thông thường không chỉ chiếm dụng dung lượng bộ nhớ lớn mà còn làm phức tạp hóa quá trình truy xuất dữ liệu song song từ BRAM.
+
+% Fig. \ref{fig:logoyrgb} illustrates an example Image in the report. The Image should have a caption, and the caption must be placed after the Image. The "label" for figures should begin with "fig:name" and the name should be related to the content of the figure.
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=.35\linewidth]{images/RGBtoYUV.pdf}  
+%     \caption{The logo of the Department of Electronics in RGB and YCbCr color spaces}
+%     \label{fig:logoyrgb}
+% \end{figure}
+
+% \section{Thesis Contributions}
+% This section should outline the specific contributions of your thesis, such as:
+
+% \begin{itemize}
+%     \item New theories, models, or frameworks developed.
+%     \item Novel methodologies or approaches proposed.
+%     \item Significant findings or insights.
+%     \item Practical implementations or applications.
+% \end{itemize}
+
+\section{Cấu trúc báo cáo}
+\qquad Tổng quan toàn bộ quá trình thực hiện và triển khai bộ giải mã LDPC, bản báo cáo này được cấu trúc thành 7 chương như sau:
 \begin{itemize}
-    \item The significance of your research topic.
-    \item The problem or gap in knowledge that your research addresses.
-    \item Why this problem is worth investigating?.
-    \item Any potential applications or impacts of your research.
+    \item[] Chương 1: Giới thiệu.
+    \item[] Chương 2: Cơ sở lý thuyết.
+    \item[] Chương 3: Thiết kế và thực hiện phần mềm.
+    \item[] Chương 4: Thiết kế và thực hiện phần cứng.
+    \item[] Chương 5: Mô phỏng phần cứng.
+    \item[] Chương 6: Kết quả thực hiện.
+    \item[] Chương 7: Kết luận và hướng phát triển.
 \end{itemize}
-
-\section{Related Works}
-In the related works section, you should:
-
-\begin{itemize}
-    \item Review existing literature and research relevant to your topic.
-    \item Discuss the findings and methodologies of previous studies.
-    \item Identify the gaps or limitations in existing research that your thesis aims to address.
-\end{itemize}
-
-Fig. \ref{fig:logoyrgb} illustrates an example Image in the report. The Image should have a caption, and the caption must be placed after the Image. The "label" for figures should begin with "fig:name" and the name should be related to the content of the figure.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.35\linewidth]{images/RGBtoYUV.pdf}  
-    \caption{The logo of the Department of Electronics in RGB and YCbCr color spaces}
-    \label{fig:logoyrgb}
-\end{figure}
-
-\section{Thesis Contributions}
-This section should outline the specific contributions of your thesis, such as:
-
-\begin{itemize}
-    \item New theories, models, or frameworks developed.
-    \item Novel methodologies or approaches proposed.
-    \item Significant findings or insights.
-    \item Practical implementations or applications.
-\end{itemize}
-
-\section{Thesis Structure}
-Provide a brief overview of the structure of your thesis, summarizing the content and purpose of each chapter.
-
 %%%%%%%%%%%%%%%%%%%%
 
-\chapter{Lý thuyết}
-This chapter should cover foundational concepts and background information necessary for understanding your research. Include:
+\chapter{Cơ sở lý thuyết}
+\section{Tổng quan về Mã Kiểm Tra Chẵn Lẻ Mật Độ Thấp (LDPC)}
+\qquad LDPC là một lớp mã khối tuyến tính được phát triển ban đầu bởi Gallager vào năm 1963 \cite{gallager1963}. Đặc tính tuyến tính này cho phép mã được áp dụng trực tiếp lên các khối dữ liệu nguồn để thực hiện chức năng phát hiện và sửa lỗi trên kênh truyền nhiễu.  
 
+\qquad Khái niệm mật độ thấp xuất phát từ đặc điểm cấu trúc hình học của ma trận kiểm tra chẵn lẻ $H$ (parity-check matrix) đại diện cho mã. Ma trận $H$ là một ma trận thưa, nghĩa là số lượng phần tử có giá trị bằng '1' chiếm tỷ lệ rất nhỏ so với số lượng phần tử mang giá trị bằng '0' bên trong ma trận. 
+
+\qquad Một mã khối tuyến tính LDPC đều đặn loại $(N, K)$ được biểu diễn cấu trúc thông qua ma trận kiểm tra $H$ có kích thước $M \times N$, với $M \ge N - K$ hàng và $N$ cột. Khi biểu diễn dưới dạng đồ thị hai phía Tanner:  
 \begin{itemize}
-    \item Basic theories and principles.
-    \item Key terminology and definitions.
-    \item Relevant technologies and tools.
-    \item Any assumptions or limitations.
+    \item Các nút kiểm tra (Check Nodes - CN): Đại diện bởi $M$ hàng của ma trận $H$, đóng vai trò kiểm tra tính ràng buộc chẵn lẻ của các phương trình toán học.  
+    \item Các nút biến (Variable Nodes - VN): Đại diện bởi $N$ cột của ma trận $H$, tương ứng trực tiếp với các phần tử bit cấu thành nên một từ mã. 
 \end{itemize}
 
-Anything you want to cite should be cited with the "cite{}" command. For example, This is a sentence from \cite{networkworld2023idc} (A Website) or this is a sentence from \cite{xu2022improving} (A paper). You can put the citing bib in the file "refs.bib", you can write the bib information yourself, get it from Google Scholar, or use Zotero (free) the best bib library software. The cite name is usually automatically generated, but you can change it to some name you remember, but don't number it.
+\qquad Nhờ vào bản chất cấu trúc thưa này, mã LDPC sở hữu khả năng sửa lỗi vượt trội và tối ưu, cho phép hiệu năng của hệ thống tiệm cận rất gần giới hạn Shannon (có thể đạt mức cách giới hạn Shannon chỉ 0.0045 dB ở tỷ lệ lỗi bit BER là $10^{-6}$). Chính vì lý do đó, mã LDPC đã trở thành một phần cốt lõi trong các tiêu chuẩn truyền thông không dây băng thông rộng hiện đại như IEEE 802.11n (WiFi) và IEEE 802.16e (WiMAX). 
 
-Table \ref{tab:example} is an example table in the report. The Table also needs a caption, and the caption must be placed before the Table. The "label" for table should begin with "tab:name" and the name should be related to the content of the table. You could try to ask ChatGPT combine data to a \LaTeX \ table for you or use \url{https://www.tablesgenerator.com}. Here' another basic table, Table \ref{tab:basic}.
+\section{Thuật Toán Giải Mã Min-Sum}
+\qquad Thuật toán giải mã Min-Sum (MSA) là một phiên bản đơn giản hóa của thuật toán Belief Propagation (BP). Sự đơn giản hóa này được thực hiện bằng cách giảm thiểu tối đa độ phức tạp tính toán tại các khối chức năng chịu trách nhiệm cập nhật nút kiểm tra (Check Node Update - CNU). So với thuật toán BP, việc ứng dụng thuật toán Min-Sum giúp giảm thiểu đáng kể tài nguyên phần cứng tiêu thụ cũng như hạ thấp độ phức tạp xử lý toán học của khối CNU \cite{10.1109/JSAC.2009.090816}.
+\subsection{Các ký hiệu và định nghĩa thuật toán}
+Hệ thống giải mã quy ước các đại lượng toán học cơ bản bao gồm:
+\begin{itemize}
+    \item $c_n$: Biểu thị cho bit thứ $n$ của một từ mã phát đi từ nguồn.
+    \item $y_n$: Giá trị tín hiệu thu được từ kênh truyền ở đầu vào bộ giải mã.
+    \item $r_{mn}[k]$: Thông điệp truyền từ nút kiểm tra $m$ đến nút biến $n$ tại vòng lặp thứ $k$ (thông điệp Check-to-Variable - CTV).
+    \item $q_{mn}[k]$: Thông điệp truyền từ nút biến $n$ đến nút kiểm tra $m$ tại vòng lặp thứ $k$ (thông điệp Variable-to-Check - VTC).
+    \item $N(m)$: Tập hợp các nút biến tham gia vào phương trình kiểm tra của nút kiểm tra $m$.
+    \item $M(n)$: Tập hợp các nút kiểm tra liên kết trực tiếp với nút biến $n$.
+    \item $N(m) \setminus n$: Tập hợp các nút biến thuộc $N(m)$ ngoại trừ chính nút biến vị trí $n$.
+    \item $M(n) \setminus m$: Tập hợp các nút kiểm tra thuộc $M(n)$ ngoại trừ chính nút kiểm tra vị trí $m$.
+\end{itemize}
+\subsection{Các bước thực hiện tiến trình giải mã lặp}
+\qquad Thuật toán giải mã Min-Sum được vận hành tuần tự qua hai giai đoạn chính: 
 
-\begin{table}[H]
-\caption{JPEG specification defined compression process}\label{tab:example}
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{|
->{\columncolor[HTML]{FFCCC9}}l |
->{\columncolor[HTML]{EFEFEF}}l |}
-\hline
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFCCC9}\textbf{Baseline}}                                                                                                                                                                              & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{Lossless}}                                                                                                                                   \\ \hline
-\begin{tabular}[c]{@{}l@{}}- DCT-based process\\ - 8-bit samples\\ - Sequential\\ - Huffman coding with up to 2 \\ AC tables and 2 DC tables\\ - Up to 4 components\end{tabular}                                                                & \begin{tabular}[c]{@{}l@{}}- Predictive process\\ - Between 2-bit and 16-bit samples\\ - Huffman or Arithmetic coding with up to \\4 AC tables and 4 DC tables\\ - Up to 4 components\end{tabular} \\ \hline
-\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{Extended DCT based}}                                                                                                                                                                    & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{Hierarchical}}                                                                                                                               \\ \hline
-\cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}l@{}}- DCT-based process\\ - 8-bit or 12-bit samples\\ - Sequential or Progressive\\ - Huffman or Arithmetic coding with up to \\4 AC tables and 4 DC tables\\ - Up to 4 components\end{tabular} & \begin{tabular}[c]{@{}l@{}}- Extended DCT-based or lossless process\\ - Multiple Frames\\ - Up to 4 components\end{tabular}                                  \\ \hline
-\end{tabular}%
-}
-\end{table}
-
-\begin{table}[h]
-\centering
-\caption{Example Table}
-\label{tab:basic}
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\ \hline
-Data 1            & Data 2            & Data 3            \\ \hline
-Data 4            & Data 5            & Data 6            \\ \hline
-Data 7            & Data 8            & Data 9            \\ \hline
-\end{tabular}
-\end{table}
-
-Pay attention to equation, it should use a "begin\{equation\}" and use its number. Then label it with "eq:name" a name that suggest to you the content. For example, see Equation \ref{eq:basic}.
-
+\qquad \textbf{Bước 1: Khởi tạo (Initialization).} Tại bước này, giá trị xác suất kênh truyền $p_n$ (thông tin nội tại) của nút biến $n$ được xác định dựa trên tỷ số của xác suất tiên nghiệm:
 \begin{equation}
-    1 + 1 = 2
-    \label{eq:basic}
+    p_n = \log \frac{P(y_n | c_n = 0)}{P(y_n | c_n = 1)}
+\end{equation}
+\qquad Đồng thời, giá trị ban đầu của các thông điệp phản hồi từ nút kiểm tra $m$ đến nút biến $n$ được thiết lập bằng không: $r_{mn}[0] = 0$. 
+  
+\qquad \textbf{Bước 2: Giải mã lặp (Iterative Decoding).} Quá trình tính toán lặp được thực hiện liên tục qua các chu kỳ cho đến khi thỏa mãn điều kiện dừng của thuật toán.
+
+\qquad Tại vòng lặp thứ $k$, thông điệp $q_{mn}[k]$ phát ra từ nút biến đến nút kiểm tra được tổng hợp bằng cách cộng thông tin nội tại của kênh với tổng các thông điệp phản hồi từ các nút kiểm tra liên kết còn lại thông qua công thức:
+\begin{equation}
+    q_{mn}[k] = p_n + \sum_{m' \in \{M(n) \setminus m\}} r_{m'n}[k-1]  
 \end{equation}
 
-Other than that, small math equation, note, ... should be written in dollar sign "\$\$" such as $a=b+c$. You can also write algorithm. Here is a basic example of pseudocode using the algorithm2e package, Algorithm \ref{alg:example}:
+\qquad Bộ giải mã tiến hành thực hiện phép quyết định cứng bằng cách tính toán giá trị xác suất hậu nghiệm (A-Posterior Probability - APP) $\Lambda_n[k]$ tại nút biến $n$ hiện tại:
+\begin{equation}
+    \Lambda_n[k] = p_n + \sum_{m' \in M(n)} r_{m'n}[k-1]
+\end{equation}
 
-\begin{algorithm}[H]
-\caption{Example Algorithm}
-\label{alg:example}
-\KwData{Input data}
-\KwResult{Output result}
-Initialization\;
-\While{condition}{
-    perform action\;
-    \eIf{condition}{
-        perform action 1\;
-    }{
-        perform action 2\;
-    }
-}
-\end{algorithm}
+\qquad Giá trị của bit kết quả $x_n$ thuộc vectơ từ mã ước lượng sẽ được xác định theo quy tắc:
+\begin{equation}
+    x_n = \begin{cases} 0 & \text{nếu } \Lambda_n[k] > 0 \\ 1 & \text{ngược lại} \end{cases}
+\end{equation}
+
+\qquad Vòng lặp giải mã sẽ kết thúc hoàn toàn khi vectơ kết quả $x = [x_1, x_2, \dots, x_N]$ thỏa mãn đồng thời tất cả các phương trình kiểm tra chẵn lẻ mang tính tuyến tính của ma trận:
+\begin{equation}
+    H \cdot x = 0
+\end{equation}
+Hoặc tiến trình lặp cũng sẽ tự động dừng lại nếu số vòng lặp hiện tại đạt đến giá trị ngưỡng tối đa được thiết lập từ trước trong cấu hình phần cứng hệ thống. Nếu từ mã hợp lệ, chế độ xuất kết quả được kích hoạt để đưa dữ liệu đã sửa lỗi ra ngoài đầu ra.  
+
+\qquad Nếu phép toán kiểm tra ma trận không thỏa mãn ($H \cdot x \neq 0$), thông điệp kiểm tra phản hồi ngược lại $r_{mn}[k]$ gửi đến nút biến $m$ sẽ được tính toán dựa trên tích các dấu và giá trị cực tiểu của các thông điệp VTC thuộc tập liên kết loại trừ:
+\begin{equation}
+    r_{mn}[k] = \left( \prod_{n' \in \{N(m) \setminus n\}} sign(q_{mn'}[k]) \right) \times \left( \alpha \times \min_{n' \in \{N(m) \setminus n\}} \{|q_{mn'}[k]|\} \right)
+\end{equation}
+Trong đó, $\alpha$ là hệ số tỷ lệ điều chỉnh cố định ($\alpha \le 1$) nhằm bù đắp cho sự suy giảm biên độ do việc thay thế phép toán hình học phức tạp của thuật toán BP bằng phép toán tìm giá trị nhỏ nhất của thuật toán Min-Sum.
+\subsection{Biểu thức rút gọn phục vụ tối ưu hóa phần cứng}
+\qquad Để thuận tiện cho việc thiết kế kiến trúc đọc/ghi song song dữ liệu từ các khối bộ nhớ Dual-port RAM (BRAM), cấu trúc toán học của thuật toán giải mã được tinh chỉnh thành các biểu thức quan hệ trực tiếp giữa giá trị APP và các thông điệp liên quan nhằm giảm độ trễ xử lý:
+\begin{itemize}
+    \item Tính toán thông điệp VTC rút gọn: 
+    \begin{equation}
+        VTC_n = APP_n - CTV_n, \quad n = 1 \dots d_r
+    \end{equation}
+    với $d_r$ là trọng số hàng của ma trận kiểm tra chẵn lẻ.
+    \item Cập nhật giá trị APP mới cho vòng lặp kế tiếp:
+    \begin{equation}
+        APP_{newn} = VTC_n + CTV_{newn}, \quad n = 1 \dots d_r
+    \end{equation}
+\end{itemize}
+% This chapter should cover foundational concepts and background information necessary for understanding your research. Include:
+
+% \begin{itemize}
+%     \item Basic theories and principles.
+%     \item Key terminology and definitions.
+%     \item Relevant technologies and tools.
+%     \item Any assumptions or limitations.
+% \end{itemize}
+
+% Anything you want to cite should be cited with the "cite{}" command. For example, This is a sentence from \cite{networkworld2023idc} (A Website) or this is a sentence from \cite{xu2022improving} (A paper). You can put the citing bib in the file "refs.bib", you can write the bib information yourself, get it from Google Scholar, or use Zotero (free) the best bib library software. The cite name is usually automatically generated, but you can change it to some name you remember, but don't number it. \cite{9493380}
+
+% Table \ref{tab:example} is an example table in the report. The Table also needs a caption, and the caption must be placed before the Table. The "label" for table should begin with "tab:name" and the name should be related to the content of the table. You could try to ask ChatGPT combine data to a \LaTeX \ table for you or use \url{https://www.tablesgenerator.com}. Here' another basic table, Table \ref{tab:basic}.
+
+% \begin{table}[H]
+% \caption{JPEG specification defined compression process}\label{tab:example}
+% \resizebox{\columnwidth}{!}{%
+% \begin{tabular}{|
+% >{\columncolor[HTML]{FFCCC9}}l |
+% >{\columncolor[HTML]{EFEFEF}}l |}
+% \hline
+% \multicolumn{1}{|c|}{\cellcolor[HTML]{FFCCC9}\textbf{Baseline}}                                                                                                                                                                              & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{Lossless}}                                                                                                                                   \\ \hline
+% \begin{tabular}[c]{@{}l@{}}- DCT-based process\\ - 8-bit samples\\ - Sequential\\ - Huffman coding with up to 2 \\ AC tables and 2 DC tables\\ - Up to 4 components\end{tabular}                                                                & \begin{tabular}[c]{@{}l@{}}- Predictive process\\ - Between 2-bit and 16-bit samples\\ - Huffman or Arithmetic coding with up to \\4 AC tables and 4 DC tables\\ - Up to 4 components\end{tabular} \\ \hline
+% \multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{Extended DCT based}}                                                                                                                                                                    & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{Hierarchical}}                                                                                                                               \\ \hline
+% \cellcolor[HTML]{EFEFEF}\begin{tabular}[c]{@{}l@{}}- DCT-based process\\ - 8-bit or 12-bit samples\\ - Sequential or Progressive\\ - Huffman or Arithmetic coding with up to \\4 AC tables and 4 DC tables\\ - Up to 4 components\end{tabular} & \begin{tabular}[c]{@{}l@{}}- Extended DCT-based or lossless process\\ - Multiple Frames\\ - Up to 4 components\end{tabular}                                  \\ \hline
+% \end{tabular}%
+% }
+% \end{table}
+
+% \begin{table}[h]
+% \centering
+% \caption{Example Table}
+% \label{tab:basic}
+% \begin{tabular}{|c|c|c|}
+% \hline
+% \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\ \hline
+% Data 1            & Data 2            & Data 3            \\ \hline
+% Data 4            & Data 5            & Data 6            \\ \hline
+% Data 7            & Data 8            & Data 9            \\ \hline
+% \end{tabular}
+% \end{table}
+
+% Pay attention to equation, it should use a "begin\{equation\}" and use its number. Then label it with "eq:name" a name that suggest to you the content. For example, see Equation \ref{eq:basic}.
+
+% \begin{equation}
+%     1 + 1 = 2
+%     \label{eq:basic}
+% \end{equation}
+
+% Other than that, small math equation, note, ... should be written in dollar sign "\$\$" such as $a=b+c$. You can also write algorithm. Here is a basic example of pseudocode using the algorithm2e package, Algorithm \ref{alg:example}:
+
+% \begin{algorithm}[H]
+% \caption{Example Algorithm}
+% \label{alg:example}
+% \KwData{Input data}
+% \KwResult{Output result}
+% Initialization\;
+% \While{condition}{
+%     perform action\;
+%     \eIf{condition}{
+%         perform action 1\;
+%     }{
+%         perform action 2\;
+%     }
+% }
+% \end{algorithm}
 
 
 
@@ -174,75 +256,75 @@ Initialization\;
 %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Thiết kế và thực hiện phần mềm}
-Detail the software development aspect of your project. Discuss:
-\begin{itemize}
-    \item The programming languages, tools, and frameworks used.
-    \item The design and architecture of your software solution.
-    \item Key algorithms and data structures.
-    \item Any challenges faced and how they were addressed.
-    \item Testing and validation procedures.
-\end{itemize}
+% Detail the software development aspect of your project. Discuss:
+% \begin{itemize}
+%     \item The programming languages, tools, and frameworks used.
+%     \item The design and architecture of your software solution.
+%     \item Key algorithms and data structures.
+%     \item Any challenges faced and how they were addressed.
+%     \item Testing and validation procedures.
+% \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Thiết kế và thực hiện phần cứng}
-\section{Hardware Design}
+% \section{Hardware Design}
 
-In this section, cover the hardware design aspects, including:
-\begin{itemize}
-    \item The choice of FPGA platform.
-    \item Design specifications and requirements.
-    \item The hardware architecture and components.
-    \item The design process, including schematic and layout considerations.
-    \item Any simulations or analyses performed to validate the design.
-\end{itemize}
+% In this section, cover the hardware design aspects, including:
+% \begin{itemize}
+%     \item The choice of FPGA platform.
+%     \item Design specifications and requirements.
+%     \item The hardware architecture and components.
+%     \item The design process, including schematic and layout considerations.
+%     \item Any simulations or analyses performed to validate the design.
+% \end{itemize}
 
-\section{Software Design}
-Discuss the software design that complements the hardware implementation. Include:
-\begin{itemize}
-    \item The development environment and tools used.
-    \item The integration between hardware and software.
-    \item Firmware or drivers developed for the FPGA.
-    \item Software algorithms and their implementation.
-    \item Testing and debugging procedures.
-\end{itemize}
+% \section{Software Design}
+% Discuss the software design that complements the hardware implementation. Include:
+% \begin{itemize}
+%     \item The development environment and tools used.
+%     \item The integration between hardware and software.
+%     \item Firmware or drivers developed for the FPGA.
+%     \item Software algorithms and their implementation.
+%     \item Testing and debugging procedures.
+% \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%
 
-\chapter{Hardware Simulation}
-This chapter should focus on the simulation aspect of your hardware design. Include:
-\begin{itemize}
-    \item The simulation tools and environments used.
-    \item Simulation models and parameters.
-    \item The process of running simulations and analyzing results.
-    \item Any optimizations or modifications made based on simulation outcomes.
-\end{itemize}
+\chapter{Mô phỏng phần cứng}
+% This chapter should focus on the simulation aspect of your hardware design. Include:
+% \begin{itemize}
+%     \item The simulation tools and environments used.
+%     \item Simulation models and parameters.
+%     \item The process of running simulations and analyzing results.
+%     \item Any optimizations or modifications made based on simulation outcomes.
+% \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Kết quả thực hiện}
-Present the results of your implementation. Discuss:
-\begin{itemize}
-    \item The performance metrics and evaluation criteria.
-    \item Results obtained from testing and validation.
-    \item Comparisons with existing solutions or benchmarks.
-    \item Analysis and interpretation of results.
-    \item Any unexpected findings or observations.
-\end{itemize}
+% Present the results of your implementation. Discuss:
+% \begin{itemize}
+%     \item The performance metrics and evaluation criteria.
+%     \item Results obtained from testing and validation.
+%     \item Comparisons with existing solutions or benchmarks.
+%     \item Analysis and interpretation of results.
+%     \item Any unexpected findings or observations.
+% \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%
 
-\chapter{Kết luận và hướng phát triển}
-Summarize the key findings and contributions of your thesis. Include:
-\begin{itemize}
-    \item A recap of the research problem and objectives.
-    \item Main findings and their implications.
-    \item Limitations of your research.
-    \item Suggestions for future work and potential directions for further research.
-\end{itemize}
+% \chapter{Kết luận và hướng phát triển}
+% Summarize the key findings and contributions of your thesis. Include:
+% \begin{itemize}
+%     \item A recap of the research problem and objectives.
+%     \item Main findings and their implications.
+%     \item Limitations of your research.
+%     \item Suggestions for future work and potential directions for further research.
+% \end{itemize}
 
 %%%%%%%%%%References part%%%%%%%%%%%%%%%%%%%%%
 
-\printbibliography[title=References]
+\printbibliography[title=Tài liệu tham khảo]
 
 \end{document}

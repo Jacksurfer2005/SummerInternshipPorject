@@ -9,38 +9,35 @@
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\babel@toc {vietnamese}{}\relax 
-\babel@toc {vietnamese}{}\relax 
-\babel@toc {vietnamese}{}\relax 
-\babel@toc {vietnamese}{}\relax 
 \contentsline {chapter}{\numberline {1}Giới thiệu}{1}{chapter.0.1}%
-\contentsline {section}{\numberline {1.1}Motivation}{1}{section.0.1.1}%
-\contentsline {section}{\numberline {1.2}Related Works}{1}{section.0.1.2}%
-\contentsline {section}{\numberline {1.3}Thesis Contributions}{1}{section.0.1.3}%
+\contentsline {section}{\numberline {1.1}Động lực nghiên cứu}{1}{section.0.1.1}%
+\contentsline {section}{\numberline {1.2}Tình hình nghiên cứu}{1}{section.0.1.2}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {section}{\numberline {1.4}Thesis Structure}{2}{section.0.1.4}%
+\contentsline {section}{\numberline {1.3}Cấu trúc báo cáo}{2}{section.0.1.3}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{\numberline {2}Lý thuyết}{3}{chapter.0.2}%
+\contentsline {chapter}{\numberline {2}Cơ sở lý thuyết}{3}{chapter.0.2}%
+\contentsline {section}{\numberline {2.1}Tổng quan về Mã Kiểm Tra Chẵn Lẻ Mật Độ Thấp (LDPC)}{3}{section.0.2.1}%
+\contentsline {section}{\numberline {2.2}Thuật Toán Giải Mã Min-Sum}{3}{section.0.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Các ký hiệu và định nghĩa thuật toán}{3}{subsection.0.2.2.1}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Các bước thực hiện tiến trình giải mã lặp}{4}{subsection.0.2.2.2}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{\numberline {3}Thiết kế và thực hiện phần mềm}{5}{chapter.0.3}%
+\contentsline {subsection}{\numberline {2.2.3}Biểu thức rút gọn phục vụ tối ưu hóa phần cứng}{5}{subsection.0.2.2.3}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{\numberline {4}Thiết kế và thực hiện phần cứng}{6}{chapter.0.4}%
-\contentsline {section}{\numberline {4.1}Hardware Design}{6}{section.0.4.1}%
-\contentsline {section}{\numberline {4.2}Software Design}{6}{section.0.4.2}%
+\contentsline {chapter}{\numberline {3}Thiết kế và thực hiện phần mềm}{6}{chapter.0.3}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{\numberline {5}Hardware Simulation}{7}{chapter.0.5}%
+\contentsline {chapter}{\numberline {4}Thiết kế và thực hiện phần cứng}{7}{chapter.0.4}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{\numberline {6}Kết quả thực hiện}{8}{chapter.0.6}%
+\contentsline {chapter}{\numberline {5}Mô phỏng phần cứng}{8}{chapter.0.5}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{\numberline {7}Kết luận và hướng phát triển}{9}{chapter.0.7}%
+\contentsline {chapter}{\numberline {6}Kết quả thực hiện}{9}{chapter.0.6}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 

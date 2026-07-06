@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.3)  3 JUL 2026 12:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.3)  6 JUL 2026 10:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1675,33 +1675,14 @@ Package biblatex Info: ... file 'report.bbl' found.
 Package biblatex Info: Reference section=0 on input line 32.
 Package biblatex Info: Reference segment=0 on input line 32.
 Package babel Info: Main language set to 'vietnamese'.
-<logobk.png, id=58, 1204.5pt x 1216.545pt>
+<logobk.png, id=62, 1204.5pt x 1216.545pt>
 File: logobk.png Graphic file (type png)
 <use logobk.png>
 Package pdftex.def Info: logobk.png  used on input line 34.
 (pdftex.def)             Requested size: 120.45705pt x 121.66162pt.
  [1
 
-{C:/Users/ASUS/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./logobk.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.93912pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.93912pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
-
-[1
-
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.93912pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.93912pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
-
-[2] (report.toc)
+{C:/Users/ASUS/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./logobk.png>] (report.toc)
 \tf@toc=\write7
 \openout7 = `report.toc'.
 
@@ -1713,7 +1694,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[3
+[1
+
+
 
 ] (report.lof)
 \tf@lof=\write8
@@ -1727,7 +1710,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[4
+[2
 
 ] (report.lot)
 \tf@lot=\write9
@@ -1741,18 +1724,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[5
+[3
 
 ]
 Ch\uhorn \ohorn ng 1.
-
-
-pdfTeX warning: pdflatex (file ./images/RGBtoYUV.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/RGBtoYUV.pdf, id=112, 158.51219pt x 235.8411pt>
-File: images/RGBtoYUV.pdf Graphic file (type pdf)
-<use images/RGBtoYUV.pdf>
-Package pdftex.def Info: images/RGBtoYUV.pdf  used on input line 84.
-(pdftex.def)             Requested size: 159.33821pt x 237.08562pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1764,11 +1739,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.104 \chapter
-              {Lý thuyết} [1
+l.99     \item[]
+                 Chương 1: Giới thiệu. [1
 
 
- <./images/RGBtoYUV.pdf>]
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1778,10 +1753,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2]
 Ch\uhorn \ohorn ng 2.
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 116.
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
-File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1800,7 +1771,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
 [4]
-Ch\uhorn \ohorn ng 3.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1808,10 +1778,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[5
-
-]
-Ch\uhorn \ohorn ng 4.
+[5]
+Ch\uhorn \ohorn ng 3.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1822,7 +1790,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [6
 
 ]
-Ch\uhorn \ohorn ng 5.
+Ch\uhorn \ohorn ng 4.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1833,7 +1801,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [7
 
 ]
-Ch\uhorn \ohorn ng 6.
+Ch\uhorn \ohorn ng 5.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1844,7 +1812,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8
 
 ]
-Ch\uhorn \ohorn ng 7.
+Ch\uhorn \ohorn ng 6.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1863,16 +1831,20 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 (biblatex)                for \mkbibdatelong.
 
 
-Package biblatex Warning: Bibliography string 'url' untranslated
-(biblatex)                at entry 'networkworld2023idc' on input line 246.
-
-
 Package biblatex Warning: Bibliography string 'and' untranslated
-(biblatex)                at entry 'xu2022improving' on input line 246.
+(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
 
 
-Package biblatex Warning: Bibliography string 'in' untranslated
-(biblatex)                at entry 'xu2022improving' on input line 246.
+Package biblatex Warning: Bibliography string 'jourvol' untranslated
+(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
+
+
+Package biblatex Warning: Bibliography string 'number' untranslated
+(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
 
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
@@ -1882,13 +1854,16 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 (biblatex)                for \mkbibdatelong.
 
 
-Package biblatex Warning: Bibliography string 'pages' untranslated
-(biblatex)                at entry 'xu2022improving' on input line 246.
+Package biblatex Warning: Bibliography string 'august' untranslated
+(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
 
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 328.
+(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
 
-Overfull \hbox (10.17633pt too wide) in paragraph at lines 246--246
-\T5/cmr/m/it/12 and Ap-pli-ca-tion of Cryp-tol-ogy and In-for-ma-tion Se-cu-rity \T5/cmr/m/n/12 Springer, 2022, [] 771^^U799. 
- []
+Package biblatex Warning: Bibliography string 'url' untranslated
+(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1900,7 +1875,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [10
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260703125238 E98D2F001DA5678B39482EFBDF5770DC)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20260706105645 E98D2F001DA5678B39482EFBDF5770DC)...disabled (restricted).
 
  (report.aux)
  ***********
@@ -1908,23 +1883,23 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: DBF6F54D1B94F99A484A0A60C878FB47;2003.
+(rerunfilecheck)             Checksum: A5D598F459354CABD3E5585079A9AD11;3114.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57067 strings out of 467510
- 1351116 string characters out of 5409281
- 2446505 words of memory out of 5000000
- 85480 multiletter control sequences out of 15000+600000
- 643728 words of font info for 70 fonts, out of 8000000 for 9000
+ 57034 strings out of 467510
+ 1350450 string characters out of 5409281
+ 2445242 words of memory out of 5000000
+ 85445 multiletter control sequences out of 15000+600000
+ 644538 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,15n,104p,1221b,1285s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\ASUS\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on report.pdf (16 pages, 809836 bytes).
+ 90i,11n,104p,1221b,1327s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\ASUS\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on report.pdf (14 pages, 263321 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
- 127 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 239 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 

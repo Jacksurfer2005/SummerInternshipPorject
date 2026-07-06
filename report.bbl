@@ -19,78 +19,88 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{networkworld2023idc}{article}{}{}
+    \entry{gallager1963}{inproceedings}{}{}
       \name{author}{1}{}{%
-        {{hash=ba904d1f374f952ae144cc772a97872b}{%
-           family={World},
-           familyi={W\bibinitperiod},
-           given={Network},
-           giveni={N\bibinitperiod}}}%
+        {{hash=42dcc7d452ac4b13cee9e0f3eb4312a8}{%
+           family={Gallager},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
-      \strng{namehash}{ba904d1f374f952ae144cc772a97872b}
-      \strng{fullhash}{ba904d1f374f952ae144cc772a97872b}
-      \strng{fullhashraw}{ba904d1f374f952ae144cc772a97872b}
-      \strng{bibnamehash}{ba904d1f374f952ae144cc772a97872b}
-      \strng{authorbibnamehash}{ba904d1f374f952ae144cc772a97872b}
-      \strng{authornamehash}{ba904d1f374f952ae144cc772a97872b}
-      \strng{authorfullhash}{ba904d1f374f952ae144cc772a97872b}
-      \strng{authorfullhashraw}{ba904d1f374f952ae144cc772a97872b}
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{1}{%
+        {M.I.T. Press}%
+      }
+      \strng{namehash}{42dcc7d452ac4b13cee9e0f3eb4312a8}
+      \strng{fullhash}{42dcc7d452ac4b13cee9e0f3eb4312a8}
+      \strng{fullhashraw}{42dcc7d452ac4b13cee9e0f3eb4312a8}
+      \strng{bibnamehash}{42dcc7d452ac4b13cee9e0f3eb4312a8}
+      \strng{authorbibnamehash}{42dcc7d452ac4b13cee9e0f3eb4312a8}
+      \strng{authornamehash}{42dcc7d452ac4b13cee9e0f3eb4312a8}
+      \strng{authorfullhash}{42dcc7d452ac4b13cee9e0f3eb4312a8}
+      \strng{authorfullhashraw}{42dcc7d452ac4b13cee9e0f3eb4312a8}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{IDC: Expect 175 zettabytes of Data Worldwide by 2025}}
-      \field{year}{accessed Dec. 1, 2023}
-      \verb{urlraw}
-      \verb https://www.networkworld.com/article/966746/idc-expect-175-zettabytes-of-data-worldwide-by-2025.html
-      \endverb
-      \verb{url}
-      \verb https://www.networkworld.com/article/966746/idc-expect-175-zettabytes-of-data-worldwide-by-2025.html
-      \endverb
+      \field{title}{Low-Density Parity-Check Codes}
+      \field{year}{1963}
     \endentry
-    \entry{xu2022improving}{inproceedings}{}{}
-      \name{author}{4}{}{%
-        {{hash=05ed36bcb6a44b5b9e4d52219469373d}{%
-           family={Xu},
-           familyi={X\bibinitperiod},
-           given={Jun},
-           giveni={J\bibinitperiod}}}%
-        {{hash=bf31b43ec92728f81e73841a519d8da2}{%
-           family={Sarkar},
-           familyi={S\bibinitperiod},
-           given={Santanu},
-           giveni={S\bibinitperiod}}}%
-        {{hash=7266c8f88e24dbee8bce391e02663a0b}{%
+    \entry{10.1109/JSAC.2009.090816}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=accfaf086a407bfb746d7875478d9130}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=8b7b2893ca528f09d25532db1ee9c232}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Xinming},
+           giveni={X\bibinitperiod}}}%
+        {{hash=d1e0fc0e54552d01b678bb2e072599dc}{%
            family={Wang},
            familyi={W\bibinitperiod},
-           given={Huaxiong},
-           giveni={H\bibinitperiod}}}%
-        {{hash=273fa49190c75abb3f5d966e01d6e051}{%
-           family={Hu},
-           familyi={H\bibinitperiod},
-           given={Lei},
-           giveni={L\bibinitperiod}}}%
+           given={Zhongfeng},
+           giveni={Z\bibinitperiod}}}%
       }
-      \list{organization}{1}{%
-        {Springer}%
+      \list{publisher}{1}{%
+        {IEEE Press}%
       }
-      \strng{namehash}{3cdd41d981feb2d3b1678d076d85297b}
-      \strng{fullhash}{145260c1380851ec0fec95efd609b93b}
-      \strng{fullhashraw}{145260c1380851ec0fec95efd609b93b}
-      \strng{bibnamehash}{145260c1380851ec0fec95efd609b93b}
-      \strng{authorbibnamehash}{145260c1380851ec0fec95efd609b93b}
-      \strng{authornamehash}{3cdd41d981feb2d3b1678d076d85297b}
-      \strng{authorfullhash}{145260c1380851ec0fec95efd609b93b}
-      \strng{authorfullhashraw}{145260c1380851ec0fec95efd609b93b}
+      \strng{namehash}{f84f8a717f92d391f50ada63543df446}
+      \strng{fullhash}{b8a0fd82a3a0bfbbf46ae2bb4e76aecc}
+      \strng{fullhashraw}{b8a0fd82a3a0bfbbf46ae2bb4e76aecc}
+      \strng{bibnamehash}{b8a0fd82a3a0bfbbf46ae2bb4e76aecc}
+      \strng{authorbibnamehash}{b8a0fd82a3a0bfbbf46ae2bb4e76aecc}
+      \strng{authornamehash}{f84f8a717f92d391f50ada63543df446}
+      \strng{authorfullhash}{b8a0fd82a3a0bfbbf46ae2bb4e76aecc}
+      \strng{authorfullhashraw}{b8a0fd82a3a0bfbbf46ae2bb4e76aecc}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{International Conference on the Theory and Application of Cryptology and Information Security}
-      \field{title}{Improving bounds on elliptic curve hidden number problem for ECDH key exchange}
-      \field{year}{2022}
-      \field{pages}{771\bibrangedash 799}
-      \range{pages}{29}
+      \field{abstract}{This paper presents a high-throughput decoder design for the Quasi-Cyclic (QC) Low-Density Parity-Check (LDPC) codes. Two new techniques are proposed, including parallel layered decoding architecture (PLDA) and critical path splitting. PLDA enables parallel processing for all layers by establishing dedicated message passing paths among them. The decoder avoids crossbar-based large interconnect network. Critical path splitting technique is based on articulate adjustment of the starting point of each layer to maximize the time intervals between adjacent layers, such that the critical path delay can be split into pipeline stages. Furthermore, min-sum and loosely coupled algorithms are employed for area efficiency. As a case study, a rate-1/2 2304-bit irregular LDPC decoder is implemented using ASIC design in 90nm CMOS process. The decoder can achieve the maximum decoding throughput of 2.2Gbps at 10 iterations. The operating frequency is 950MHz after synthesis and the chip area is 2.9mm2.}
+      \field{issn}{0733-8716}
+      \field{journaltitle}{IEEE J.Sel. A. Commun.}
+      \field{month}{8}
+      \field{number}{6}
+      \field{title}{High-throughput layered decoder implementation for quasi-cyclic LDPC codes}
+      \field{volume}{27}
+      \field{year}{2009}
+      \field{pages}{98\bibrangedash 994}
+      \range{pages}{897}
+      \verb{doi}
+      \verb 10.1109/JSAC.2009.090816
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/JSAC.2009.090816
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/JSAC.2009.090816
+      \endverb
+      \keyw{quasi-cyclic codes,parallel architecture,min-sum algorithm,low-density parity-check codes,loosely coupled algorithm,layered decoding,critical path splitting,VLSI.,VLSI,Low-density parity-check codes}
     \endentry
   \enddatalist
 \endrefsection
