@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.3)  6 JUL 2026 10:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.3)  17 JUL 2026 21:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/LATEX/DoeLatexTemplate/report.tex
-(d:/LATEX/DoeLatexTemplate/report.tex
+**"d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex"
+(d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
 (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
@@ -1675,7 +1675,7 @@ Package biblatex Info: ... file 'report.bbl' found.
 Package biblatex Info: Reference section=0 on input line 32.
 Package biblatex Info: Reference segment=0 on input line 32.
 Package babel Info: Main language set to 'vietnamese'.
-<logobk.png, id=62, 1204.5pt x 1216.545pt>
+<logobk.png, id=66, 1204.5pt x 1216.545pt>
 File: logobk.png Graphic file (type png)
 <use logobk.png>
 Package pdftex.def Info: logobk.png  used on input line 34.
@@ -1739,8 +1739,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.99     \item[]
-                 Chương 1: Giới thiệu. [1
+l.73     \item M
+                ặc dù đã có một số ít các công trình nghiên c... [1
 
 
 ]
@@ -1779,7 +1779,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
 [5]
-Ch\uhorn \ohorn ng 3.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1787,10 +1786,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[6
-
-]
-Ch\uhorn \ohorn ng 4.
+[6]
+Ch\uhorn \ohorn ng 3.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1801,7 +1798,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [7
 
 ]
-Ch\uhorn \ohorn ng 5.
+Ch\uhorn \ohorn ng 4.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1812,7 +1809,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8
 
 ]
-Ch\uhorn \ohorn ng 6.
+Ch\uhorn \ohorn ng 5.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1823,48 +1820,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [9
 
 ]
-
-Package biblatex Warning: Using fallback definition for \mkbibdatelong.
-(biblatex)                The command should be defined in the .lbx file.
-(biblatex)                If you see this message, the .lbx file could not be
-(biblatex)                loaded, is faulty or does not contain a definition
-(biblatex)                for \mkbibdatelong.
-
-
-Package biblatex Warning: Bibliography string 'and' untranslated
-(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
-
-
-Package biblatex Warning: Bibliography string 'jourvol' untranslated
-(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
-
-
-Package biblatex Warning: Bibliography string 'number' untranslated
-(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
-
-
-Package biblatex Warning: Bibliography string 'pages' untranslated
-(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
-
-
-Package biblatex Warning: Using fallback definition for \mkbibdatelong.
-(biblatex)                The command should be defined in the .lbx file.
-(biblatex)                If you see this message, the .lbx file could not be
-(biblatex)                loaded, is faulty or does not contain a definition
-(biblatex)                for \mkbibdatelong.
-
-
-Package biblatex Warning: Bibliography string 'august' untranslated
-(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
-
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 328.
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
-File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-
-Package biblatex Warning: Bibliography string 'url' untranslated
-(biblatex)                at entry '10.1109/JSAC.2009.090816' on input line 328.
-
+Ch\uhorn \ohorn ng 6.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1875,7 +1831,192 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [10
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260706105645 E98D2F001DA5678B39482EFBDF5770DC)...disabled (restricted).
+Ch\uhorn \ohorn ng 7.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[11
+
+]
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry '1' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'jourvol' untranslated
+(biblatex)                at entry '1' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'number' untranslated
+(biblatex)                at entry '1' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry '1' on input line 403.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 403.
+(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry '2' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'jourvol' untranslated
+(biblatex)                at entry '2' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'number' untranslated
+(biblatex)                at entry '2' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry '2' on input line 403.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry '3' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry '3' on input line 403.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry '3' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry '4' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry '4' on input line 403.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry '4' on input line 403.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry '6' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'jourvol' untranslated
+(biblatex)                at entry '6' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry '6' on input line 403.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'url' untranslated
+(biblatex)                at entry '6' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry '7' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'jourvol' untranslated
+(biblatex)                at entry '7' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'number' untranslated
+(biblatex)                at entry '7' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry '7' on input line 403.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'august' untranslated
+(biblatex)                at entry '7' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'url' untranslated
+(biblatex)                at entry '7' on input line 403.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'page' untranslated
+(biblatex)                at entry '8' on input line 403.
+
+
+Package biblatex Warning: Bibliography string 'url' untranslated
+(biblatex)                at entry '8' on input line 403.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[12
+
+]
+runsystem(latexminted cleantemp  --timestamp 20260717215741 E98D2F001DA5678B39482EFBDF5770DC)...disabled (restricted).
 
  (report.aux)
  ***********
@@ -1883,23 +2024,23 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: A5D598F459354CABD3E5585079A9AD11;3114.
+(rerunfilecheck)             Checksum: 93D26917E455235870E35612FA79B2BA;3147.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57034 strings out of 467510
- 1350450 string characters out of 5409281
- 2445242 words of memory out of 5000000
- 85445 multiletter control sequences out of 15000+600000
- 644538 words of font info for 71 fonts, out of 8000000 for 9000
+ 57087 strings out of 467510
+ 1352356 string characters out of 5409281
+ 2453882 words of memory out of 5000000
+ 85479 multiletter control sequences out of 15000+600000
+ 645466 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,11n,104p,1221b,1327s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\ASUS\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on report.pdf (14 pages, 263321 bytes).
+ 90i,12n,104p,1501b,1325s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\ASUS\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on report.pdf (16 pages, 308089 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 304 PDF objects out of 1000 (max. 8388607)
+ 58 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

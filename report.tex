@@ -59,20 +59,21 @@
 
 \chapter{Giới thiệu}
 \section{Động lực nghiên cứu}
-\qquad Mã kiểm tra chẵn lẻ mật độ thấp (Low-Density Parity-Check - LDPC) đóng vai trò quan trọng trong các hệ thống thông tin hiện đại nhờ khả năng sửa lỗi tối ưu, cho phép hiệu năng tiệm cận giới hạn Shannon đạt tới $0.0045\text{ dB}$ ở tỷ lệ lỗi bit $\text{BER} = 10^{-6}$ một cách đáng kinh ngạc. Nhờ đặc tính vượt trội này, mã LDPC đã trở thành một phần không thể thiếu trong các tiêu chuẩn truyền thông không dây băng thông rộng phổ biến như IEEE 802.11n/ad/ay/ax (Wifi), IEEE 802.16e (WiMAX), mạng di động thế hệ mới ETSI 5G, các tiêu chuẩn truyền hình kỹ thuật số như DVB-T2, DVB-S2, DVB-C2 và cũng như trong các công nghệ lưu trữ tiên tiến như ổ cứng thể rắn (SSD). 
+\qquad Mã kiểm tra chẵn lẻ mật độ thấp (Low-Density Parity-Check - LDPC) đóng vai trò quan trọng trong các hệ thống thông tin hiện đại nhờ khả năng sửa lỗi tối ưu. Cụ thể, các nghiên cứu \cite{1} đã chỉ rằng các mã LDPC bất thường nếu được thiết kế tối ưu có thể đạt ngưỡng hiệu suất chỉ cách giới hạn Shannon một khoảng cực kỳ nhỏ là $0.0045\text{ dB}$ ở tỷ lệ lỗi bit $\text{BER} = 10^{-6}$. Thậm chí, trong các mô phỏng thực tế với chiều dài khối lên tới $10^7$ thì các bộ giải mã này vẫn duy trì khả năng hoạt động cực kỳ ổn định và đạt mức cách giới hạn Shannon chỉ $0.04\text{ dB}$ ở mức $\text{BER} = 10^{-6}$. Nhờ đặc tính vượt trội này mà mã LDPC đã trở thành một phần không thể thiếu trong các chuẩn truyền thông không dây băng thông rộng phổ biến như IEEE 802.11n/ad/ay/ax (Wifi), IEEE 802.16e (WiMAX) và mạng di động thế hệ mới ETSI 5G.
 
-\qquad Trong thực tế triển khai, các ứng dụng truyền thông hiện đại đòi hỏi tốc độ dữ liệu ngày càng cao và khả năng tương thích linh hoạt với nhiều tiêu chuẩn khác nhau. Tuy nhiên, phần lớn các kiến trúc giải mã song song hiện nay chỉ được thiết kế cố định cho một tiêu chuẩn truyền thông duy nhất hoặc một chiều dài từ mã cụ thể, dẫn đến sự thiếu linh hoạt nghiêm trọng. Bên cạnh đó, các nghiên cứu trước đây thường lạm dụng tài nguyên bộ nhớ khối (BRAM) để lưu trữ các giá trị nội bộ mà chưa chú trọng đến việc tối ưu hóa cách thức lưu trữ ma trận kiểm tra chẵn lẻ thưa (Sparse Parity-Check Matrix), gây lãng phí tài nguyên phần cứng trên chip.  
+\qquad Trong thực tế triển khai, các ứng dụng truyền thông hiện đại đòi hỏi tốc độ dữ liệu ngày càng cao và khả năng tương thích linh hoạt với nhiều tiêu chuẩn khác nhau. Tuy nhiên, phần lớn các kiến trúc giải mã song song hiện nay chỉ được thiết kế cố định cho một tiêu chuẩn truyền thông duy nhất hoặc một chiều dài từ mã cụ thể, dẫn đến sự thiếu linh hoạt. Bên cạnh đó, các nghiên cứu trước đây \cite{2}, \cite{3}, \cite{4} thường lạm dụng tài nguyên bộ nhớ khối (BRAM) để lưu trữ các giá trị nội bộ mà chưa chú trọng đến việc tối ưu hóa cách thức lưu trữ ma trận kiểm tra chẵn lẻ thưa (Sparse Parity-Check Matrix), gây lãng phí tài nguyên phần cứng trên chip. Để giải quyết triệt để, kiến trúc bộ giải mã đề xuất chỉ lưu trữ ma trận kiểm tra chẵn lẻ cơ sở (base parity-check matrix) $H_b$. Khối dữ liệu này được nén thông qua 3 vector nội bộ: \textit{vals} (chứa các phần tử có giá trị khác -1), \textit{pos} (chứa chỉ số cột tương ứng) và \textit{elementSize} (chứa số lượng phần tử khác -1 trong mỗi hàng). Phương pháp này giúp giảm thiểu đột phá dung lượng BRAM cần thiết. 
 
-\qquad Việc giải quyết bài toán tối ưu hóa tài nguyên lưu trữ đồng thời tăng cường khả năng cấu hình cho bộ giải mã là vô cùng cấp thiết. Một kiến trúc giải mã QC-LDPC có thể tái cấu hình linh hoạt sẽ giúp giảm thiểu chi phí thiết kế phần cứng và đẩy nhanh tốc độ xử lý.  
-
-\qquad Kết quả của nghiên cứu này có thể ứng dụng trực tiếp vào các hệ thống hạ tầng viễn thông không dây tốc độ cao và các thiết bị lưu trữ thế hệ mới, đáp ứng đồng thời cả hai tiêu chuẩn phổ biến là WiMAX và WiFi trên cùng một nền tảng phần cứng.
+\qquad Việc giải quyết bài toán tối ưu hóa tài nguyên lưu trữ đồng thời tăng cường khả năng cấu hình cho bộ giải mã là vô cùng cấp thiết. Một kiến trúc giải mã QC-LDPC có thể tái cấu hình linh hoạt sẽ giúp giảm thiểu chi phí thiết kế phần cứng và đẩy nhanh tốc độ xử lý. Kết quả của nghiên cứu này có thể ứng dụng trực tiếp vào các hệ thống hạ tầng viễn thông không dây tốc độ cao và các thiết bị lưu trữ thế hệ mới, đáp ứng đồng thời cả hai tiêu chuẩn phổ biến là WiMAX và WiFi trên cùng một nền tảng phần cứng.
 
 \section{Tình hình nghiên cứu}
-\qquad Trong thập kỷ qua, đã có rất nhiều công trình nghiên cứu về kiến trúc giải mã LDPC song song được công bố nhằm đáp ứng yêu cầu khắt khe về băng thông của các đặc tả kỹ thuật hiện đại. Các kiến trúc được đề xuất tiêu biểu trong các nghiên cứu trước đây đã chứng minh được hiệu năng xử lý ở các mức độ nhất định.  
+\qquad Trong kỷ nguyên truyền thông tốc độ cao, yêu cầu khắt khe về băng thông đã thúc đẩy vô số công trình nghiên cứu về kiến trúc giải mã LDPC song song được công bố trong thập kỷ qua. Dù các kiến trúc này đã chứng minh được hiệu năng xử lý ở các mức độ nhất định, chúng vẫn tồn tại những nhược điểm về kiến trúc lưu trữ và độ linh hoạt, cụ thể:  
+\begin{itemize}
+    \item Hạn chế về tính linh hoạt phần cứng. Tiêu biểu như nghiên cứu của C. Kun \cite{2}, kiến trúc giải mã được thiết kế cố định cho một khung tiêu chuẩn cụ thể. Điều này đồng nghĩa với việc khi hệ thống cần chuyển đổi từ giao thức WiFi sang WiMAX thì toàn bộ phần cứng phải được thiết kế và tổng hợp lại từ đầu, gây lãng phí thời gian và tốn kém chi phí triển khai.
+    \item Ngoài ra trước đây có khá nhiều thiết kế đã áp dụng phương pháp lưu trữ dữ liệu tính toán nội bộ trực tiếp lên BRAM mà không nén dữ liệu. Nghiên cứu của S. Mhaske \cite{3} là một ví dụ minh họa rõ nét. Dù kiến trúc giải mã thuật toán này đạt được tốc độ băng thông lên tới $2.48 Gb/s$, nhưng lại tiêu tốn một lượng BRAM do không tối ưu hóa việc lưu trữ ma trận thưa. Việc lạm dụng BRAM theo cách truyền thống không chỉ gây lãng phí mà còn làm phức tạp hóa quá trình truy xuất dữ liệu song song, dễ tạo ra các điểm nghẽn băng thông khi mở rộng số lượng lõi giải mã.  
+    \item Mặc dù đã có một số ít các công trình nghiên cứu bắt đầu chú ý đến việc tối ưu hóa bộ nhớ,như công trình của S. Nimara \cite{4} đề xuất một kiến trúc giải mã đa từ mã với hiệu suất sử dụng BRAM tốt hơn. Tuy nhiên thì công trình này vẫn thiếu đi khả năng tham số hóa để hỗ trợ đa chuẩn truyền thông băng thông rộng trên cùng một thiết kế nguyên khối. Ngoại trừ số ít nghiên cứu cung cấp được bộ giải mã linh hoạt nhưng phần lớn các kiến trúc hiện hành vẫn chưa giải quyết được bài toán cân bằng giữa tối ưu bộ nhớ và tính linh hoạt đa chuẩn.  
+\end{itemize}
 
-\qquad Phương pháp luận và kết quả của các nghiên cứu trước: Phần lớn các tác giả tập trung vào việc khai thác tính chất song song mã hóa để tăng băng thông và sử dụng rộng rãi bộ nhớ BRAM tích hợp để lưu trữ các giá trị tính toán nội bộ của bộ giải mã. 
-
-\qquad Hạn chế của các nghiên cứu trước và khoảng trống tri thức: Tính linh hoạt kém, ngoại trừ một số ít công trình cung cấp bộ giải mã vạn năng có khả năng tham số hóa, hầu hết các kiến trúc giải mã hiện tại đều bị giới hạn trong một khung tiêu chuẩn hoặc một chiều dài từ mã cố định. Khai thác tài nguyên chưa tối ưu, rất ít kiến trúc chú ý đến cách thức lưu trữ hiệu quả ma trận thưa. Việc lưu trữ ma trận kiểm tra một cách thông thường không chỉ chiếm dụng dung lượng bộ nhớ lớn mà còn làm phức tạp hóa quá trình truy xuất dữ liệu song song từ BRAM.
+\qquad Chính từ những nhược điểm này thì việc phát triển một kiến trúc giải mã QC-LDPC kết hợp sử dụng thuật toán Min-Sum và có khả năng cấu hình bằng tham số là vô cùng cấp thiết. Kiến trúc đề xuất trong báo cáo này kỳ vọng giải quyết toàn diện các nhược điểm trên, đạt được băng thông giải mã lên tới $1.2 Gbps$ ở tần số hoạt động $240 MHz$ mà vẫn giữ mức tiêu thụ tài nguyên phần cứng cực kỳ tối ưu trên FPGA.
 
 % Fig. \ref{fig:logoyrgb} illustrates an example Image in the report. The Image should have a caption, and the caption must be placed after the Image. The "label" for figures should begin with "fig:name" and the name should be related to the content of the figure.
 
@@ -94,7 +95,7 @@
 % \end{itemize}
 
 \section{Cấu trúc báo cáo}
-\qquad Tổng quan toàn bộ quá trình thực hiện và triển khai bộ giải mã LDPC, bản báo cáo này được cấu trúc thành 7 chương như sau:
+\qquad Tổng quan toàn bộ quá trình thực hiện và triển khai bộ giải mã LDPC của bản báo cáo này được cấu trúc thành 7 chương như sau:
 \begin{itemize}
     \item[] Chương 1: Giới thiệu.
     \item[] Chương 2: Cơ sở lý thuyết.
@@ -108,22 +109,24 @@
 
 \chapter{Cơ sở lý thuyết}
 \section{Tổng quan về Mã Kiểm Tra Chẵn Lẻ Mật Độ Thấp (LDPC)}
-\qquad LDPC là một lớp mã khối tuyến tính được phát triển ban đầu bởi Gallager vào năm 1963 \cite{gallager1963}. Đặc tính tuyến tính này cho phép mã được áp dụng trực tiếp lên các khối dữ liệu nguồn để thực hiện chức năng phát hiện và sửa lỗi trên kênh truyền nhiễu.  
+\qquad LDPC là một lớp mã khối tuyến tính được phát triển ban đầu bởi Gallager vào năm 1963 \cite{5}. Đặc tính tuyến tính này cho phép mã được áp dụng trực tiếp lên các khối dữ liệu nguồn để thực hiện chức năng phát hiện và sửa lỗi trên kênh truyền nhiễu. Dù từng bị lãng quên trong nhiều thập kỷ do giới hạn phần cứng, mã LDPC đã trỗi dậy mạnh mẽ sau khi được MacKay và Neal khám phá lại vào cuối những năm 1990 \cite{6}.
 
-\qquad Khái niệm mật độ thấp xuất phát từ đặc điểm cấu trúc hình học của ma trận kiểm tra chẵn lẻ $H$ (parity-check matrix) đại diện cho mã. Ma trận $H$ là một ma trận thưa, nghĩa là số lượng phần tử có giá trị bằng '1' chiếm tỷ lệ rất nhỏ so với số lượng phần tử mang giá trị bằng '0' bên trong ma trận. 
+\qquad Khái niệm mật độ thấp xuất phát từ đặc điểm cấu trúc hình học của ma trận kiểm tra chẵn lẻ $H$ (parity-check matrix) đại diện cho mã. Ma trận $H$ là một ma trận thưa, nghĩa là số lượng phần tử có giá trị bằng `1' chiếm tỷ lệ rất nhỏ so với số lượng phần tử mang giá trị bằng `0' bên trong ma trận. 
 
-\qquad Một mã khối tuyến tính LDPC đều đặn loại $(N, K)$ được biểu diễn cấu trúc thông qua ma trận kiểm tra $H$ có kích thước $M \times N$, với $M \ge N - K$ hàng và $N$ cột. Khi biểu diễn dưới dạng đồ thị hai phía Tanner:  
+\qquad Một mã khối tuyến tính LDPC đều loại $(N, K)$ được biểu diễn cấu trúc thông qua ma trận kiểm tra $H$ có kích thước $M \times N$, với $M \ge N - K$ hàng và $N$ cột. Khi biểu diễn dưới dạng đồ thị hai phía Tanner, cấu trúc này bao gồm 2 thành phần chính sau:  
 \begin{itemize}
     \item Các nút kiểm tra (Check Nodes - CN): Đại diện bởi $M$ hàng của ma trận $H$, đóng vai trò kiểm tra tính ràng buộc chẵn lẻ của các phương trình toán học.  
     \item Các nút biến (Variable Nodes - VN): Đại diện bởi $N$ cột của ma trận $H$, tương ứng trực tiếp với các phần tử bit cấu thành nên một từ mã. 
 \end{itemize}
 
-\qquad Nhờ vào bản chất cấu trúc thưa này, mã LDPC sở hữu khả năng sửa lỗi vượt trội và tối ưu, cho phép hiệu năng của hệ thống tiệm cận rất gần giới hạn Shannon (có thể đạt mức cách giới hạn Shannon chỉ 0.0045 dB ở tỷ lệ lỗi bit BER là $10^{-6}$). Chính vì lý do đó, mã LDPC đã trở thành một phần cốt lõi trong các tiêu chuẩn truyền thông không dây băng thông rộng hiện đại như IEEE 802.11n (WiFi) và IEEE 802.16e (WiMAX). 
+\qquad Trong các ứng dụng thực tế, các tiêu chuẩn truyền thông không dây băng thông rộng như WiFi và WiMAX không sử dụng mã LDPC mà sử dụng một biến thể gọi là mã LDPC tuần hoàn (QC-LDPC). Đây là nền tảng toán học cốt lõi cho phép triển khai kiến trúc giải mã song song trên phần cứng FPGA. Đặc tính tựa vòng thể hiện ở chỗ ma trận kiểm tra chẵn lẻ $H$ được cấu trúc từ nhiều ma trận con vuông. Các ma trận con này được tạo ra bằng cách dịch vòng một ma trận đơn vị theo các giá trị dịch chuyển xác định.
+
+\qquad Nhờ tính chất này, quá trình triển khai phần cứng không cần phải lưu trữ toàn bộ ma trận $H$ khổng lồ. Thay vào đó, bộ giải mã chỉ cần lưu trữ ma trận kiểm tra chẵn lẻ cơ sở $H_b$ (base parity-check matrix). Việc biểu diễn $H_b$ giúp giảm thiểu đáng kể tài nguyên bộ nhớ BRAM cần thiết trên chip. Bên cạnh đó, kích thước của các ma trận con tựa vòng được ký hiệu là hệ số khai triển từ mã $z$ (codeword circulant size), quyết định trực tiếp đến mức độ song song hóa của bộ giải mã. Cụ thể, kiến trúc phần cứng có thể cập nhật đồng thời dữ liệu của $z$ nút biến, cho phép tăng tốc độ thông lượng lên gấp nhiều lần.
 
 \section{Thuật Toán Giải Mã Min-Sum}
-\qquad Thuật toán giải mã Min-Sum (MSA) là một phiên bản đơn giản hóa của thuật toán Belief Propagation (BP). Sự đơn giản hóa này được thực hiện bằng cách giảm thiểu tối đa độ phức tạp tính toán tại các khối chức năng chịu trách nhiệm cập nhật nút kiểm tra (Check Node Update - CNU). So với thuật toán BP, việc ứng dụng thuật toán Min-Sum giúp giảm thiểu đáng kể tài nguyên phần cứng tiêu thụ cũng như hạ thấp độ phức tạp xử lý toán học của khối CNU \cite{10.1109/JSAC.2009.090816}.
-\subsection{Các ký hiệu và định nghĩa thuật toán}
-Hệ thống giải mã quy ước các đại lượng toán học cơ bản bao gồm:
+\qquad Thuật toán giải mã Min-Sum là một phiên bản đơn giản hóa của thuật toán Belief Propagation (BP). Sự đơn giản hóa này được thực hiện bằng cách giảm thiểu tối đa độ phức tạp tính toán tại các khối chức năng chịu trách nhiệm cập nhật nút kiểm tra (Check Node Update - CNU). So với thuật toán BP gốc, việc ứng dụng thuật toán Min-Sum giúp giảm thiểu đáng kể tài nguyên phần cứng tiêu thụ cũng như làm giảm độ phức tạp xử lý toán học của khối CNU \cite{7} mà vẫn duy trì được hiệu suất sửa lỗi ổn định.
+
+\qquad Hệ thống giải mã quy ước các đại lượng toán học cơ bản bao gồm:
 \begin{itemize}
     \item $c_n$: Biểu thị cho bit thứ $n$ của một từ mã phát đi từ nguồn.
     \item $y_n$: Giá trị tín hiệu thu được từ kênh truyền ở đầu vào bộ giải mã.
@@ -134,18 +137,16 @@ Hệ thống giải mã quy ước các đại lượng toán học cơ bản ba
     \item $N(m) \setminus n$: Tập hợp các nút biến thuộc $N(m)$ ngoại trừ chính nút biến vị trí $n$.
     \item $M(n) \setminus m$: Tập hợp các nút kiểm tra thuộc $M(n)$ ngoại trừ chính nút kiểm tra vị trí $m$.
 \end{itemize}
-\subsection{Các bước thực hiện tiến trình giải mã lặp}
 \qquad Thuật toán giải mã Min-Sum được vận hành tuần tự qua hai giai đoạn chính: 
 
 \qquad \textbf{Bước 1: Khởi tạo (Initialization).} Tại bước này, giá trị xác suất kênh truyền $p_n$ (thông tin nội tại) của nút biến $n$ được xác định dựa trên tỷ số của xác suất tiên nghiệm:
 \begin{equation}
     p_n = \log \frac{P(y_n | c_n = 0)}{P(y_n | c_n = 1)}
+    \label{eq:1}
 \end{equation}
-\qquad Đồng thời, giá trị ban đầu của các thông điệp phản hồi từ nút kiểm tra $m$ đến nút biến $n$ được thiết lập bằng không: $r_{mn}[0] = 0$. 
+\qquad Đồng thời, giá trị ban đầu của các thông điệp CTV được thiết lập bằng không: $r_{mn}[0] = 0$. 
   
-\qquad \textbf{Bước 2: Giải mã lặp (Iterative Decoding).} Quá trình tính toán lặp được thực hiện liên tục qua các chu kỳ cho đến khi thỏa mãn điều kiện dừng của thuật toán.
-
-\qquad Tại vòng lặp thứ $k$, thông điệp $q_{mn}[k]$ phát ra từ nút biến đến nút kiểm tra được tổng hợp bằng cách cộng thông tin nội tại của kênh với tổng các thông điệp phản hồi từ các nút kiểm tra liên kết còn lại thông qua công thức:
+\qquad \textbf{Bước 2: Giải mã lặp (Iterative Decoding).} Tại vòng lặp thứ $k$, thông điệp VTC là $q_{mn}[k]$ được tổng hợp bằng cách cộng thông tin nội tại của kênh với tổng các thông điệp phản hồi từ các nút kiểm tra liên kết còn lại thông qua công thức:
 \begin{equation}
     q_{mn}[k] = p_n + \sum_{m' \in \{M(n) \setminus m\}} r_{m'n}[k-1]  
 \end{equation}
@@ -158,32 +159,106 @@ Hệ thống giải mã quy ước các đại lượng toán học cơ bản ba
 \qquad Giá trị của bit kết quả $x_n$ thuộc vectơ từ mã ước lượng sẽ được xác định theo quy tắc:
 \begin{equation}
     x_n = \begin{cases} 0 & \text{nếu } \Lambda_n[k] > 0 \\ 1 & \text{ngược lại} \end{cases}
+    \label{eq:5}
 \end{equation}
 
 \qquad Vòng lặp giải mã sẽ kết thúc hoàn toàn khi vectơ kết quả $x = [x_1, x_2, \dots, x_N]$ thỏa mãn đồng thời tất cả các phương trình kiểm tra chẵn lẻ mang tính tuyến tính của ma trận:
 \begin{equation}
     H \cdot x = 0
+    \label{eq:6}
 \end{equation}
-Hoặc tiến trình lặp cũng sẽ tự động dừng lại nếu số vòng lặp hiện tại đạt đến giá trị ngưỡng tối đa được thiết lập từ trước trong cấu hình phần cứng hệ thống. Nếu từ mã hợp lệ, chế độ xuất kết quả được kích hoạt để đưa dữ liệu đã sửa lỗi ra ngoài đầu ra.  
+
+\qquad Hoặc tiến trình lặp cũng sẽ tự động dừng lại nếu số vòng lặp hiện tại đạt đến giá trị ngưỡng tối đa được thiết lập từ trước trong cấu hình phần cứng hệ thống. Nếu từ mã hợp lệ, chế độ xuất kết quả được kích hoạt để đưa dữ liệu đã sửa lỗi ra ngoài đầu ra.  
 
 \qquad Nếu phép toán kiểm tra ma trận không thỏa mãn ($H \cdot x \neq 0$), thông điệp kiểm tra phản hồi ngược lại $r_{mn}[k]$ gửi đến nút biến $m$ sẽ được tính toán dựa trên tích các dấu và giá trị cực tiểu của các thông điệp VTC thuộc tập liên kết loại trừ:
 \begin{equation}
     r_{mn}[k] = \left( \prod_{n' \in \{N(m) \setminus n\}} sign(q_{mn'}[k]) \right) \times \left( \alpha \times \min_{n' \in \{N(m) \setminus n\}} \{|q_{mn'}[k]|\} \right)
 \end{equation}
-Trong đó, $\alpha$ là hệ số tỷ lệ điều chỉnh cố định ($\alpha \le 1$) nhằm bù đắp cho sự suy giảm biên độ do việc thay thế phép toán hình học phức tạp của thuật toán BP bằng phép toán tìm giá trị nhỏ nhất của thuật toán Min-Sum.
+
+\qquad Trong đó, $\alpha$ là hệ số tỷ lệ điều chỉnh cố định ($\alpha \le 1$) nhằm bù đắp cho sự suy giảm biên độ do việc đơn giản hóa từ BP sang Min-Sum.
 \subsection{Biểu thức rút gọn phục vụ tối ưu hóa phần cứng}
-\qquad Để thuận tiện cho việc thiết kế kiến trúc đọc/ghi song song dữ liệu từ các khối bộ nhớ Dual-port RAM (BRAM), cấu trúc toán học của thuật toán giải mã được tinh chỉnh thành các biểu thức quan hệ trực tiếp giữa giá trị APP và các thông điệp liên quan nhằm giảm độ trễ xử lý:
+\qquad Để tối ưu hóa kiến trúc đọc/ghi song song dữ liệu từ bộ nhớ cổng kép (Dual-port BRAM) trên FPGA, cấu trúc toán học của thuật toán được tinh chỉnh lại. Các phép tính được đưa về quan hệ trực tiếp giữa giá trị APP tổng thể và các thông điệp cập nhật nhằm giảm độ trễ logic.  
 \begin{itemize}
-    \item Tính toán thông điệp VTC rút gọn: 
+    \item Thay vì thực hiện phép cộng tích lũy, VTC được trích xuất trực tiếp bằng cách trừ thông điệp CTV của vòng trước khỏi APP hiện tại:
     \begin{equation}
-        VTC_n = APP_n - CTV_n, \quad n = 1 \dots d_r
+        VTC_n=APP_n-CTV_n, \quad n=1...d_r
+        \label{eq:2}
     \end{equation}
-    với $d_r$ là trọng số hàng của ma trận kiểm tra chẵn lẻ.
+    với $d_r$ là trọng số hàng của ma trận kiểm tra.  
+    \item Tính toán CTV mới:
+    \begin{equation}
+        CTV_{new\_n}=\prod_{k=1}^{N}\text{sign}(VTC_k)\times\text{sign}(VTC_n)\times\min(\vert{}VTC\vert{})
+        \label{eq:3}
+    \end{equation}
+    Biểu thức này được hiện thực hóa bằng mạng so sánh logic kết hợp với các cổng logic XOR để xử lý dấu. 
     \item Cập nhật giá trị APP mới cho vòng lặp kế tiếp:
     \begin{equation}
-        APP_{newn} = VTC_n + CTV_{newn}, \quad n = 1 \dots d_r
+        APP_{new\_n}=VTC_n+CTV_{new\_n}, \quad n=1...d_r
+        \label{eq:4}
     \end{equation}
+    Kết quả APP mới này sẽ được ghi đè trở lại BRAM, chuẩn bị cho chu kỳ giải mã tiếp theo.  
 \end{itemize}
+\subsection{Ví dụ tổng quát về thuật toán Min-Sum}
+\qquad Giả sử ta có từ mã $c = [0\ 0\ 1\ 0\ 1\ 1],$ được truyền qua kênh truyền với xác suất lai chéo $p=0.2$ và giá trị tín hiệu thu được từ kênh truyền $y = [1\ 0\ 1\ 0\ 1\ 1]$. \cite{8}
+
+\qquad Đầu tiên, ta tiến hành thiết lập ma trận kiểm tra chẵn lẻ $H$ với kích thước $4\times 6$ (4 phương trình kiểm tra và 6 bit từ mã) để tiện quan sát:
+\begin{equation}
+    H = \begin{bmatrix} 1 & 1 & 0 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 & 1 & 0 \\ 1 & 0 & 0 & 0 & 1 & 1 \\ 0 & 0 & 1 & 1 & 0 & 1\end{bmatrix}
+\end{equation}
+
+Từ \ref{eq:1} ta có giá trị xác suất kênh truyền như sau:
+\begin{equation}
+    p_n = \begin{cases} 
+P(y_n|c_n=0)=\log \dfrac{p}{1-p}, & \text{nếu } y_i = 1, \\
+P(y_n|c_n=1)=\log \dfrac{1-p}{p}, & \text{nếu } y_i = 0.
+\end{cases}
+\end{equation}
+Như vậy đối với kênh truyền này ta lần lượt có giá trị như sau:
+\begin{equation}
+    P(y_n|c_n=0) = \log \frac{0.2}{1-0.2} = -1.3863,\ P(y_n|c_n=1) = \log \frac{1-0.2}{0.2} = 1.3863
+\end{equation}
+Từ đó ta có dãy Log-Likelihood Ratio (LLR) thu được từ kênh truyền như sau:
+\begin{equation}
+    p = [-1.3863, 1.3863, -1.3863, 1.3863, -1.3863, -1.3863]
+\end{equation}
+
+Tại vòng lặp 0, các thông điệp VTC chưa qua xử lý, nên sẽ nhận chính giá trị LLR ban đầu này:
+\begin{itemize}
+    \item[]$n = 1$: $VTC_{1,1} = -1.3863,\ VTC_{1,3} = -1.3863$
+    \item[]$n = 2$: $VTC_{2,1} =\ \ 1.3863,\ VTC_{2,2} =\ \ 1.3863$
+    \item[]$n = 3$: $VTC_{3,2} = -1.3863,\ VTC_{3,4} = -1.3863$
+    \item[]$n = 4$: $VTC_{4,1} =\ \ 1.3863,\ VTC_{4,4} =\ \ 1.3863$
+    \item[]$n = 5$: $VTC_{5,2} = -1.3863,\ VTC_{5,3} = -1.3863$
+    \item[]$n = 6$: $VTC_{6,3} = -1.3863,\ VTC_{6,4}= -1.3863$
+\end{itemize}
+
+\qquad Tiếp đến, ta cập nhật giá trị CTV thông qua công thức \ref{eq:3} ứng với 3 nút kiểm tra:
+\begin{itemize}
+    \item[]$m = 1$: $CTV_{1,1} = 1.3863$, $CTV_{1,2} = -1.3863$, $CTV_{1,4} = -1.3863$
+    \item[]$m = 2$: $CTV_{2,2} = 1.3863$, $CTV_{2,3} = -1.3863$, $CTV_{2,5} = -1.3863$
+    \item[]$m = 3$: $CTV_{3,1} = 1.3863$, $CTV_{3,5} =\ \ 1.3863$, $CTV_{3,6} =\ \ 1.3863$
+    \item[]$m = 4$: $CTV_{4,3} = -1.3863$, $CTV_{4,4} = 1.3863$, $CTV_{4,6} = -1.3863$
+\end{itemize}
+
+\qquad Tiếp theo, ta tiến hành cập nhật giá trị APP mới thông qua \ref{eq:4} cho vòng lặp tiếp theo:
+\begin{itemize}
+    \item[] $APP_1 = p_1 + CTV_{1,1} + CTV_{3,1} = -1.3863 + 1.3863 + 1.3863 = 1.3863$
+    \item[] $APP_2 = p_2 + CTV_{1,2} + CTV_{2,2} = 1.3863 -1.3863 + 1.3863 = 1.3863$
+    \item[] $APP_3 = p_3 + CTV_{2,3} + CTV_{4,3} = -1.3863 -1.3863 -1.3863= -4.1589$
+    \item[] $APP_4 = p_4 + CTV_{1,4} + CTV_{4,4}= 1.3863 - 1.3863 + 1.3863= 1.3863$
+    \item[] $APP_5 = p_5 + CTV_{2,5} + CTV_{3,5} = -1.3863 - 1.3863 + 1.3863 = -1.3863$
+    \item[] $APP_6 = p_6 + CTV_{3,6} + CTV_{4,6}= -1.3863 + 1.3863 -1.3863= -1.3863$
+\end{itemize}
+
+\qquad Căn cứ vào dấu của bộ giá trị APP mới, hệ thống đưa ra phép quyết định cứng dựa vào quy tắc \ref{eq:5}. Khi ấy ta có từ mã dự đoán:
+\begin{equation}
+    x = [0\ 0\ 1\ 0\ 1\ 1]
+\end{equation}
+\qquad Để kiểm tra nếu từ mã $x$ đã đúng hay chưa, ta áp dụng \ref{eq:6} và thu được:
+\begin{equation}
+    \mathbf{x}H^T = [0 \quad 0 \quad 1 \quad 0 \quad 1 \quad 1] \begin{bmatrix} 1 & 0 & 1 & 0 \\ 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 1 & 1 \end{bmatrix} = [0 \quad 0 \quad 0 \quad 0]
+\end{equation}
+Như vậy $x$ là từ mã hợp lệ.
 % This chapter should cover foundational concepts and background information necessary for understanding your research. Include:
 
 % \begin{itemize}
@@ -255,29 +330,17 @@ Trong đó, $\alpha$ là hệ số tỷ lệ điều chỉnh cố định ($\alp
 
 %%%%%%%%%%%%%%%%%%%%
 
-\chapter{Thiết kế và thực hiện phần mềm}
-% Detail the software development aspect of your project. Discuss:
-% \begin{itemize}
-%     \item The programming languages, tools, and frameworks used.
-%     \item The design and architecture of your software solution.
-%     \item Key algorithms and data structures.
-%     \item Any challenges faced and how they were addressed.
-%     \item Testing and validation procedures.
-% \end{itemize}
-
-% %%%%%%%%%%%%%%%%%%%%
-
 \chapter{Thiết kế và thực hiện phần cứng}
-% \section{Hardware Design}
+\section{Hardware Design}
 
-% In this section, cover the hardware design aspects, including:
-% \begin{itemize}
-%     \item The choice of FPGA platform.
-%     \item Design specifications and requirements.
-%     \item The hardware architecture and components.
-%     \item The design process, including schematic and layout considerations.
-%     \item Any simulations or analyses performed to validate the design.
-% \end{itemize}
+In this section, cover the hardware design aspects, including:
+\begin{itemize}
+    \item The choice of FPGA platform.
+    \item Design specifications and requirements.
+    \item The hardware architecture and components.
+    \item The design process, including schematic and layout considerations.
+    \item Any simulations or analyses performed to validate the design.
+\end{itemize}
 
 % \section{Software Design}
 % Discuss the software design that complements the hardware implementation. Include:
@@ -291,37 +354,49 @@ Trong đó, $\alpha$ là hệ số tỷ lệ điều chỉnh cố định ($\alp
 
 % %%%%%%%%%%%%%%%%%%%%
 
+\chapter{Thiết kế và thực hiện phần mềm}
+Detail the software development aspect of your project. Discuss:
+\begin{itemize}
+    \item The programming languages, tools, and frameworks used.
+    \item The design and architecture of your software solution.
+    \item Key algorithms and data structures.
+    \item Any challenges faced and how they were addressed.
+    \item Testing and validation procedures.
+\end{itemize}
+
+% %%%%%%%%%%%%%%%%%%%%
+
 \chapter{Mô phỏng phần cứng}
-% This chapter should focus on the simulation aspect of your hardware design. Include:
-% \begin{itemize}
-%     \item The simulation tools and environments used.
-%     \item Simulation models and parameters.
-%     \item The process of running simulations and analyzing results.
-%     \item Any optimizations or modifications made based on simulation outcomes.
-% \end{itemize}
+This chapter should focus on the simulation aspect of your hardware design. Include:
+\begin{itemize}
+    \item The simulation tools and environments used.
+    \item Simulation models and parameters.
+    \item The process of running simulations and analyzing results.
+    \item Any optimizations or modifications made based on simulation outcomes.
+\end{itemize}
 
 % %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Kết quả thực hiện}
-% Present the results of your implementation. Discuss:
-% \begin{itemize}
-%     \item The performance metrics and evaluation criteria.
-%     \item Results obtained from testing and validation.
-%     \item Comparisons with existing solutions or benchmarks.
-%     \item Analysis and interpretation of results.
-%     \item Any unexpected findings or observations.
-% \end{itemize}
+Present the results of your implementation. Discuss:
+\begin{itemize}
+    \item The performance metrics and evaluation criteria.
+    \item Results obtained from testing and validation.
+    \item Comparisons with existing solutions or benchmarks.
+    \item Analysis and interpretation of results.
+    \item Any unexpected findings or observations.
+\end{itemize}
 
 % %%%%%%%%%%%%%%%%%%%%
 
-% \chapter{Kết luận và hướng phát triển}
-% Summarize the key findings and contributions of your thesis. Include:
-% \begin{itemize}
-%     \item A recap of the research problem and objectives.
-%     \item Main findings and their implications.
-%     \item Limitations of your research.
-%     \item Suggestions for future work and potential directions for further research.
-% \end{itemize}
+\chapter{Kết luận và hướng phát triển}
+Summarize the key findings and contributions of your thesis. Include:
+\begin{itemize}
+    \item A recap of the research problem and objectives.
+    \item Main findings and their implications.
+    \item Limitations of your research.
+    \item Suggestions for future work and potential directions for further research.
+\end{itemize}
 
 %%%%%%%%%%References part%%%%%%%%%%%%%%%%%%%%%
 

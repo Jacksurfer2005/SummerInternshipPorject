@@ -19,7 +19,201 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{gallager1963}{inproceedings}{}{}
+    \entry{1}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=cf36a9e45c9803b37af3743c7aa76e58}{%
+           family={Chung},
+           familyi={C\bibinitperiod},
+           given={Sae-Young},
+           giveni={S\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=1c58ad3962bf89e08d33c9278595f3c6}{%
+           family={Forney},
+           familyi={F\bibinitperiod},
+           given={G.D.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f86dcc8d99702ed7824d3f14b0168d8e}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={T.J.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=56a2b7be4c43a3e739a7ebbfc700125d}{%
+           family={Urbanke},
+           familyi={U\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca5c7123a48284be9191d2c06052480c}
+      \strng{fullhash}{d16aeedadaf0d11be27a44ccdf42e093}
+      \strng{fullhashraw}{d16aeedadaf0d11be27a44ccdf42e093}
+      \strng{bibnamehash}{d16aeedadaf0d11be27a44ccdf42e093}
+      \strng{authorbibnamehash}{d16aeedadaf0d11be27a44ccdf42e093}
+      \strng{authornamehash}{ca5c7123a48284be9191d2c06052480c}
+      \strng{authorfullhash}{d16aeedadaf0d11be27a44ccdf42e093}
+      \strng{authorfullhashraw}{d16aeedadaf0d11be27a44ccdf42e093}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Letters}
+      \field{number}{2}
+      \field{title}{On the design of low-density parity-check codes within 0.0045 dB of the Shannon limit}
+      \field{volume}{5}
+      \field{year}{2001}
+      \field{pages}{58\bibrangedash 60}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/4234.905935
+      \endverb
+      \keyw{Parity check codes;Decoding;Additive white noise;Turbo codes;AWGN;Laboratories;Quantization;Bit error rate;Sum product algorithm;H infinity control}
+    \endentry
+    \entry{2}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=3f46d522cf2345fb7112168620bb03cd}{%
+           family={Kun},
+           familyi={K\bibinitperiod},
+           given={Cheng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f674c1c25c7a4cafa4ef05247812c287}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Shen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c34bbf2f5531401ace5ab1efc99eb9b2}{%
+           family={Shengkai},
+           familyi={S\bibinitperiod},
+           given={Liao},
+           giveni={L\bibinitperiod}}}%
+        {{hash=99e3ab4675b97858d9de9e752277c972}{%
+           family={Chengzhi},
+           familyi={C\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a76839b411152fccbf6cb66c9f4366e}
+      \strng{fullhash}{ff8102dcdbbbead5ef102305eadcd9f3}
+      \strng{fullhashraw}{ff8102dcdbbbead5ef102305eadcd9f3}
+      \strng{bibnamehash}{ff8102dcdbbbead5ef102305eadcd9f3}
+      \strng{authorbibnamehash}{ff8102dcdbbbead5ef102305eadcd9f3}
+      \strng{authornamehash}{4a76839b411152fccbf6cb66c9f4366e}
+      \strng{authorfullhash}{ff8102dcdbbbead5ef102305eadcd9f3}
+      \strng{authorfullhashraw}{ff8102dcdbbbead5ef102305eadcd9f3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Systems Engineering and Electronics}
+      \field{number}{4}
+      \field{title}{Implementation of encoder and decoder for LDPC codes based on FPGA}
+      \field{volume}{30}
+      \field{year}{2019}
+      \field{pages}{642\bibrangedash 650}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.21629/JSEE.2019.04.02
+      \endverb
+      \keyw{Decoding;Encoding;Field programmable gate arrays;Iterative decoding;Throughput;Random access memory;low-density parity-check (LDPC);field programmable gate array (FPGA);normalized min-sum algorithm (NMSA)}
+    \endentry
+    \entry{3}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=9ddc22467d1d93105acacc6b27a059bf}{%
+           family={Mhaske},
+           familyi={M\bibinitperiod},
+           given={Swapnil},
+           giveni={S\bibinitperiod}}}%
+        {{hash=44379676e574c6c0276f940e019af048}{%
+           family={Uliana},
+           familyi={U\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=7d87edd4d1917e59dcff3dd24c563d94}{%
+           family={Kee},
+           familyi={K\bibinitperiod},
+           given={Hojin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=6555115f96a83795dac96ae0e76da0ed}{%
+           family={Ly},
+           familyi={L\bibinitperiod},
+           given={Tai},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b076ac9a2689dd366bb38c6ca3fa169a}{%
+           family={Aziz},
+           familyi={A\bibinitperiod},
+           given={Ahsan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b131eca0a3f7b9f35c2ebbd63050e032}{%
+           family={Spasojevic},
+           familyi={S\bibinitperiod},
+           given={Predrag},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6883f35971fa9cdb51d80d810f9f4c8c}
+      \strng{fullhash}{cf21f03b2d032286336bcd18cd948955}
+      \strng{fullhashraw}{cf21f03b2d032286336bcd18cd948955}
+      \strng{bibnamehash}{cf21f03b2d032286336bcd18cd948955}
+      \strng{authorbibnamehash}{cf21f03b2d032286336bcd18cd948955}
+      \strng{authornamehash}{6883f35971fa9cdb51d80d810f9f4c8c}
+      \strng{authorfullhash}{cf21f03b2d032286336bcd18cd948955}
+      \strng{authorfullhashraw}{cf21f03b2d032286336bcd18cd948955}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 36th IEEE Sarnoff Symposium}
+      \field{title}{A 2.48Gb/s FPGA-based QC-LDPC decoder: An algorithmic compiler implementation}
+      \field{year}{2015}
+      \field{pages}{88\bibrangedash 93}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/SARNOF.2015.7324649
+      \endverb
+      \keyw{Decoding;Field programmable gate arrays;Throughput;Computer architecture;Algorithm design and analysis;Software algorithms;Wireless communication;5G;mm-wave;Software-defined Radio (SDR);Universal Software Radio Peripheral (USRP);massively-parallel;QC-LDPC;layered decoding;algorithmic compiler;Kintex-7}
+    \endentry
+    \entry{4}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=08d6d04eab7e036aad93c0efd555711d}{%
+           family={Nimara},
+           familyi={N\bibinitperiod},
+           given={Sergiu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=059952ddd0bffd7470ee3c64e8f58aed}{%
+           family={Boncalo},
+           familyi={B\bibinitperiod},
+           given={Oana},
+           giveni={O\bibinitperiod}}}%
+        {{hash=4413ce75976f4a0fd81eebfad0e9b368}{%
+           family={Amaricai},
+           familyi={A\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a3cdd82df26a267b59672a6ef7ee89fe}{%
+           family={Popa},
+           familyi={P\bibinitperiod},
+           given={Mircea},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ebbc5d606a61e5451642efe4c665e3c}
+      \strng{fullhash}{1fdd2e001d4d9c65f2348a3a28787fa3}
+      \strng{fullhashraw}{1fdd2e001d4d9c65f2348a3a28787fa3}
+      \strng{bibnamehash}{1fdd2e001d4d9c65f2348a3a28787fa3}
+      \strng{authorbibnamehash}{1fdd2e001d4d9c65f2348a3a28787fa3}
+      \strng{authornamehash}{8ebbc5d606a61e5451642efe4c665e3c}
+      \strng{authorfullhash}{1fdd2e001d4d9c65f2348a3a28787fa3}
+      \strng{authorfullhashraw}{1fdd2e001d4d9c65f2348a3a28787fa3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 IEEE 19th International Symposium on Design and Diagnostics of Electronic Circuits Systems (DDECS)}
+      \field{title}{FPGA architecture of multi-codeword LDPC decoder with efficient BRAM utilization}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/DDECS.2016.7482452
+      \endverb
+      \keyw{Parity check codes;Decoding;Random access memory;Throughput;Field programmable gate arrays;Memory management;Quantization (signal);LDPC;FPGA;BRAM;Min-Sum;multi-codeword;Flooded}
+    \endentry
+    \entry{5}{inproceedings}{}{}
       \name{author}{1}{}{%
         {{hash=42dcc7d452ac4b13cee9e0f3eb4312a8}{%
            family={Gallager},
@@ -41,14 +235,60 @@
       \strng{authornamehash}{42dcc7d452ac4b13cee9e0f3eb4312a8}
       \strng{authorfullhash}{42dcc7d452ac4b13cee9e0f3eb4312a8}
       \strng{authorfullhashraw}{42dcc7d452ac4b13cee9e0f3eb4312a8}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Low-Density Parity-Check Codes}
       \field{year}{1963}
     \endentry
-    \entry{10.1109/JSAC.2009.090816}{article}{}{}
+    \entry{6}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=9f6c0a6544c28f7c57d6815b7d768f60}{%
+           family={MacKay},
+           familyi={M\bibinitperiod},
+           given={D.J.C.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5547cc512bd4012fc4ac86f72ce8960b}{%
+           family={Neal},
+           familyi={N\bibinitperiod},
+           given={R.M.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{667da6e847014e9b658f7d90cb613a56}
+      \strng{fullhash}{667da6e847014e9b658f7d90cb613a56}
+      \strng{fullhashraw}{667da6e847014e9b658f7d90cb613a56}
+      \strng{bibnamehash}{667da6e847014e9b658f7d90cb613a56}
+      \strng{authorbibnamehash}{667da6e847014e9b658f7d90cb613a56}
+      \strng{authornamehash}{667da6e847014e9b658f7d90cb613a56}
+      \strng{authorfullhash}{667da6e847014e9b658f7d90cb613a56}
+      \strng{authorfullhashraw}{667da6e847014e9b658f7d90cb613a56}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The authors report the empirical performance of Gallager's low density parity check codes on Gaussian channels. It is shown that performance substantially better than that of standard convolutional and concatenated codes can be achieved; indeed the performance is almost as close to the Shannon limit as that of Turbo codes.}
+      \field{issue}{18}
+      \field{journaltitle}{Electronics Letters}
+      \field{title}{Near Shannon limit performance of low density parity check codes}
+      \field{volume}{32}
+      \field{year}{1996}
+      \field{pages}{1645\bibrangedash 1646}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1049/el:19961141
+      \endverb
+      \verb{eprint}
+      \verb https://digital-library.theiet.org/doi/pdf/10.1049/el%3A19961141
+      \endverb
+      \verb{urlraw}
+      \verb https://digital-library.theiet.org/doi/abs/10.1049/el%3A19961141
+      \endverb
+      \verb{url}
+      \verb https://digital-library.theiet.org/doi/abs/10.1049/el%3A19961141
+      \endverb
+    \endentry
+    \entry{7}{article}{}{}
       \name{author}{3}{}{%
         {{hash=accfaf086a407bfb746d7875478d9130}{%
            family={Zhang},
@@ -77,8 +317,8 @@
       \strng{authornamehash}{f84f8a717f92d391f50ada63543df446}
       \strng{authorfullhash}{b8a0fd82a3a0bfbbf46ae2bb4e76aecc}
       \strng{authorfullhashraw}{b8a0fd82a3a0bfbbf46ae2bb4e76aecc}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper presents a high-throughput decoder design for the Quasi-Cyclic (QC) Low-Density Parity-Check (LDPC) codes. Two new techniques are proposed, including parallel layered decoding architecture (PLDA) and critical path splitting. PLDA enables parallel processing for all layers by establishing dedicated message passing paths among them. The decoder avoids crossbar-based large interconnect network. Critical path splitting technique is based on articulate adjustment of the starting point of each layer to maximize the time intervals between adjacent layers, such that the critical path delay can be split into pipeline stages. Furthermore, min-sum and loosely coupled algorithms are employed for area efficiency. As a case study, a rate-1/2 2304-bit irregular LDPC decoder is implemented using ASIC design in 90nm CMOS process. The decoder can achieve the maximum decoding throughput of 2.2Gbps at 10 iterations. The operating frequency is 950MHz after synthesis and the chip area is 2.9mm2.}
@@ -101,6 +341,37 @@
       \verb https://doi.org/10.1109/JSAC.2009.090816
       \endverb
       \keyw{quasi-cyclic codes,parallel architecture,min-sum algorithm,low-density parity-check codes,loosely coupled algorithm,layered decoding,critical path splitting,VLSI.,VLSI,Low-density parity-check codes}
+    \endentry
+    \entry{8}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=51785d5d5c20f029b4382f84146acde0}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Sarah\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{51785d5d5c20f029b4382f84146acde0}
+      \strng{fullhash}{51785d5d5c20f029b4382f84146acde0}
+      \strng{fullhashraw}{51785d5d5c20f029b4382f84146acde0}
+      \strng{bibnamehash}{51785d5d5c20f029b4382f84146acde0}
+      \strng{authorbibnamehash}{51785d5d5c20f029b4382f84146acde0}
+      \strng{authornamehash}{51785d5d5c20f029b4382f84146acde0}
+      \strng{authorfullhash}{51785d5d5c20f029b4382f84146acde0}
+      \strng{authorfullhashraw}{51785d5d5c20f029b4382f84146acde0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introducing Low-Density Parity-Check Codes}
+      \field{year}{2008}
+      \field{pages}{49}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:17943867
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:17943867
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
