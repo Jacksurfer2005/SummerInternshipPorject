@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber report"] 1784279748.59518 "report.bcf" "report.bbl" "report" 1784300263.97104 0
+["biber report"] 0 "report.bcf" "report.bbl" "report" 1785078238.80057 -1
   "refs.bib" 1784279103 5869 2357a7c76e9af2155154708e81cd362a ""
-  "report.bcf" 1784300263 108417 232540cb6931af277c515e3fad8c12b3 "pdflatex"
+  "report.bcf" 1785078238 108417 232540cb6931af277c515e3fad8c12b3 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1784300261.20823 "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" "report.pdf" "report" 1784300263.97188 0
+["pdflatex"] 1785078235.37794 "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" "report.pdf" "report" 1785078238.80147 0
   "C:/Users/ASUS/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1783052594 88371 b965f57369ed322039596060d18f4416 ""
   "C:/Users/ASUS/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1780757792 14064 98cb83acf7549c9caf7e1d3f6e3d9f36 ""
   "C:/Users/ASUS/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1783052688 13366575 d07abb7c7a6cac5740e15a44a2c4ae71 ""
@@ -28,6 +28,7 @@
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vnbx12.tfm" 1644004041 4020 c48f3c7e11edde839ff6260300faa1bb ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vncsc10.tfm" 1644004041 3328 915efe5837c0b39f09836cbf8f322602 ""
+  "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vnr10.tfm" 1644004041 3980 a378198bbdb2c6fcd4b722396a62ad27 ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vnr12.tfm" 1644004041 3984 be7b630197255361b12d153ce5e1bc5b ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vnr6.tfm" 1644004041 3988 1f6bc3097731d87cba5c55c000fe39f4 ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vnr8.tfm" 1644004041 3984 233206e6f80a2fd00ed2ee2bf783da65 ""
@@ -44,6 +45,7 @@
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb" 1644004041 41089 cd085a6112214f1ec9535fe0d1ee127f ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb" 1644004041 41115 0656009cce5da93b639dc9d869f1af5e ""
+  "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb" 1644004041 41608 f55c1a79be39d4e7ed224ba660d7353d ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb" 1644004041 40319 02110ade360715fbba33c66db50ef607 ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr8.pfb" 1644004041 41310 310d863e4c8e005265dc9ba6af1579a2 ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb" 1644004041 45761 648ecdc1078fdfee480e9a81aed1d127 ""
@@ -297,16 +299,19 @@
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/tex/latex/vntex/vncaps.tex" 1368738347 3273 a55ebdb07413d2fea580f210e3c0b252 ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "bkthesis.sty" 1783089235 7463 66c0bf266872a7b64538434e65a66bad ""
-  "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" 1784300257 29667 1506764ac24c2cc7286bc220c69c9a82 ""
+  "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" 1785078234 38354 9b99fda8cb2e33ebfe2e8d128b7c1934 ""
+  "images/BRAM APP.png" 1784691042 279971 507aea8a89ac20fa1b10457446f24731 ""
+  "images/FPGA LDPC decoder.png" 1785053086 25857 eee65aa7326acb6333aaab5920ab41cb ""
+  "images/Iterations counter.png" 1784690997 287845 906126250f02d19cffd0586bc083a3aa ""
   "logobk.png" 1720864378 71082 38c5f95d579ecdf9e3ebe3a0f81470b1 ""
-  "report.aux" 1784300263 6455 f2c154448b8577b6c79c5a711763e04b "pdflatex"
+  "report.aux" 1785078238 7416 d351a27c5f5dade9635ba7c351763579 "pdflatex"
   "report.bbl" 1784279750 17227 e33ae2fe7b89648b045489fea98f7fb9 "biber report"
-  "report.lof" 1784300263 1229 a4d0aeb8542d5529d83755e1301921e4 "pdflatex"
-  "report.lot" 1784300263 1229 a4d0aeb8542d5529d83755e1301921e4 "pdflatex"
-  "report.out" 1784300263 3147 93d26917e455235870e35612fa79b2ba "pdflatex"
-  "report.run.xml" 1784300263 2379 a8e85b0f96fed71ef052dcdbf9cebce7 "pdflatex"
-  "report.tex" 1784300257 29667 1506764ac24c2cc7286bc220c69c9a82 ""
-  "report.toc" 1784300263 2526 f93f21e62e410adae5eea71285eb2d00 "pdflatex"
+  "report.lof" 1785078238 1766 170daa449062009aefbd586e222dc84e "pdflatex"
+  "report.lot" 1785078238 1427 d9efd5fca27591b9d340ae7c86ce4640 "pdflatex"
+  "report.out" 1785078238 3572 acc1328201b0c4dbbce7849b3d707d1d "pdflatex"
+  "report.run.xml" 1785078238 2379 a8e85b0f96fed71ef052dcdbf9cebce7 "pdflatex"
+  "report.tex" 1785078234 38354 9b99fda8cb2e33ebfe2e8d128b7c1934 ""
+  "report.toc" 1785078238 2934 366585cbcbeadcec6f91444f73c09517 "pdflatex"
   (generated)
   "report.aux"
   "report.bcf"

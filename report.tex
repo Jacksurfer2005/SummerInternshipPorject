@@ -331,16 +331,78 @@ Như vậy $x$ là từ mã hợp lệ.
 %%%%%%%%%%%%%%%%%%%%
 
 \chapter{Thiết kế và thực hiện phần cứng}
-\section{Hardware Design}
+\section{Tổng quan hoạt động hệ thống}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{./images/FPGA LDPC decoder.png}
+    \caption{Kiến trúc bộ giải mã LDPC}
+\end{figure}
 
-In this section, cover the hardware design aspects, including:
+\qquad Luồng dữ liệu bên trong bộ giải mã diễn ra theo một chu trình khép kín, được đồng bộ chặt chẽ qua từng vòng lặp:
+
 \begin{itemize}
-    \item The choice of FPGA platform.
-    \item Design specifications and requirements.
-    \item The hardware architecture and components.
-    \item The design process, including schematic and layout considerations.
-    \item Any simulations or analyses performed to validate the design.
+    \item Khởi tạo: Dòng bit dữ liệu đầu vào dạng nối tiếp được chuyển đổi thành dạng song song và ghi vào khối bộ nhớ BRAM APP. 
+    \item Bắt đầu vòng lặp: Tại mỗi chu kỳ lặp, dữ liệu xác suất hậu nghiệm APP được đọc ra từ BRAM APP. Đồng thời, các thông tin về vị trí cấu trúc mạng được truy xuất từ bộ nhớ lưu trữ ma trận kiểm tra để định tuyến chính xác dữ liệu.  
+    \item Tính toán VTC: Khối VTC calculation nhận APP và các giá trị CTV từ vòng lặp trước (lưu trong BRAM CTV), thực hiện phép trừ để tạo ra thông điệp VTC gửi đến các nút kiểm tra.  
+    \item Tìm cực tiểu (Min/submin): Các giá trị VTC này được đẩy vào khối Min/submin calculation để tách biệt phần dấu và phần độ lớn, sau đó chạy qua một mạng lưới mạch so sánh nhằm tìm ra hai giá trị có độ lớn nhỏ nhất và nhỏ thứ hai của mỗi hàng.  
+    \item Tính toán cập nhật: Khối CTV and APP calculation sử dụng các giá trị cực tiểu này, kết hợp với phép XOR các bit dấu và hệ số tỉ lệ $\alpha$ để tính ra thông điệp CTV mới ($CTV_{new}$). Ngay lập tức, khối này cộng ngược VTC với $CTV_{new}$ để tạo ra xác suất hậu nghiệm mới ($APP_{new}$).  
+    \item Phản hồi và xuất dữ liệu: $APP_{new}$ được ghi đè trở lại BRAM APP và $CTV_{new}$ được ghi vào BRAM CTV cho vòng lặp tiếp theo. Nếu bộ đếm xác định đã đạt số vòng lặp tối đa, luồng dữ liệu phản hồi bị ngắt, tín hiệu READY được kích hoạt và từ mã đã được giải mã sẽ được đẩy ra đường OUT. 
 \end{itemize}
+\newpage
+\subsection{Khối BRAM APP}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./images/BRAM APP.png}
+    \caption{Kiến trúc khối BRAM APP}
+\end{figure}
+
+\qquad Khối BRAM APP được triển khai dưới dạng một module IP bộ nhớ đồng bộ với các đặc điểm cấu trúc sau:
+\begin{itemize}
+    \item Cổng truy xuất (Dual-Port Access): Khối BRAM sở hữu hai cổng độc lập bao gồm Port A và Port B với các đường địa chỉ \textit{addr\_a}, \textit{addr\_b}, đường dữ liệu vào \textit{din\_a}, \textit{din\_b} và tín hiệu cho phép ghi \textit{we\_a}, \textit{we\_b} riêng biệt. Cấu trúc này cho phép phần cứng đọc/ghi đồng thời trên hai vùng nhớ khác nhau trong cùng một chu kỳ xung nhịp \textit{clk}.
+    \item Tham số hóa bus dữ liệu: Để tạo điều kiện thuận lợi cho việc đọc và ghi APP song song, bộ nhớ khối được chia thành $K=N/z$ khối. Kích thước của mỗi khối phụ thuộc vào số lượng ký hiệu trong circulant và độ rộng của dữ liệu đầu vào. Trong sơ đồ, điều này tương ứng với độ rộng bus dữ liệu vào/ra là $Z \times W$ bit và độ rộng bus địa chỉ là $K$ bit.
+    \item Số lượng khối nhớ phân mảnh: Số lượng của các khối này được quyết định bởi chiều dài của từ mã N và kích thước của ma trận con circulant z.  
+    \item Thanh ghi đầu ra: Tại các đầu ra \textit{A\_Data\_out} và \textit{B\_Data\_out} của lõi BRAM, thiết kế bố trí thêm các D Flip-Flops được kích hoạt bởi xung nhịp \textit{clk}. Kỹ thuật chèn pipeline này giúp đồng bộ hóa dữ liệu trước khi đẩy ra các cổng \textit{dout\_a} và \textit{dout\_b}, từ đó giảm trễ lan truyền và tăng tần số hoạt động Fmax cho toàn hệ thống.
+\end{itemize}
+
+\qquad Luồng dữ liệu qua BRAM APP được chia thành 3 giai đoạn hoạt động chính:
+\begin{itemize}
+    \item Giai đoạn nạp dữ liệu: Dòng bit dữ liệu nối tiếp ở đầu vào được chuyển đổi thành song song và được ghi vào bộ nhớ khối. Dữ liệu ban đầu này sẽ được đưa qua bus din cùng tín hiệu kích hoạt we. 
+    \item Giai đoạn vòng lặp giải mã: Trong chế độ giải mã từ vựng, chỉ một phần của các khối được đọc từ BRAM phụ thuộc vào ma trận LDPC. Lúc này, các khối tính toán sẽ tính ra giá trị $APP_{new}$ và phản hồi ngược trở lại BRAM APP để ghi đè vào địa chỉ cũ, chuẩn bị cho chu kỳ lặp tiếp theo.  
+    \item Giai đoạn xuất kết quả: Khi quá trình giải mã hoàn tất, tất cả các khối của bộ nhớ khối được chuyển đến đầu ra của bộ giải mã.
+\end{itemize}
+\newpage
+\subsection{Khối Iterations counter}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./images/Iterations counter.png}
+    \caption{Kiến trúc khối Iterations counter}
+\end{figure}
+
+\qquad Về mặt yêu cầu thiết kế, khối Iterations counter đưa ra quyết định về việc hoàn thành quá trình giải mã và xuất kết quả. Khi đạt đến một số lượng vòng lặp nhất định, đầu ra của nó được đặt ở mức cao. Theo thông số kiểm thử thông thường của chuẩn giao tiếp, số vòng lặp tối đa (MAX) thường được đặt ở mức 10 vòng. Do đó, phần cứng chỉ cần một thanh ghi đếm dung lượng nhỏ nên ở đây ta chọn 5-bit là đủ để đáp ứng yêu cầu thiết kế mà không gây lãng phí tài nguyên. Tổng quan bao gồm các thành phần logic sau:
+\begin{itemize}
+    \item Thanh ghi lưu trữ 5-bit: Đây là trung tâm của khối, làm nhiệm vụ lưu trữ giá trị đếm hiện tại của vòng lặp. Thanh ghi này nhận tín hiệu xung \textit{clk}, tín hiệu \textit{rst} để xóa bộ đếm, và tín hiệu cho phép \textit{ld} để cập nhật giá trị mới.
+    \item Bộ cộng: Một khối toán học tổ hợp đơn giản, lấy giá trị 5-bit hiện tại từ đầu ra của thanh ghi và cộng thêm 1. Kết quả này được vòng ngược trở lại đầu vào dữ liệu của thanh ghi.
+    \item Các khối so sánh: Khối \textit{count < MAX}, kiểm tra xem giá trị vòng lặp hiện tại đã chạm ngưỡng tối đa (MAX) hay chưa. Khối \textit{count >= MAX}, đưa ra quyết định cuối cùng, xác nhận bộ đếm đã hoàn thành mục tiêu.
+    \item Cổng logic AND: Nằm ở ngõ vào điều khiển \textit{ld} của thanh ghi. Nó nhận hai đầu vào gồm tín hiệu báo hoàn thành một vòng tính toán \textit{iter\_done} từ hệ thống và kết quả của khối so sánh \textit{count < MAX}.
+\end{itemize}
+
+\qquad Nguyên lý hoạt động của khối đếm này diễn ra tuần tự qua các trạng thái:
+\begin{itemize}
+    \item Khởi tạo: Khi bắt đầu một chu trình giải mã mới cho một từ vựng, tích cực mức thấp tín hiệu \textit{rst\_n} sẽ kích hoạt chân \textit{rst}, xóa toàn bộ giá trị bên trong thanh ghi 5-bit về 0.
+    \item Quá trình đếm: Mỗi khi hệ thống hoàn tất tính toán cho một vòng lặp, một xung \textit{iter\_done} được gửi đến khối. Nếu lúc này giá trị đếm vẫn nhỏ hơn ngưỡng giới hạn thông qua khối \textit{count < MAX} thì cổng AND sẽ xuất mức cao vào chân \textit{ld}. Tại sườn lên tiếp theo của xung nhịp \textit{clk}, thanh ghi sẽ nạp giá trị mới từ bộ cộng 1.
+    \item Kết thúc giải mã: Khi thanh ghi tiếp tục đếm tăng và một số lượng vòng lặp nhất định đạt được, điều kiện của khối so sánh \textit{count >= MAX} trở nên đúng. Ngay lập tức đầu ra của khối \textit{max\_iter\_reached} được đặt ở mức cao. Tín hiệu mức cao này chính là yếu tố kích hoạt khối Operating mode selection chuyển toàn bộ hệ thống từ trạng thái giải mã sang trạng thái xuất kết quả.
+\end{itemize}
+
+% \section{Hardware Design}
+
+% In this section, cover the hardware design aspects, including:
+% \begin{itemize}
+%     \item The choice of FPGA platform.
+%     \item Design specifications and requirements.
+%     \item The hardware architecture and components.
+%     \item The design process, including schematic and layout considerations.
+%     \item Any simulations or analyses performed to validate the design.
+% \end{itemize}
 
 % \section{Software Design}
 % Discuss the software design that complements the hardware implementation. Include:
