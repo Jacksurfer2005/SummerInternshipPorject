@@ -371,7 +371,7 @@ Như vậy $x$ là từ mã hợp lệ.
     \item Giai đoạn xuất kết quả: Khi quá trình giải mã hoàn tất, tất cả các khối của bộ nhớ khối được chuyển đến đầu ra của bộ giải mã.
 \end{itemize}
 \newpage
-\subsection{Khối Iterations counter}
+\subsection{Khối Iterations Counter}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{./images/Iterations counter.png}
@@ -392,6 +392,47 @@ Như vậy $x$ là từ mã hợp lệ.
     \item Quá trình đếm: Mỗi khi hệ thống hoàn tất tính toán cho một vòng lặp, một xung \textit{iter\_done} được gửi đến khối. Nếu lúc này giá trị đếm vẫn nhỏ hơn ngưỡng giới hạn thông qua khối \textit{count < MAX} thì cổng AND sẽ xuất mức cao vào chân \textit{ld}. Tại sườn lên tiếp theo của xung nhịp \textit{clk}, thanh ghi sẽ nạp giá trị mới từ bộ cộng 1.
     \item Kết thúc giải mã: Khi thanh ghi tiếp tục đếm tăng và một số lượng vòng lặp nhất định đạt được, điều kiện của khối so sánh \textit{count >= MAX} trở nên đúng. Ngay lập tức đầu ra của khối \textit{max\_iter\_reached} được đặt ở mức cao. Tín hiệu mức cao này chính là yếu tố kích hoạt khối Operating mode selection chuyển toàn bộ hệ thống từ trạng thái giải mã sang trạng thái xuất kết quả.
 \end{itemize}
+
+\subsection{Khối Operating Mode Selection}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./images/Operating Mode Selection.png}
+    \caption{Kiến trúc khối  Operating Mode Selection}
+\end{figure}
+
+\qquad Nhiệm vụ chính của khối là chuyển đổi trạng thái của hệ thống giữa hai chế độ: tiếp tục vòng lặp giải mã (decoding) hoặc dừng tính toán để xuất kết quả (result output). Khối này yêu cầu khả năng xử lý dữ liệu có với độ rộng bit được tham số hóa $W=8$ bit cho giá trị xác suất hậu nghiệm APP, đồng thời phải thực hiện phép quyết định cứng để chuyển đổi từ giá trị mềm sang bit nhị phân ở chu kỳ cuối cùng.
+\begin{itemize}
+    \item Cổng AND: Đóng vai trò làm bộ đồng bộ điều kiện dừng. Nó nhận hai đầu vào là cờ báo đủ số vòng lặp (\textit{max\_iter\_reached} từ khối Iterations counter) và cờ báo dữ liệu hợp lệ \textit{app\_valid}. Ngõ ra của cổng AND chính là tín hiệu trạng thái \textit{ready}.
+    \item Bộ so sánh và Cổng NOT: Thực hiện bộ phân giải quyết định cứng. Bộ so sánh kiểm tra xem giá trị đầu vào \textit{app\_in} có lớn hơn 0 hay không. Ngõ ra của bộ so sánh đi qua cổng NOT để đảo trạng thái logic, tạo thành luồng dữ liệu giải mã nhị phân.
+    \item Các bộ dồn kênh MUX: Hai bộ MUX 2-to-1 được điều khiển chung bởi tín hiệu chọn kênh \textit{ready} $S0$: MUX 1: Quyết định việc cho phép dữ liệu đi tiếp vào khối tính toán VTC là \textit{app\_to\_vtc} hay bị chặn lại là 1'b0. MUX 2: Quyết định việc đẩy bit đã giải mã ra cổng \textit{decoded\_out} hay giữ ở mức mặc định là 1'b0.
+\end{itemize}
+
+\qquad Tùy thuộc vào trạng thái của tín hiệu điều khiển, khối sẽ định tuyến luồng dữ liệu theo một trong hai chế độ:
+\begin{itemize}
+    \item Chế độ giải mã (Decoding Mode): Khi chưa đạt đủ số vòng lặp tối đa với tín hiệu \textit{max\_iter\_reached} = 0 hoặc dữ liệu chưa hợp lệ \textit{app\_valid} = 0 thì cổng AND xuất mức thấp, kéo tín hiệu \textit{ready} = 1'b0. Lúc này, chân chọn $S0$ của các MUX ở mức 0. MUX 1 sẽ định tuyến trực tiếp toàn bộ bus dữ liệu đầu vào \textit{app\_in} sang ngõ ra \textit{app\_to\_vtc} để hệ thống tiếp tục tính toán thông điệp từ nút biến đến nút kiểm tra VTC. Đồng thời, MUX 2 chốt ngõ ra \textit{decoded\_out} = 1'b0, báo hiệu chưa có kết quả hợp lệ.
+    \item Chế độ xuất kết quả (Result Output Mode): Khi cả \textit{max\_iter\_reached} và \textit{app\_valid} đều ở mức cao thì cổng AND kích hoạt, kéo tín hiệu \textit{ready} = 1'b1. Chân chọn $S0$ chuyển sang mức 1. Tại MUX 1, luồng dữ liệu bị ngắt kết nối với khối VTC gán \textit{app\_to\_vtc} = '0, qua đó tiết kiệm năng lượng chuyển mạch và chặn hệ thống tính toán các vòng lặp dư thừa. Tại MUX 2, luồng dữ liệu được kết nối với ngõ ra của khối quyết định cứng. Theo nguyên lý giải mã LDPC, nếu giá trị APP mềm lớn hơn 0, bit ban đầu có xác suất cao là 0; ngược lại nếu APP nhỏ hơn hoặc bằng 0, bit ban đầu là 1. Mạch logic thực thi biểu thức \textit{app\_in} > 0 ? 1'b0 : 1'b1, và xuất trực tiếp kết quả nhị phân ra cổng \textit{decoded\_out}.
+\end{itemize}
+\subsection{Khối VTC Calculation}
+\qquad Khối VTC calculation có nhiệm vụ cốt lõi là tính toán các thông điệp từ nút biến đến nút kiểm tra VTC. Đầu vào của quá trình tính toán này là các giá trị xác suất hậu nghiệm APP được cung cấp từ khối lưu trữ BRAM APP, kết hợp với các thông điệp CTV từ vòng lặp trước. Mục tiêu kết quả đầu ra là khối phải xử lý mượt mà các dữ liệu số có dấu để phản ánh đúng tính chất của các quyết định mềm trong giải mã LDPC. Khối có một số đặc điểm nổi bật sau:
+\begin{itemize}
+    \item Tham số hóa: Thiết kế sử dụng tham số $W = 8$ bit, cho phép hệ thống linh hoạt thay đổi độ rộng của bus dữ liệu đầu vào và đầu ra. Điều này rất hữu ích khi cần cân bằng giữa độ chính xác của giải mã và tài nguyên phần cứng như diện tích mạch, công suất tiêu thụ...
+    \item Bộ trừ có dấu: Thành phần toán học duy nhất và cốt lõi của khối là một bộ trừ. Thay vì sử dụng các IP lõi phức tạp, khối sử dụng trực tiếp phép gán liên tục qua lệnh \textit{assign vtc\_out = app\_in - ctv\_in;} để phần mềm synthesis tự động ánh xạ xuống cấu trúc mạch trừ tối ưu nhất trên FPGA.
+    \item Cổng I/O: Khối bao gồm hai bus đầu vào \textit{app\_in}, \textit{ctv\_in} và một bus đầu ra \textit{vtc\_out}. Tất cả đều được ép kiểu logic signed có độ rộng $W$ bit để đảm bảo phép toán bù 2 được thực thi chính xác đối với các giá trị âm.
+\end{itemize}
+
+\qquad Luồng dữ liệu của khối VTC hoạt động theo cơ chế luân chuyển liên tục như sau:
+\begin{itemize}
+    \item Truy xuất dữ liệu định tuyến: Để luồng tính toán diễn ra chính xác, hệ thống phải sử dụng một ma trận kiểm tra được lưu trữ trong bộ nhớ phân tán. Thông tin từ bộ nhớ này đóng vai trò quyết định trong việc lấy đúng các giá trị cấu thành từ khối BRAM APP để đưa vào tính toán các thông điệp VTC tương ứng.
+    \item Thực thi biểu thức toán học: Ngay khi dữ liệu được nạp vào, bộ trừ logic tổ hợp sẽ thực hiện biểu thức tính toán VTC rút gọn~\ref{eq:2}.
+    \item Chuyển tiếp luồng: Do tính chất của mạch tổ hợp, giá trị \textit{vtc\_out} được tạo ra gần như tức thời, chỉ trễ một khoảng thời gian truyền qua các cổng logic gate delay. Dữ liệu này ngay lập tức được đẩy liên tục sang khối Min/submin calculation để tiếp tục quy trình tìm kiếm giá trị cực tiểu trong vòng lặp giải mã hiện tại.
+\end{itemize}
+\subsection{Khối Min/Submin Calculation}
+
+
+
+
+
+
 
 % \section{Hardware Design}
 
