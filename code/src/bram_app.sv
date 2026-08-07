@@ -1,31 +1,37 @@
-`timescale 1ns / 1ns
+//============================================================================
+//  bram_app.sv -- "BRAM APP" (Figure 1)
+//
+//  Bo nho khoi 2 cong (dual-port) chua xac suat hau nghiem APP.
+//  Bo nho duoc chia thanh K = N/z khoi, moi khoi rong z*DW bit
+//  (muc III.A: "the block memory is divided into K = N/z blocks").
+//    - Cong A : doc  (giai ma / xuat ket qua)
+//    - Cong B : ghi  (nap du lieu kenh / ghi nguoc APP_new)
+//============================================================================
+`timescale 1ns/1ps
 
 module bram_app #(
-    parameter Z= 96,       
-    parameter W= 8,    
-    parameter N= 2304,   
-    parameter K= N/ Z
+  parameter int DEPTH = 24,
+  parameter int WIDTH = 144
 )(
-    input  logic clk, we_a, we_b,
-    input  logic [$clog2(K)-1:0] addr_a, addr_b,
-    input  logic [(Z*W)-1:0] din_a, din_b,
-    output logic [(Z*W)-1:0] dout_a, dout_b
+  input  logic                     clk,
+  // cong A - doc
+  input  logic                     a_en,
+  input  logic [$clog2(DEPTH)-1:0] a_addr,
+  output logic [WIDTH-1:0]         a_dout,
+  // cong B - ghi
+  input  logic                     b_we,
+  input  logic [$clog2(DEPTH)-1:0] b_addr,
+  input  logic [WIDTH-1:0]         b_din
 );
 
-    logic [(Z*W)-1:0] ram_blocks [0:K-1];
-    
-    always_ff @(posedge clk) begin
-        if (we_a) begin
-            ram_blocks[addr_a] <= din_a;
-        end
-        dout_a <= ram_blocks[addr_a];
-    end
+  logic [WIDTH-1:0] mem [0:DEPTH-1];
 
-    always_ff @(posedge clk) begin
-        if (we_b) begin
-            ram_blocks[addr_b] <= din_b;
-        end
-	dout_b <= ram_blocks[addr_b];
-    end
+  always_ff @(posedge clk) begin
+    if (b_we) mem[b_addr] <= b_din;
+  end
+
+  always_ff @(posedge clk) begin
+    if (a_en) a_dout <= mem[a_addr];
+  end
 
 endmodule
