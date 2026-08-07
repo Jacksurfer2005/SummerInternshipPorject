@@ -44,18 +44,21 @@
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \contentsline {subsection}{\numberline {3.1.4}Khối VTC Calculation}{11}{subsection.0.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Khối Min/Submin Calculation}{11}{subsection.0.3.1.5}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{\numberline {4}Thiết kế và thực hiện phần mềm}{12}{chapter.0.4}%
+\contentsline {subsection}{\numberline {3.1.5}Khối Min/Submin Calculation}{12}{subsection.0.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Khối CTV \& APP Calculation}{12}{subsection.0.3.1.6}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{\numberline {5}Mô phỏng phần cứng}{13}{chapter.0.5}%
+\contentsline {chapter}{\numberline {4}Thiết kế và thực hiện phần mềm}{13}{chapter.0.4}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{\numberline {6}Kết quả thực hiện}{14}{chapter.0.6}%
+\contentsline {chapter}{\numberline {5}Mô phỏng phần cứng}{14}{chapter.0.5}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{\numberline {7}Kết luận và hướng phát triển}{15}{chapter.0.7}%
+\contentsline {chapter}{\numberline {6}Kết quả thực hiện}{15}{chapter.0.6}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {chapter}{\numberline {7}Kết luận và hướng phát triển}{16}{chapter.0.7}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 

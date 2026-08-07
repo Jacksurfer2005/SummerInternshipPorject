@@ -1,5 +1,5 @@
 `timescale 1ns / 1ns
-
+//bổ sung thêm testcase cho chắc
 module tb_bram_app;
     localparam Z = 96, W = 8, N = 2304, K = N / Z;
     localparam DATA_W = Z * W;
@@ -21,10 +21,7 @@ module tb_bram_app;
         .dout_b(dout_b)
     );
 
-    initial begin
-        clk = 0;
-        forever #5 clk = ~clk;
-    end
+    always #5 clk = ~clk;
 
     initial begin
         $dumpfile("tb_bramp_app.vcd");

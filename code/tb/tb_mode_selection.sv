@@ -1,13 +1,19 @@
 `timescale 1ns / 1ns
 
-module tb_mode_selection;
-    localparam W = 8;
-    logic max_iter_reached, app_valid;
-    logic signed [W-1:0] app_in;
-    logic signed [W-1:0] app_to_vtc;
-    logic ready, decoded_out;
+module tb_mode_selection();
+    parameter W = 8;
 
-    mode_selection #(W) dut (
+    logic max_iter_reached;
+    logic app_valid;
+    logic signed [W-1:0] app_in;
+    
+    logic signed [W-1:0] app_to_vtc;
+    logic ready;
+    logic decoded_out;
+
+    mode_selection #(
+        .W(W)
+    ) dut (
         .max_iter_reached(max_iter_reached), 
         .app_valid(app_valid),
         .app_in(app_in),
@@ -20,6 +26,7 @@ module tb_mode_selection;
         $dumpfile("tb_mode_selection.vcd");
         $dumpvars(0, tb_mode_selection);
 
+        $display("=== TEST MODE SELECTION ===");
         // Mode đang tính toán
         max_iter_reached = 0; app_valid = 1; app_in = 8'sd25; #10;
         $display("Iterating Mode: app_to_vtc=%d, ready=%b, decoded=%b", app_to_vtc, ready, decoded_out);
@@ -31,6 +38,18 @@ module tb_mode_selection;
         // Mode kết thúc, kiểm tra số âm
         max_iter_reached = 1; app_in = -8'sd5; #10;
         $display("Max Iter (APP<0): app_to_vtc=%d, ready=%b, decoded=%b", app_to_vtc, ready, decoded_out);
+
+        // Chế độ 1: Đang trong quá trình giải mã (Pass-through)
+        max_iter_reached = 0; app_valid = 1; app_in = 8'd42; #10;
+        $display("Decoding Mode -> Ready: %b, APP_to_VTC: %d, Decoded: %b", ready, app_to_vtc, decoded_out);
+
+        // Chế độ 2: Chốt kết quả - APP > 0 -> Bit 0
+        max_iter_reached = 1; app_valid = 1; app_in = 8'd15; #10;
+        $display("Result Mode (APP > 0) -> Ready: %b, APP_to_VTC: %d, Decoded: %b (Expected: 0)", ready, app_to_vtc, decoded_out);
+
+        // Chế độ 3: Chốt kết quả - APP <= 0 -> Bit 1
+        max_iter_reached = 1; app_valid = 1; app_in = -8'd10; #10;
+        $display("Result Mode (APP <= 0) -> Ready: %b, APP_to_VTC: %d, Decoded: %b (Expected: 1)", ready, app_to_vtc, decoded_out);
         
         $finish;
     end

@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber report"] 0 "report.bcf" "report.bbl" "report" 1785117849.45077 -1
+["biber report"] 0 "report.bcf" "report.bbl" "report" 1785833959.46138 -1
   "refs.bib" 1784279103 5869 2357a7c76e9af2155154708e81cd362a ""
-  "report.bcf" 1785117848 108417 232540cb6931af277c515e3fad8c12b3 "pdflatex"
+  "report.bcf" 1785833959 108417 232540cb6931af277c515e3fad8c12b3 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1785117842.67651 "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" "report.pdf" "report" 1785117849.45188 0
+["pdflatex"] 1785833954.644 "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" "report.pdf" "report" 1785833959.46225 0
   "C:/Users/ASUS/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1783052594 88371 b965f57369ed322039596060d18f4416 ""
   "C:/Users/ASUS/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1780757792 14064 98cb83acf7549c9caf7e1d3f6e3d9f36 ""
   "C:/Users/ASUS/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1783052688 13366575 d07abb7c7a6cac5740e15a44a2c4ae71 ""
@@ -299,20 +299,21 @@
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/tex/latex/vntex/vncaps.tex" 1368738347 3273 a55ebdb07413d2fea580f210e3c0b252 ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "bkthesis.sty" 1783089235 7463 66c0bf266872a7b64538434e65a66bad ""
-  "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" 1785117841 45069 584fff289c8433961b94a893a7aa7db1 ""
+  "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" 1785833954 45864 1444ca2758ffa9d561f0935e41bef5b9 ""
   "images/BRAM APP.png" 1784691042 279971 507aea8a89ac20fa1b10457446f24731 ""
   "images/FPGA LDPC decoder.png" 1785053086 25857 eee65aa7326acb6333aaab5920ab41cb ""
   "images/Iterations counter.png" 1784690997 287845 906126250f02d19cffd0586bc083a3aa ""
-  "images/Operating Mode Selection.png" 1785081624 201534 7faf91050d5e18c5a00e71dc86680c2d ""
+  "images/Operating Mode Selection.png" 1785833433 380975 939535bdc43b601af7ea5ef4bcc1cb02 ""
+  "images/VTC Calculation.png" 1785833294 520891 ff62e062e6abb5002c3aea5b32b0930f ""
   "logobk.png" 1720864378 71082 38c5f95d579ecdf9e3ebe3a0f81470b1 ""
-  "report.aux" 1785117848 8075 e6c579ecaa6f13193a3a41623815eef6 "pdflatex"
+  "report.aux" 1785833959 8444 04d23dfa2f1a8aaf269a54dc7ebce54b "pdflatex"
   "report.bbl" 1784279750 17227 e33ae2fe7b89648b045489fea98f7fb9 "biber report"
-  "report.lof" 1785117849 1957 e0620a66873a23ef61f1c7be99c61f40 "pdflatex"
-  "report.lot" 1785117849 1493 d5500a798c6f45d0610dc3004ea8fe89 "pdflatex"
-  "report.out" 1785117848 4180 97f13401104de9562c50f32c80fbe950 "pdflatex"
-  "report.run.xml" 1785117849 2379 a8e85b0f96fed71ef052dcdbf9cebce7 "pdflatex"
-  "report.tex" 1785117841 45069 584fff289c8433961b94a893a7aa7db1 ""
-  "report.toc" 1785117849 3301 f77732da669396d5e38deb98104e2882 "pdflatex"
+  "report.lof" 1785833959 2139 07c13f33e19107cfb256ddd06376f8dd "pdflatex"
+  "report.lot" 1785833959 1559 e9e544931136cbf154b4176d6f935889 "pdflatex"
+  "report.out" 1785833959 4394 ad9eb680bd341d8df1d9fa88e1b969b9 "pdflatex"
+  "report.run.xml" 1785833959 2379 a8e85b0f96fed71ef052dcdbf9cebce7 "pdflatex"
+  "report.tex" 1785833954 45864 1444ca2758ffa9d561f0935e41bef5b9 ""
+  "report.toc" 1785833959 3469 7f653019bd6d8917eb5076fdf9dd3d74 "pdflatex"
   (generated)
   "report.aux"
   "report.bcf"

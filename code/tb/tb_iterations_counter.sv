@@ -1,10 +1,17 @@
 `timescale 1ns / 1ns
 
-module tb_iterations_counter;
-    logic clk, rst_n, iter_done;
+module tb_iterations_counter();
+    parameter MAX = 5;
+
+    logic clk;
+    logic rst_n;
+    logic iter_done;
     logic max_iter_reached;
 
-    iterations_counter #(5) dut (
+    // Instantiate DUT
+    iterations_counter #(
+        .MAX(MAX)
+    ) dut (
         .clk(clk), 
         .rst_n(rst_n), 
         .iter_done(iter_done),
@@ -17,18 +24,28 @@ module tb_iterations_counter;
         $dumpfile("tb_iterations_counter.vcd");
         $dumpvars(0, tb_iterations_counter);
         
-        clk = 0; rst_n = 0; iter_done = 0;
+        clk = 0;
+        rst_n = 0;
+        iter_done = 0;
+
         #15 rst_n = 1;
+
+        $display("=== TEST ITERATIONS COUNTER ===");
         
-        // Mô phỏng 6 vòng lặp (MAX = 5)
-        for(int i=0; i<6; i++) begin
-            @(posedge clk);
+        // Mô phỏng phát xung iter_done vượt quá MAX
+        repeat (MAX + 2) begin
+            #10;
             iter_done = 1;
-            @(posedge clk);
+            #10;
             iter_done = 0;
-            $display("Lần lặp %d, max_iter_reached = %b", i+1, max_iter_reached);
+            $display("Time: %0t | Count Reached Max: %b", $time, max_iter_reached);
         end
-        
-        #20 $finish;
+
+        // Kiểm tra Reset
+        #10 rst_n = 0;
+        #10 rst_n = 1;
+        $display("After Reset | Reached Max: %b (Expected: 0)", max_iter_reached);
+
+        $finish;
     end
 endmodule
