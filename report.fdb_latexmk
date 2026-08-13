@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber report"] 0 "report.bcf" "report.bbl" "report" 1785833959.46138 -1
+["biber report"] 0 "report.bcf" "report.bbl" "report" 1786332974.45052 -1
   "refs.bib" 1784279103 5869 2357a7c76e9af2155154708e81cd362a ""
-  "report.bcf" 1785833959 108417 232540cb6931af277c515e3fad8c12b3 "pdflatex"
+  "report.bcf" 1786332974 108417 232540cb6931af277c515e3fad8c12b3 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1785833954.644 "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" "report.pdf" "report" 1785833959.46225 0
+["pdflatex"] 1786332968.84852 "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" "report.pdf" "report" 1786332974.4513 0
   "C:/Users/ASUS/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1783052594 88371 b965f57369ed322039596060d18f4416 ""
   "C:/Users/ASUS/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1780757792 14064 98cb83acf7549c9caf7e1d3f6e3d9f36 ""
   "C:/Users/ASUS/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1783052688 13366575 d07abb7c7a6cac5740e15a44a2c4ae71 ""
@@ -299,21 +299,21 @@
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/tex/latex/vntex/vncaps.tex" 1368738347 3273 a55ebdb07413d2fea580f210e3c0b252 ""
   "C:/Users/ASUS/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "bkthesis.sty" 1783089235 7463 66c0bf266872a7b64538434e65a66bad ""
-  "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" 1785833954 45864 1444ca2758ffa9d561f0935e41bef5b9 ""
-  "images/BRAM APP.png" 1784691042 279971 507aea8a89ac20fa1b10457446f24731 ""
+  "d:/BACH KHOA/253/TTNT/DoeLatexTemplate/report.tex" 1786332968 48139 e89f13a253cc018fd3309a202f2b51d7 ""
   "images/FPGA LDPC decoder.png" 1785053086 25857 eee65aa7326acb6333aaab5920ab41cb ""
-  "images/Iterations counter.png" 1784690997 287845 906126250f02d19cffd0586bc083a3aa ""
-  "images/Operating Mode Selection.png" 1785833433 380975 939535bdc43b601af7ea5ef4bcc1cb02 ""
-  "images/VTC Calculation.png" 1785833294 520891 ff62e062e6abb5002c3aea5b32b0930f ""
+  "images/LDP_DECODER-BRAM_APP.drawio.png" 1786249955 1574041 7a08f38237707e2efc766d5dea569177 ""
+  "images/LDP_DECODER-BRAM_CTV.drawio.png" 1786250012 1575246 a2bbc625a85306436f7ee044743ab4a1 ""
+  "images/LDP_DECODER-ITER COUNTER.drawio.png" 1786250029 1897491 74c774083b037421ad559d810abc8075 ""
+  "images/LDP_DECODER-VTC_CALC.drawio.png" 1786259323 879588 2a12e6dd9480cd5a1f7e87c1b84b02e1 ""
   "logobk.png" 1720864378 71082 38c5f95d579ecdf9e3ebe3a0f81470b1 ""
-  "report.aux" 1785833959 8444 04d23dfa2f1a8aaf269a54dc7ebce54b "pdflatex"
+  "report.aux" 1786332974 8701 f75a252852858da937b88070d453b749 "pdflatex"
   "report.bbl" 1784279750 17227 e33ae2fe7b89648b045489fea98f7fb9 "biber report"
-  "report.lof" 1785833959 2139 07c13f33e19107cfb256ddd06376f8dd "pdflatex"
-  "report.lot" 1785833959 1559 e9e544931136cbf154b4176d6f935889 "pdflatex"
-  "report.out" 1785833959 4394 ad9eb680bd341d8df1d9fa88e1b969b9 "pdflatex"
-  "report.run.xml" 1785833959 2379 a8e85b0f96fed71ef052dcdbf9cebce7 "pdflatex"
-  "report.tex" 1785833954 45864 1444ca2758ffa9d561f0935e41bef5b9 ""
-  "report.toc" 1785833959 3469 7f653019bd6d8917eb5076fdf9dd3d74 "pdflatex"
+  "report.lof" 1786332974 2123 55e89e4858f8aefbd7aacf9bec4def3e "pdflatex"
+  "report.lot" 1786332974 1559 e9e544931136cbf154b4176d6f935889 "pdflatex"
+  "report.out" 1786332974 4371 f73d5b3730c23be8734db30557f43e2c "pdflatex"
+  "report.run.xml" 1786332974 2379 a8e85b0f96fed71ef052dcdbf9cebce7 "pdflatex"
+  "report.tex" 1786332968 48139 e89f13a253cc018fd3309a202f2b51d7 ""
+  "report.toc" 1786332974 3660 40075d645700c5a2a7dafd3de045d401 "pdflatex"
   (generated)
   "report.aux"
   "report.bcf"

@@ -1,49 +1,45 @@
-//============================================================================
-//  sign_insertion.sv -- Khoi "Sign insertion" (Figure 3)
-//
-//  Voi moi canh n cua hang kiem tra:
-//      |CTV_n| = alpha * ( n == idx_min ? min2 : min1 )
-//      sign(CTV_n) = sign_prod XOR sign(VTC_n)          (cong thuc (4),(6))
-//  alpha o dang Q1.4 : alpha_thuc = alpha/16 (vd 12 -> 0.75, 16 -> 1.0)
-//============================================================================
-`timescale 1ns/1ps
+`timescale 1ns/1ns
 
-import ldpc_pkg::*;
+module sign_insertion (
+    input  logic [7:0] x_1,
+    input  logic [7:0] x_2,
+    input  logic [7:0] x_3,
+    input  logic [7:0] x_4,
+    input  logic [7:0] x_5,
+    input  logic [7:0] x_6,
+    input  logic [7:0] x_7,
 
-module sign_insertion
-(
-  input  logic [MAGW-1:0]        min1,
-  input  logic [MAGW-1:0]        min2,
-  input  logic [IDXW-1:0]        min_idx,
-  input  logic                   sign_prod,
-  input  logic [DR_MAX-1:0]      signs,
-  input  logic [DRW-1:0]         row_weight,
-  input  logic [ALPHA_W-1:0]     alpha,
-  output logic [DR_MAX*DW-1:0]   ctv_o     // {ctv[7],...,ctv[0]} phang
+    input  logic [6:0] sign_i,
+    input  logic       sign_total,
+
+    output logic [7:0] y_1,
+    output logic [7:0] y_2,
+    output logic [7:0] y_3,
+    output logic [7:0] y_4,
+    output logic [7:0] y_5,
+    output logic [7:0] y_6,
+    output logic [7:0] y_7
 );
 
-  localparam int PW = MAGW + ALPHA_W;
+    logic s1, s2, s3, s4, s5, s6, s7;
+    logic co1, co2, co3, co4, co5, co6, co7;
 
-  // Bien trung gian khai bao o pham vi module (tranh tu kich hoat lai
-  // always_comb tren mot so trinh mo phong)
-  logic [MAGW-1:0]      sel_mag;
-  logic [PW-1:0]        prod;
-  logic [PW-1:0]        scaled;
-  logic [MAGW-1:0]      mag_sat;
-  logic                 s;
-  logic signed [DW-1:0] ctv;
+    // Sign của từng CTV
+    assign s1 = sign_total ^ sign_i[0];
+    assign s2 = sign_total ^ sign_i[1];
+    assign s3 = sign_total ^ sign_i[2];
+    assign s4 = sign_total ^ sign_i[3];
+    assign s5 = sign_total ^ sign_i[4];
+    assign s6 = sign_total ^ sign_i[5];
+    assign s7 = sign_total ^ sign_i[6];
 
-  always_comb begin
-    ctv_o = '0;
-    for (int n = 0; n < DR_MAX; n++) begin
-      sel_mag = (n[IDXW-1:0] == min_idx) ? min2 : min1;
-      prod    = sel_mag * alpha;
-      scaled  = prod >> 4;                      // chia cho 16 (Q1.4)
-      mag_sat = (scaled > MAGMAX) ? MAGMAX : scaled[MAGW-1:0];
-      s       = sign_prod ^ signs[n];
-      ctv     = s ? -$signed({1'b0, mag_sat}) : $signed({1'b0, mag_sat});
-      ctv_o[n*DW +: DW] = (n < row_weight) ? ctv : {DW{1'b0}};
-    end
-  end
+    // Chuyển magnitude thành signed CTV
+    fa_calc y_calc1(.A(8'b0),.B(x_1),.Sel(s1),.S(y_1),.Co(co1),.Ov());
+    fa_calc y_calc2(.A(8'b0),.B(x_2),.Sel(s2),.S(y_2),.Co(co2),.Ov());
+    fa_calc y_calc3(.A(8'b0),.B(x_3),.Sel(s3),.S(y_3),.Co(co3),.Ov());
+    fa_calc y_calc4(.A(8'b0),.B(x_4),.Sel(s4),.S(y_4),.Co(co4),.Ov());
+    fa_calc y_calc5(.A(8'b0),.B(x_5),.Sel(s5),.S(y_5),.Co(co5),.Ov());
+    fa_calc y_calc6(.A(8'b0),.B(x_6),.Sel(s6),.S(y_6),.Co(co6),.Ov());
+    fa_calc y_calc7(.A(8'b0),.B(x_7),.Sel(s7),.S(y_7),.Co(co7),.Ov());
 
 endmodule

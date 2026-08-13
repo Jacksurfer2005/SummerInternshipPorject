@@ -7,7 +7,7 @@
 //    - Cong A : doc  (giai ma / xuat ket qua)
 //    - Cong B : ghi  (nap du lieu kenh / ghi nguoc APP_new)
 //============================================================================
-`timescale 1ns/1ps
+`timescale 1ns/1ns
 
 module bram_app #(
   parameter int DEPTH = 24,
@@ -16,11 +16,11 @@ module bram_app #(
   input  logic                     clk,
   // cong A - doc
   input  logic                     a_en,
-  input  logic [$clog2(DEPTH)-1:0] a_addr,
+  input  logic [DEPTH-1:0]         a_addr,
   output logic [WIDTH-1:0]         a_dout,
   // cong B - ghi
   input  logic                     b_we,
-  input  logic [$clog2(DEPTH)-1:0] b_addr,
+  input  logic [DEPTH-1:0]         b_addr,
   input  logic [WIDTH-1:0]         b_din
 );
 

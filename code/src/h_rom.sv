@@ -11,7 +11,7 @@
 //  ba vector tren khi khoi tao => thay ma tran chi can thay file .mem.
 //  Luong dich duoc chia ti le theo chuan: p(f,i,j) = floor(p(i,j)*z/z0).
 //============================================================================
-`timescale 1ns/1ps
+`timescale 1ns/1ns
 
 import ldpc_pkg::*;
 

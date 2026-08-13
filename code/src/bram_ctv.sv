@@ -7,7 +7,7 @@
 //  Tuong duong "z memory instances of size
 //   (rowWeight x inputDataSize x numberOfRow)" trong muc III.B.
 //============================================================================
-`timescale 1ns/1ps
+`timescale 1ns/1ns
 
 module bram_ctv #(
   parameter int DEPTH = 96,
@@ -15,10 +15,10 @@ module bram_ctv #(
 )(
   input  logic                     clk,
   input  logic                     rd_en,
-  input  logic [$clog2(DEPTH)-1:0] rd_addr,
+  input  logic [DEPTH-1:0]         rd_addr,
   output logic [WIDTH-1:0]         rd_data,
   input  logic                     wr_en,
-  input  logic [$clog2(DEPTH)-1:0] wr_addr,
+  input  logic [DEPTH-1:0]         wr_addr,
   input  logic [WIDTH-1:0]         wr_data
 );
 

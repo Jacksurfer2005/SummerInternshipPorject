@@ -5,13 +5,11 @@
 //  syndrome = 0 neu bat dung sang som) thi dua ngo ra len muc cao de
 //  khoi "Operating mode selection" chuyen sang che do xuat ket qua.
 //============================================================================
-`timescale 1ns/1ps
+`timescale 1ns/1ns
 
-import ldpc_pkg::*;
-
-module iter_counter
-#(
-  parameter bit EARLY_TERM = 1
+module iter_counter #(
+  parameter bit DONE = 1,
+  parameter int ITER_W = 5
 )(
   input  logic              clk,
   input  logic              rst_n,
@@ -33,7 +31,7 @@ module iter_counter
     end else if (iter_done) begin
       iter_cnt <= iter_cnt + 1'b1;
       if ((iter_cnt + 1'b1) >= max_iter)         done <= 1'b1;
-      else if (EARLY_TERM && converged)          done <= 1'b1;
+      else if (DONE && converged)                done <= 1'b1;
     end
   end
 

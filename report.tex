@@ -349,82 +349,118 @@ Như vậy $x$ là từ mã hợp lệ.
     \item Phản hồi và xuất dữ liệu: $APP_{new}$ được ghi đè trở lại BRAM APP và $CTV_{new}$ được ghi vào BRAM CTV cho vòng lặp tiếp theo. Nếu bộ đếm xác định đã đạt số vòng lặp tối đa, luồng dữ liệu phản hồi bị ngắt, tín hiệu READY được kích hoạt và từ mã đã được giải mã sẽ được đẩy ra đường OUT. 
 \end{itemize}
 \newpage
-\subsection{Khối BRAM APP}
+\subsection{Khối BRAM}
+\subsubsection{Khối BRAM APP}
 \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{./images/BRAM APP.png}
+    \includegraphics[width=0.9\textwidth]{./images/LDP_DECODER-BRAM_APP.drawio.png}
     \caption{Kiến trúc khối BRAM APP}
+    \centering
 \end{figure}
 
-\qquad Khối BRAM APP được triển khai dưới dạng một module IP bộ nhớ đồng bộ với các đặc điểm cấu trúc sau:
+Về mặt yêu cầu thiết kế, khối BRAM APP đóng vai trò chứa các giá trị APP trong suốt quá trình lặp của thuật toán Min-Sum. Các giá trị này ban đầu chính là các quyết định mềm thu được từ bộ giải điều chế của kênh truyền. Nhằm giải quyết bài toán về băng thông dữ liệu trong các thiết kế giải mã tốc độ cao, bộ nhớ này bắt buộc phải được thiết kế dưới dạng bộ nhớ RAM cổng kép (dual-port). Điều này cho phép phần cứng có thể đọc và ghi các giá trị một cách độc lập trong cùng một chu kỳ xung nhịp. 
+
+Kiến trúc tổng quan và các thông số kỹ thuật chi tiết bao gồm:
 \begin{itemize}
-    \item Cổng truy xuất (Dual-Port Access): Khối BRAM sở hữu hai cổng độc lập bao gồm Port A và Port B với các đường địa chỉ \textit{addr\_a}, \textit{addr\_b}, đường dữ liệu vào \textit{din\_a}, \textit{din\_b} và tín hiệu cho phép ghi \textit{we\_a}, \textit{we\_b} riêng biệt. Cấu trúc này cho phép phần cứng đọc/ghi đồng thời trên hai vùng nhớ khác nhau trong cùng một chu kỳ xung nhịp \textit{clk}.
-    \item Tham số hóa bus dữ liệu: Để tạo điều kiện thuận lợi cho việc đọc và ghi APP song song, bộ nhớ khối được chia thành $K=N/z$ khối. Kích thước của mỗi khối phụ thuộc vào số lượng ký hiệu trong circulant và độ rộng của dữ liệu đầu vào. Trong sơ đồ, điều này tương ứng với độ rộng bus dữ liệu vào/ra là $Z \times W$ bit và độ rộng bus địa chỉ là $K$ bit.
-    \item Số lượng khối nhớ phân mảnh: Số lượng của các khối này được quyết định bởi chiều dài của từ mã N và kích thước của ma trận con circulant z.  
-    \item Thanh ghi đầu ra: Tại các đầu ra \textit{A\_Data\_out} và \textit{B\_Data\_out} của lõi BRAM, thiết kế bố trí thêm các D Flip-Flops được kích hoạt bởi xung nhịp \textit{clk}. Kỹ thuật chèn pipeline này giúp đồng bộ hóa dữ liệu trước khi đẩy ra các cổng \textit{dout\_a} và \textit{dout\_b}, từ đó giảm trễ lan truyền và tăng tần số hoạt động Fmax cho toàn hệ thống.
+    \item Mã nguồn định nghĩa sẵn hai tham số cơ bản là độ sâu bộ nhớ $DEPTH = 24$ và độ rộng dữ liệu $WIDTH = 144$ bit. Không gian lưu trữ thực tế là một mảng thanh ghi hai chiều mang tên \textit{mem}.  
+    \item Để hỗ trợ việc đọc và ghi song song các giá trị APP, tổng thể bộ nhớ không nằm ở một khối duy nhất mà được chia nhỏ thành $K = N/z$ khối. Trong đó, $N$ là chiều dài của từ mã và $z$ là kích thước của ma trận con tuần hoàn.
+    \item Kích thước của mỗi khối BRAM APP phụ thuộc trực tiếp vào số lượng ký hiệu trong ma trận con tuần hoàn $z$ và độ rộng của dữ liệu đầu vào. Cụ thể, dung lượng được cấp phát tính bằng $(z \times \text{weight\_of\_input\_data}) \times (N/z)$.
+    \item Giao tiếp Cổng A (Cổng Đọc): Cổng này chịu sự điều khiển của tín hiệu cho phép đọc \textit{a\_en}. Dữ liệu đầu ra \textit{a\_dout} được trích xuất từ vị trí \textit{a\_addr}. Giao tiếp Cổng B (Cổng Ghi): Cổng này nhận tín hiệu cho phép ghi \textit{b\_we} để nạp dữ liệu \textit{b\_din} vào địa chỉ \textit{b\_addr}.
 \end{itemize}
 
-\qquad Luồng dữ liệu qua BRAM APP được chia thành 3 giai đoạn hoạt động chính:
+Nguyên lý hoạt động của khối BRAM APP diễn ra như sau:
 \begin{itemize}
-    \item Giai đoạn nạp dữ liệu: Dòng bit dữ liệu nối tiếp ở đầu vào được chuyển đổi thành song song và được ghi vào bộ nhớ khối. Dữ liệu ban đầu này sẽ được đưa qua bus din cùng tín hiệu kích hoạt we. 
-    \item Giai đoạn vòng lặp giải mã: Trong chế độ giải mã từ vựng, chỉ một phần của các khối được đọc từ BRAM phụ thuộc vào ma trận LDPC. Lúc này, các khối tính toán sẽ tính ra giá trị $APP_{new}$ và phản hồi ngược trở lại BRAM APP để ghi đè vào địa chỉ cũ, chuẩn bị cho chu kỳ lặp tiếp theo.  
-    \item Giai đoạn xuất kết quả: Khi quá trình giải mã hoàn tất, tất cả các khối của bộ nhớ khối được chuyển đến đầu ra của bộ giải mã.
+    \item Trong pha giải mã: Tại mỗi cạnh lên của xung nhịp clk, hệ thống chỉ trích xuất một phần các khối bộ nhớ BRAM APP thông qua Cổng A. Việc khối nào được đọc hoàn toàn phụ thuộc vào cấu trúc của ma trận kiểm tra chẵn lẻ LDPC. Dữ liệu này được đẩy vào khối "VTC calculation". Đồng thời, các giá trị APP cập nhật ($APP\_{new}$) được tính toán xong sẽ ngay lập tức được ghi đè ngược lại vào bộ nhớ thông qua Cổng B.
+    \item Trong pha xuất kết quả (Result Output Mode): Khi khối "Iterations counter" báo hiệu đã hoàn thành số vòng lặp tối đa, khối "Operating mode selection" sẽ chuyển trạng thái hệ thống. Lúc này, toàn bộ các khối của bộ nhớ BRAM APP sẽ được đọc và đẩy thẳng ra ngõ ra \textit{READY OUT} để cung cấp từ mã đã được giải mã hoàn chỉnh.
 \end{itemize}
-\newpage
+\subsubsection{Khối BRAM CTV}
+\begin{figure}[h!]
+    \includegraphics[width=0.9\textwidth]{./images/LDP_DECODER-BRAM_CTV.drawio.png}
+    \caption{Kiến trúc khối BRAM CTV}
+    \centering
+\end{figure}
+
+Về mặt yêu cầu thiết kế, khối BRAM CTV là thành phần lưu trữ các bản tin CTV, tương đương với thông điệp $r\_{mn}[k]$ truyền từ nút kiểm tra $m$ đến nút biến $n$ trong thuật toán đồ thị Tanner. Vì ma trận QC-LDPC của các chuẩn WiFi (IEEE 802.11n) và WiMAX (IEEE 802.16e) có tính chất tuần hoàn, kiến trúc bộ giải mã yêu cầu phải cập nhật đồng thời tất cả các giá trị APP cho một hàng hiện tại của ma trận. Do đó, hệ thống bắt buộc phải khởi tạo $z$ phiên bản bộ nhớ CTV chạy hoàn toàn song song (với $z$ là số nhân lõi tương đương kích thước ma trận con).  
+
+Kiến trúc tổng quan và các thông số kỹ thuật chi tiết bao gồm:
+\begin{itemize}
+    \item Khác với BRAM APP, dung lượng của BRAM CTV được thiết kế để tránh lãng phí tài nguyên trên FPGA. Cụ thể, độ sâu của bộ nhớ được quy định bằng đúng số lượng hàng khối nhân với trọng số hàng tối đa là $96$.
+    \item Mã nguồn định nghĩa độ sâu mặc định $DEPTH = 96$ và độ rộng $WIDTH = 144$ bit. Tương đương với $z \times DW$, tức $z$ làn dữ liệu song song, mỗi làn rộng $DW$ bit.
+    \item Kích thước chính xác của nhóm bộ nhớ này được ánh xạ theo cấu trúc ma trận LDPC với công thức: Trọng số hàng của ma trận $\times$ Kích thước dữ liệu đầu vào $\times$ Số lượng hàng của ma trận.
+    \item Mảng thanh ghi mem được truy cập qua hai tiến trình phần cứng độc lập. Tiến trình đọc được kiểm soát bởi \textit{rd\_en, rd\_addr} để xuất \textit{rd\_data}. Tiến trình ghi được kiểm soát bởi \textit{wr\_en, wr\_addr} để nạp \textit{wr\_data}. 
+\end{itemize}
+
+Nguyên lý hoạt động của khối BRAM CTV diễn ra như sau:
+\begin{itemize}
+    \item Cung cấp dữ liệu (Pha Đọc): Khởi đầu mỗi chu kỳ lặp, các giá trị CTV ban đầu được thiết lập bằng 0, sau đó sẽ được xuất ra thông qua ngõ \textit{rd\_data} khi có tín hiệu \textit{rd\_en} tại cạnh lên của xung clk. Các giá trị CTV cũ này được đưa trực tiếp vào khối "VTC calculation" để thực hiện phép toán $VTC\_n = APP\_n - CTV\_n$.
+    \item Cập nhật dữ liệu (Pha Ghi): Tại cuối chu trình của một hàng, khối "CTV and APP calculation" sẽ tổng hợp các giá trị VTC cực tiểu min và cực tiểu phụ submin, sau đó khối sẽ xử lý dấu (Signs XORing) để tạo ra bản tin $CTV_{new}$. Ngay lập tức, khi có xung clk và tín hiệu \textit{wr\_en} tích cực, tập dữ liệu $CTV_{new}$ này được nạp vào chân \textit{wr\_data} và ghi đè vào địa chỉ \textit{wr\_addr} tương ứng. Quá trình này đảm bảo dữ liệu luôn sẵn sàng cho vòng lặp giải mã tiếp theo.
+\end{itemize}
 \subsection{Khối Iterations Counter}
 \begin{figure}[h!]
+    \includegraphics[width=0.9\textwidth]{./images/LDP_DECODER-ITER COUNTER.drawio.png}
+    \caption{Kiến trúc khối Iterations Counter}
     \centering
-    \includegraphics[width=0.9\textwidth]{./images/Iterations counter.png}
-    \caption{Kiến trúc khối Iterations counter}
 \end{figure}
 
-\qquad Về mặt yêu cầu thiết kế, khối Iterations counter đưa ra quyết định về việc hoàn thành quá trình giải mã và xuất kết quả. Khi đạt đến một số lượng vòng lặp nhất định, đầu ra của nó được đặt ở mức cao. Theo thông số kiểm thử thông thường của chuẩn giao tiếp, số vòng lặp tối đa (MAX) thường được đặt ở mức 10 vòng. Do đó, phần cứng chỉ cần một thanh ghi đếm dung lượng nhỏ nên ở đây ta chọn 5-bit là đủ để đáp ứng yêu cầu thiết kế mà không gây lãng phí tài nguyên. Tổng quan bao gồm các thành phần logic sau:
+Về mặt yêu cầu thiết kế, khối iter counter là thành phần kiểm soát số vòng lặp giải mã, tương đương với biến đếm số lần lặp trong các thuật toán lặp. Vì thuật toán giải mã yêu cầu lặp đi lặp lại quá trình cập nhật thông điệp để hội tụ, kiến trúc bộ giải mã yêu cầu phải giới hạn số vòng lặp tối đa và có khả năng dừng sớm khi đã tìm ra từ mã đúng. Do đó, hệ thống bắt buộc phải khởi tạo bộ đếm này để theo dõi tiến trình và phát tín hiệu hoàn thành (\textit{done}) chuyển khối "Operating mode selection" sang chế độ xuất kết quả. 
+
+Kiến trúc tổng quan và các thông số kỹ thuật chi tiết bao gồm:
 \begin{itemize}
-    \item Thanh ghi lưu trữ 5-bit: Đây là trung tâm của khối, làm nhiệm vụ lưu trữ giá trị đếm hiện tại của vòng lặp. Thanh ghi này nhận tín hiệu xung \textit{clk}, tín hiệu \textit{rst} để xóa bộ đếm, và tín hiệu cho phép \textit{ld} để cập nhật giá trị mới.
-    \item Bộ cộng: Một khối toán học tổ hợp đơn giản, lấy giá trị 5-bit hiện tại từ đầu ra của thanh ghi và cộng thêm 1. Kết quả này được vòng ngược trở lại đầu vào dữ liệu của thanh ghi.
-    \item Các khối so sánh: Khối \textit{count < MAX}, kiểm tra xem giá trị vòng lặp hiện tại đã chạm ngưỡng tối đa (MAX) hay chưa. Khối \textit{count >= MAX}, đưa ra quyết định cuối cùng, xác nhận bộ đếm đã hoàn thành mục tiêu.
-    \item Cổng logic AND: Nằm ở ngõ vào điều khiển \textit{ld} của thanh ghi. Nó nhận hai đầu vào gồm tín hiệu báo hoàn thành một vòng tính toán \textit{iter\_done} từ hệ thống và kết quả của khối so sánh \textit{count < MAX}.
+    \item Khác với các khối lưu trữ dữ liệu, khối iter counter được thiết kế dưới dạng một bộ đếm đồng bộ kết hợp logic tổ hợp để tránh giải mã mắc kẹt trong vòng lặp vô tận.
+    \item Mã nguồn định nghĩa độ rộng mặc định \textit{ITER\_W} = 5 bit và cờ cho phép dừng sớm \textit{DONE} = 1. Tương đương với việc phần cứng có thể đếm và quản lý tối đa 32 vòng lặp, mỗi vòng được biểu diễn trên 5 bit dữ liệu. 
+    \item Giới hạn lặp chính xác của hệ thống được ánh xạ theo cấu hình động với đầu vào \textit{max\_iter} có độ rộng \textit{ITER\_W} bit, quy định số vòng lặp tối đa cho từng phiên chạy.
+    \item Khối đếm được cập nhật qua một tiến trình phần cứng tuần tự độc lập. Tiến trình này được kiểm soát bởi tín hiệu đồng hồ clk và tín hiệu reset không đồng bộ \textit{rst\_n} để xuất ra giá trị vòng lặp hiện tại \textit{iter\_cnt} và cờ trạng thái done.
 \end{itemize}
 
-\qquad Nguyên lý hoạt động của khối đếm này diễn ra tuần tự qua các trạng thái:
+Nguyên lý hoạt động của khối iter counter diễn ra như sau:
 \begin{itemize}
-    \item Khởi tạo: Khi bắt đầu một chu trình giải mã mới cho một từ vựng, tích cực mức thấp tín hiệu \textit{rst\_n} sẽ kích hoạt chân \textit{rst}, xóa toàn bộ giá trị bên trong thanh ghi 5-bit về 0.
-    \item Quá trình đếm: Mỗi khi hệ thống hoàn tất tính toán cho một vòng lặp, một xung \textit{iter\_done} được gửi đến khối. Nếu lúc này giá trị đếm vẫn nhỏ hơn ngưỡng giới hạn thông qua khối \textit{count < MAX} thì cổng AND sẽ xuất mức cao vào chân \textit{ld}. Tại sườn lên tiếp theo của xung nhịp \textit{clk}, thanh ghi sẽ nạp giá trị mới từ bộ cộng 1.
-    \item Kết thúc giải mã: Khi thanh ghi tiếp tục đếm tăng và một số lượng vòng lặp nhất định đạt được, điều kiện của khối so sánh \textit{count >= MAX} trở nên đúng. Ngay lập tức đầu ra của khối \textit{max\_iter\_reached} được đặt ở mức cao. Tín hiệu mức cao này chính là yếu tố kích hoạt khối Operating mode selection chuyển toàn bộ hệ thống từ trạng thái giải mã sang trạng thái xuất kết quả.
+    \item Khởi tạo và làm mới dữ liệu (Pha Khởi tạo): Khởi đầu hệ thống (tín hiệu \textit{rst\_n} ở mức thấp) hoặc khi hệ thống bắt đầu xử lý một khung giải mã mới (tín hiệu clear tích cực), các giá trị của bộ đếm \textit{iter\_cnt} và cờ \textit{done} ban đầu được thiết lập bằng 0.
+    \item Cập nhật và đánh giá (Pha Đếm): Tại quá trình giải mã, khi có xung \textit{iter\_done} báo hiệu kết thúc một vòng lặp, khối sẽ thực hiện phép toán \textit{iter\_cnt} + 1'b1 để tăng biến đếm. Ngay lập tức, khối sẽ tổng hợp các điều kiện để xét duyệt hoàn thành: nếu giá trị lặp tiếp theo đạt tới ngưỡng \textit{max\_iter} hoặc nếu cờ \textit{DONE} tích cực đi kèm với việc bật sáng sớm thì tín hiệu \textit{done} sẽ được nạp mức cao. Quá trình này đảm bảo tín hiệu hoàn thành luôn sẵn sàng để hệ thống dừng giải mã đúng thời điểm. 
 \end{itemize}
 
 \subsection{Khối Operating Mode Selection}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{./images/Operating Mode Selection.png}
-    \caption{Kiến trúc khối  Operating Mode Selection}
-\end{figure}
 
-\qquad Nhiệm vụ chính của khối là chuyển đổi trạng thái của hệ thống giữa hai chế độ: tiếp tục vòng lặp giải mã (decoding) hoặc dừng tính toán để xuất kết quả (result output). Khối này yêu cầu khả năng xử lý dữ liệu có với độ rộng bit được tham số hóa $W=8$ bit cho giá trị xác suất hậu nghiệm APP, đồng thời phải thực hiện phép quyết định cứng để chuyển đổi từ giá trị mềm sang bit nhị phân ở chu kỳ cuối cùng.
+Khối Operating mode selection là một thành phần điều khiển luồng dữ liệu nằm ở giai đoạn cuối của kiến trúc bộ giải mã QC-LDPC. Chức năng chính của khối này là đóng vai trò như một bộ chuyển mạch trạng thái cấp hệ thống. Nó chịu trách nhiệm quyết định khi nào hệ thống đang trong quá trình giải mã và khi nào hệ thống đã hoàn thành việc tính toán để kết xuất kết quả cuối cùng ra bên ngoài. Khi chế độ xuất kết quả được kích hoạt, khối này sẽ thực hiện bước cuối cùng của thuật toán giải mã là chuyển đổi các giá trị xác suất thành các bit nhị phân của từ mã. 
+
+Kiến trúc tổng quan của khối được cấu hình $Z=24$ cho thiết kế này đang được nhắm tới chuẩn WiMAX (IEEE 802.16e) với chiều dài từ mã cơ sở là 576. Nhờ cấu trúc song song này, phần cứng có thể đưa ra quyết định cho 24 bit kết quả cùng một lúc. Độ rộng của mỗi từ mã dữ liệu được kỹ hiệu với biến DW = 6. Các ngõ vào và ra của khối được quy định như sau::
 \begin{itemize}
-    \item Cổng AND: Đóng vai trò làm bộ đồng bộ điều kiện dừng. Nó nhận hai đầu vào là cờ báo đủ số vòng lặp (\textit{max\_iter\_reached} từ khối Iterations counter) và cờ báo dữ liệu hợp lệ \textit{app\_valid}. Ngõ ra của cổng AND chính là tín hiệu trạng thái \textit{ready}.
-    \item Bộ so sánh và Cổng NOT: Thực hiện bộ phân giải quyết định cứng. Bộ so sánh kiểm tra xem giá trị đầu vào \textit{app\_in} có lớn hơn 0 hay không. Ngõ ra của bộ so sánh đi qua cổng NOT để đảo trạng thái logic, tạo thành luồng dữ liệu giải mã nhị phân.
-    \item Các bộ dồn kênh MUX: Hai bộ MUX 2-to-1 được điều khiển chung bởi tín hiệu chọn kênh \textit{ready} $S0$: MUX 1: Quyết định việc cho phép dữ liệu đi tiếp vào khối tính toán VTC là \textit{app\_to\_vtc} hay bị chặn lại là 1'b0. MUX 2: Quyết định việc đẩy bit đã giải mã ra cổng \textit{decoded\_out} hay giữ ở mức mặc định là 1'b0.
+    \item mode\_out (input): Tín hiệu điều khiển trạng thái, đóng vai trò như cờ báo hiệu chuyển đổi chế độ.
+    \item blk\_valid (Input): Tín hiệu xác nhận, báo hiệu dữ liệu đầu vào đang ở trạng thái hợp lệ.
+    \item app\_word (input): Mảng dữ liệu đầu vào. Nó bao gồm Z từ mã dữ liệu, mỗi từ mã rộng DW bit. Đây chính là mảng chứa các giá trị Xác suất Hậu nghiệm  được đọc ra từ khối nhớ của hệ thống.
+    \item ready (output): Tín hiệu trạng thái, dùng để báo cho hệ thống tổng biết bộ giải mã đã sẵn sàng xuất kết quả.
+    \item out\_valid (output): Tín hiệu xác nhận tính hợp lệ của gói dữ liệu kết quả trên đường dẫn ra.
+    \item out\_bits (output): Vector dữ liệu ngõ ra (rộng Z bit). Đây là kết quả giải mã cuối cùng, trong đó mỗi bit là quyết định cứng tương ứng với từng giá trị APP đầu vào. 
 \end{itemize}
 
-\qquad Tùy thuộc vào trạng thái của tín hiệu điều khiển, khối sẽ định tuyến luồng dữ liệu theo một trong hai chế độ:
+Nguyên lý hoạt động của khối có thể được chia thành hai chức năng chính:
 \begin{itemize}
-    \item Chế độ giải mã (Decoding Mode): Khi chưa đạt đủ số vòng lặp tối đa với tín hiệu \textit{max\_iter\_reached} = 0 hoặc dữ liệu chưa hợp lệ \textit{app\_valid} = 0 thì cổng AND xuất mức thấp, kéo tín hiệu \textit{ready} = 1'b0. Lúc này, chân chọn $S0$ của các MUX ở mức 0. MUX 1 sẽ định tuyến trực tiếp toàn bộ bus dữ liệu đầu vào \textit{app\_in} sang ngõ ra \textit{app\_to\_vtc} để hệ thống tiếp tục tính toán thông điệp từ nút biến đến nút kiểm tra VTC. Đồng thời, MUX 2 chốt ngõ ra \textit{decoded\_out} = 1'b0, báo hiệu chưa có kết quả hợp lệ.
-    \item Chế độ xuất kết quả (Result Output Mode): Khi cả \textit{max\_iter\_reached} và \textit{app\_valid} đều ở mức cao thì cổng AND kích hoạt, kéo tín hiệu \textit{ready} = 1'b1. Chân chọn $S0$ chuyển sang mức 1. Tại MUX 1, luồng dữ liệu bị ngắt kết nối với khối VTC gán \textit{app\_to\_vtc} = '0, qua đó tiết kiệm năng lượng chuyển mạch và chặn hệ thống tính toán các vòng lặp dư thừa. Tại MUX 2, luồng dữ liệu được kết nối với ngõ ra của khối quyết định cứng. Theo nguyên lý giải mã LDPC, nếu giá trị APP mềm lớn hơn 0, bit ban đầu có xác suất cao là 0; ngược lại nếu APP nhỏ hơn hoặc bằng 0, bit ban đầu là 1. Mạch logic thực thi biểu thức \textit{app\_in} > 0 ? 1'b0 : 1'b1, và xuất trực tiếp kết quả nhị phân ra cổng \textit{decoded\_out}.
+    \item Toàn bộ luồng dữ liệu được định đoạt bởi tín hiệu mode\_out đến từ khối đếm vòng lặp.
+    \begin{itemize}
+        \item Khi đang giải mã (mode\_out = 0): Khối duy trì trạng thái decoding, khóa các tín hiệu ngõ ra (ready = 0, out\_valid = 0) để hệ thống tiếp tục chạy các vòng lặp tính toán.
+        \item Khi xuất kết quả (mode\_out = 1): Khi bộ đếm báo hiệu đã xong, khối chuyển sang trạng thái result output bằng cách bật ready = 1. Đồng thời, nếu dữ liệu từ khối nhớ báo về là hợp lệ (blk\_valid = 1), tín hiệu out\_valid cũng được bật lên để mở cổng cho phép xuất dữ liệu ra ngoài.  
+    \end{itemize}
+    \item Khối thực hiện bước cuối của thuật toán Min-Sum: chuyển đổi các giá trị Xác suất hậu nghiệm (APP - $\Lambda_n$) thành các bit nhị phân ($x_n$) của từ mã. Khối sử dụng $Z$ bộ so sánh độc lập hoạt động song song trên phần cứng. Bằng cách ép kiểu có dấu \$signed cho toàn bộ mảng đầu vào app\_word, nó đối chiếu đồng loạt các giá trị này với số 0. Bất kỳ giá trị nào dương sẽ trả về bit 0, phần còn lại trả về bit 1, tạo thành mảng dữ liệu đầu ra out\_bits ngay lập tức.  
 \end{itemize}
+
 \subsection{Khối VTC Calculation}
 \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{./images/VTC Calculation.png}
+    \includegraphics[width=0.9\textwidth]{./images/LDP_DECODER-VTC_CALC.drawio.png}
     \caption{Kiến trúc khối VTC Calculation}
+    \centering
 \end{figure}
 
-\qquad Nhiệm vụ chính của khối VTC calculation là tính toán các thông điệp từ nút biến đến nút kiểm tra (variable-to-check messages) dựa trên các giá trị xác suất hậu nghiệm (APP) từ khối bộ nhớ. Cụ thể, khối thực thi biểu thức toán học ~\ref{eq:2}. Khối này yêu cầu khả năng xử lý dữ liệu với độ rộng bit được tham số hóa $W=8$ bit cho các ngõ vào \textit{app\_in} và \textit{ctv\_in}. Để đảm bảo tính toàn vẹn dữ liệu trong quá trình giải mã, khối được thiết kế tích hợp cơ chế ghim giá trị (saturation) bằng phần cứng nhằm ngăn chặn hiện tượng tràn số (overflow) gây sai lệch bit dấu khi thực hiện phép trừ. Kiến trúc bên trong của khối bao gồm:
+Khối VTC calculation chịu trách nhiệm tính toán các thông điệp VTC trong cấu trúc của bộ giải mã LDPC. Khối này nhận đầu vào là các giá trị xác suất hậu nghiệm APP từ khối bộ nhớ BRAM APP. Dựa trên APP và giá trị thông điệp CTV tương ứng, khối sẽ tính toán ra tín hiệu VTC. Đầu ra VTC sau đó sẽ được chuyển tiếp đến khối tính toán Min/submin để thực hiện các bước tiếp theo của thuật toán giải mã Min-Sum. Khối được thiết kế để xử lý song song, trong đó số lượng bộ xử lý tương đương với kích thước ma trận con $Z$, cho phép cập nhật đồng thời tất cả các giá trị APP được sử dụng bởi hàng hiện tại của ma trận kiểm tra.  
+
+Nguyên lý hoạt động của khối bao gồm các nội dung sau:
 \begin{itemize}
-\item Bộ trừ (Subtractor): Chịu trách nhiệm thực hiện phép tính $APP - CTV$. Để bắt được trạng thái tràn số, bộ trừ thực hiện tính toán với độ rộng được mở rộng thêm 1 bit thành $W+1$ (9 bit) và lưu kết quả vào bus dữ liệu tạm thời \textit{temp\_vtc}.
-\item Các bộ so sánh (Comparators): Hai bộ so sánh được sử dụng để đối chiếu giá trị 9 bit \textit{temp\_vtc} với hai hằng số giới hạn (ngưỡng bão hòa) biểu diễn số có dấu: giá trị cực đại dương MAX\_VAL (01111111) và giá trị cực đại âm MIN\_VAL (10000000). Ngõ ra của các bộ so sánh đóng vai trò làm tín hiệu chọn kênh (select lines) cho hệ thống phân luồng phía sau.
-\item Các bộ dồn kênh MUX: Các bộ MUX 2-to-1 được xếp tầng để đưa ra quyết định cuối cùng cho luồng dữ liệu ngõ ra \textit{vtc\_out} (8 bit). Tùy thuộc vào cờ cảnh báo tràn số từ bộ so sánh, chuỗi MUX sẽ định tuyến để xuất ra giá trị tính toán thực tế hoặc giá trị đã được ghim an toàn.
-\end{itemize}  \qquad Tùy thuộc vào biên độ kết quả của phép trừ, khối sẽ định tuyến luồng dữ liệu ngõ ra theo một trong ba trường hợp sau:\begin{itemize}\item Tràn số dương (Positive Overflow): Khi kết quả phép trừ \textit{temp\_vtc} vượt quá giới hạn biểu diễn của số có dấu 8 bit (lớn hơn MAX\_VAL), bộ so sánh điều kiện lớn hơn sẽ xuất tín hiệu mức cao. Chuỗi MUX sẽ ngắt kết nối luồng dữ liệu tính toán và ép ngõ ra \textit{vtc\_out} = MAX\_VAL để hạn chế sai số lớn do mất bit dấu.\item Tràn số âm (Negative Overflow): Tương tự, nếu kết quả \textit{temp\_vtc} rớt xuống dưới giới hạn âm cho phép (nhỏ hơn MIN\_VAL), bộ so sánh điều kiện nhỏ hơn sẽ kích hoạt. Chuỗi MUX lập tức chặn giá trị tạm thời và gán kết quả ngõ ra \textit{vtc\_out} = MIN\_VAL.\item Hoạt động trong vùng tuyến tính (Normal Operation): Nếu kết quả phép trừ an toàn và nằm trong khoảng từ MIN\_VAL đến MAX\_VAL, không có bộ so sánh nào kích hoạt trạng thái tràn. Bộ MUX cuối cùng sẽ cắt bỏ bit mở rộng dấu (chỉ lấy W bit từ $W-1$ đến 0) và truyền trực tiếp kết quả 8 bit thấp của \textit{temp\_vtc} ra cổng \textit{vtc\_out} để tiếp tục đưa vào quá trình cập nhật nút kiểm tra.\end{itemize}
+    \item Do là mạch tổ hợp, giá trị đầu ra vtc\_o sẽ phản hồi và thay đổi ngay lập tức dựa trên sự thay đổi của đầu vào app\_i và ctv\_i. Kiến trúc xử lý song song sử dụng Vòng lặp for sinh ra cấu trúc phần cứng gồm $Z$ bộ tính toán, với $Z$ là 24, hoạt động hoàn toàn song song với nhau trên cùng một chu kỳ.
+    \item Để tránh lỗi số học tràn bit khi thực hiện phép trừ trên các số nguyên có dấu, phần cứng sử dụng một biến trung gian tên là diff.
+    \begin{itemize}
+        \item Nếu diff vượt quá giới hạn biểu diễn dương lớn nhất là +127, đầu ra sẽ được ghim ở mức bão hòa trên là hằng số MAX = 8'h7F.
+        \item Nếu diff nhỏ hơn giới hạn biểu diễn âm nhỏ nhất là -128, đầu ra sẽ bị ghim ở mức bão hòa dưới là hằng số MIN = 8'h80.
+        \item Nếu kết quả diff không bị tràn, mạch sẽ cắt lấy phần bit tương ứng với độ rộng dữ liệu DW để đưa ra vtc\_o[i].
+    \end{itemize}
+\end{itemize}
+
 
 \subsection{Khối Min/Submin Calculation}
 \subsection{Khối CTV \& APP Calculation}
