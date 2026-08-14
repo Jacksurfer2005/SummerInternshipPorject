@@ -1774,7 +1774,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Ms8Xv8dRzg0dn-9KS-qn" name="MIN SUBMIN CALCULATION">
-    <mxGraphModel dx="4120" dy="2248" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+    <mxGraphModel dx="6867" dy="3747" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3549,6 +3549,9 @@
         </mxCell>
         <mxCell id="ujPck5BPXN1rdeUSzhAB-290" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;rounded=0;" value="1&#39;b0" vertex="1">
           <mxGeometry height="30" width="40" x="870" y="1885" as="geometry" />
+        </mxCell>
+        <mxCell id="ujPck5BPXN1rdeUSzhAB-292" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Times New Roman;fontStyle=1" value="SIGN INSERTION" vertex="1">
+          <mxGeometry height="30" width="140" x="1680" y="1810" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
