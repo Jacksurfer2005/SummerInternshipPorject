@@ -509,6 +509,7 @@ INPUT .\logobk.png
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
 INPUT C:\Users\ASUS\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnti12.tfm
 INPUT .\report.toc
 INPUT .\report.toc
 INPUT report.toc
@@ -537,7 +538,6 @@ INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr12.tfm
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr8.tfm
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr6.tfm
-INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnti12.tfm
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
@@ -571,18 +571,145 @@ INPUT .\images\LDP_DECODER-ITER COUNTER.drawio.png
 INPUT .\images\LDP_DECODER-ITER COUNTER.drawio.png
 INPUT .\images\LDP_DECODER-ITER COUNTER.drawio.png
 INPUT .\images\LDP_DECODER-ITER COUNTER.drawio.png
-INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
-INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
-INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
-INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
-INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
-INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
-INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
-INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vncsc10.tfm
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vntt12.tfm
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (1).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (1).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (1).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (1).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (1).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (1).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (1).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio.png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio.png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio.png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio.png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio.png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio.png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio.png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (2).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (2).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (2).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (2).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (2).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (2).png
+INPUT .\images\LDP_DECODER-MODE_SELECT.drawio (2).png
+INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC.drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC(1).drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC(1).drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC(1).drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC(1).drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC(1).drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC(1).drawio.png
+INPUT .\images\LDP_DECODER-VTC_CALC(1).drawio.png
+INPUT .\images\LDP_DECODER-ABS.drawio.png
+INPUT .\images\LDP_DECODER-ABS.drawio.png
+INPUT .\images\LDP_DECODER-ABS.drawio.png
+INPUT .\images\LDP_DECODER-ABS.drawio.png
+INPUT .\images\LDP_DECODER-ABS.drawio.png
+INPUT .\images\LDP_DECODER-ABS.drawio.png
+INPUT .\images\LDP_DECODER-ABS.drawio.png
+INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnitt10.tfm
+INPUT .\images\LDP_DECODER-ABS.drawio (1).png
+INPUT .\images\LDP_DECODER-ABS.drawio (1).png
+INPUT .\images\LDP_DECODER-ABS.drawio (1).png
+INPUT .\images\LDP_DECODER-ABS.drawio (1).png
+INPUT .\images\LDP_DECODER-ABS.drawio (1).png
+INPUT .\images\LDP_DECODER-ABS.drawio (1).png
+INPUT .\images\LDP_DECODER-ABS.drawio (1).png
+INPUT .\images\LDP_DECODER-ABS.drawio (2).png
+INPUT .\images\LDP_DECODER-ABS.drawio (2).png
+INPUT .\images\LDP_DECODER-ABS.drawio (2).png
+INPUT .\images\LDP_DECODER-ABS.drawio (2).png
+INPUT .\images\LDP_DECODER-ABS.drawio (2).png
+INPUT .\images\LDP_DECODER-ABS.drawio (2).png
+INPUT .\images\LDP_DECODER-ABS.drawio (2).png
+INPUT .\images\LDP_DECODER-ABS.drawio (3).png
+INPUT .\images\LDP_DECODER-ABS.drawio (3).png
+INPUT .\images\LDP_DECODER-ABS.drawio (3).png
+INPUT .\images\LDP_DECODER-ABS.drawio (3).png
+INPUT .\images\LDP_DECODER-ABS.drawio (3).png
+INPUT .\images\LDP_DECODER-ABS.drawio (3).png
+INPUT .\images\LDP_DECODER-ABS.drawio (3).png
+INPUT .\images\LDP_DECODER-ABS.drawio (4).png
+INPUT .\images\LDP_DECODER-ABS.drawio (4).png
+INPUT .\images\LDP_DECODER-ABS.drawio (4).png
+INPUT .\images\LDP_DECODER-ABS.drawio (4).png
+INPUT .\images\LDP_DECODER-ABS.drawio (4).png
+INPUT .\images\LDP_DECODER-ABS.drawio (4).png
+INPUT .\images\LDP_DECODER-ABS.drawio (4).png
+INPUT .\images\LDP_DECODER-SIGN.INSERT.drawio.png
+INPUT .\images\LDP_DECODER-SIGN.INSERT.drawio.png
+INPUT .\images\LDP_DECODER-SIGN.INSERT.drawio.png
+INPUT .\images\LDP_DECODER-SIGN.INSERT.drawio.png
+INPUT .\images\LDP_DECODER-SIGN.INSERT.drawio.png
+INPUT .\images\LDP_DECODER-SIGN.INSERT.drawio.png
+INPUT .\images\LDP_DECODER-SIGN.INSERT.drawio.png
+INPUT .\images\LDP_DECODER-CTV APP CALC.drawio.png
+INPUT .\images\LDP_DECODER-CTV APP CALC.drawio.png
+INPUT .\images\LDP_DECODER-CTV APP CALC.drawio.png
+INPUT .\images\LDP_DECODER-CTV APP CALC.drawio.png
+INPUT .\images\LDP_DECODER-CTV APP CALC.drawio.png
+INPUT .\images\LDP_DECODER-CTV APP CALC.drawio.png
+INPUT .\images\LDP_DECODER-CTV APP CALC.drawio.png
+INPUT .\images\bram_app_waveform.png
+INPUT .\images\bram_app_waveform.png
+INPUT .\images\bram_app_waveform.png
+INPUT .\images\bram_app_waveform.png
+INPUT .\images\bram_app_waveform.png
+INPUT .\images\bram_app_waveform.png
+INPUT .\images\bram_app_waveform.png
+INPUT .\images\bram_ctv_waveform.png
+INPUT .\images\bram_ctv_waveform.png
+INPUT .\images\bram_ctv_waveform.png
+INPUT .\images\bram_ctv_waveform.png
+INPUT .\images\bram_ctv_waveform.png
+INPUT .\images\bram_ctv_waveform.png
+INPUT .\images\bram_ctv_waveform.png
+INPUT .\images\iter_counter_waveform.png
+INPUT .\images\iter_counter_waveform.png
+INPUT .\images\iter_counter_waveform.png
+INPUT .\images\iter_counter_waveform.png
+INPUT .\images\iter_counter_waveform.png
+INPUT .\images\iter_counter_waveform.png
+INPUT .\images\iter_counter_waveform.png
+INPUT .\images\mode_select_waveform.png
+INPUT .\images\mode_select_waveform.png
+INPUT .\images\mode_select_waveform.png
+INPUT .\images\mode_select_waveform.png
+INPUT .\images\mode_select_waveform.png
+INPUT .\images\mode_select_waveform.png
+INPUT .\images\mode_select_waveform.png
+INPUT .\images\vtc_calc_waveform.png
+INPUT .\images\vtc_calc_waveform.png
+INPUT .\images\vtc_calc_waveform.png
+INPUT .\images\vtc_calc_waveform.png
+INPUT .\images\vtc_calc_waveform.png
+INPUT .\images\vtc_calc_waveform.png
+INPUT .\images\vtc_calc_waveform.png
+INPUT .\images\min_submin_waveform.png
+INPUT .\images\min_submin_waveform.png
+INPUT .\images\min_submin_waveform.png
+INPUT .\images\min_submin_waveform.png
+INPUT .\images\min_submin_waveform.png
+INPUT .\images\min_submin_waveform.png
+INPUT .\images\min_submin_waveform.png
+INPUT .\images\ctv_app_calc_waveform.png
+INPUT .\images\ctv_app_calc_waveform.png
+INPUT .\images\ctv_app_calc_waveform.png
+INPUT .\images\ctv_app_calc_waveform.png
+INPUT .\images\ctv_app_calc_waveform.png
+INPUT .\images\ctv_app_calc_waveform.png
+INPUT .\images\ctv_app_calc_waveform.png
+INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vncsc10.tfm
 INPUT report.aux
 INPUT .\report.out
 INPUT .\report.out
@@ -596,6 +723,8 @@ INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
@@ -612,6 +741,8 @@ INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnbx12.p
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnbx12.pfb
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vncsc10.pfb
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vncsc10.pfb
+INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnitt10.pfb
+INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnitt10.pfb
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr10.pfb
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr10.pfb
 INPUT C:\Users\ASUS\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr12.pfb

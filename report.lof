@@ -9,6 +9,8 @@
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
 \addvspace {10\p@ }
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
@@ -36,20 +38,82 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Kiến trúc khối Iterations Counter}}{10}{figure.caption.7}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Kiến trúc khối Iterations Counter}}{11}{figure.caption.8}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Kiến trúc khối VTC Calculation}}{12}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Kiến trúc khối Iterations Compare}}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Kiến trúc khối Mode Select}}{12}{figure.caption.10}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Kiến trúc khối VTC Calculation}}{13}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Kiến trúc Bộ so sánh độ lớn số 6 bit}}{13}{figure.caption.12}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Kiến trúc phần tử con full adder 8 bit}}{14}{figure.caption.13}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Kiến trúc Khối ABS}}{15}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Kiến trúc Khối SignsXoring}}{15}{figure.caption.15}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Kiến trúc phần tử con Comp min}}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Kiến trúc Khối Compare tree}}{16}{figure.caption.17}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Kiến trúc Khối Sign Insertion}}{17}{figure.caption.18}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Kiến trúc Khối CTV APP CALC}}{18}{figure.caption.19}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Dạng sóng của khối BRAM APP}}{19}{figure.caption.20}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Dạng sóng của khối BRAM CTV}}{21}{figure.caption.23}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Dạng sóng của khối Iteration Counter}}{24}{figure.caption.26}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Dạng sóng của khối Mode Select}}{27}{figure.caption.29}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Dạng sóng của khối VTC Calculation}}{30}{figure.caption.32}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Dạng sóng của khối Min Submin Calculation}}{33}{figure.caption.35}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Dạng sóng của khối CTV APP Calculation}}{35}{figure.caption.38}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \addvspace {10\p@ }
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\addvspace {10\p@ }
-\babel@toc {vietnamese}{}\relax 
-\babel@toc {vietnamese}{}\relax 
-\addvspace {10\p@ }
-\babel@toc {vietnamese}{}\relax 
-\babel@toc {vietnamese}{}\relax 
-\addvspace {10\p@ }
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 

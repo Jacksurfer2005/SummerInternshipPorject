@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.3)  10 AUG 2026 10:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.3)  16 AUG 2026 21:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1675,14 +1675,25 @@ Package biblatex Info: ... file 'report.bbl' found.
 Package biblatex Info: Reference section=0 on input line 32.
 Package biblatex Info: Reference segment=0 on input line 32.
 Package babel Info: Main language set to 'vietnamese'.
-<logobk.png, id=90, 1204.5pt x 1216.545pt>
+<logobk.png, id=126, 1204.5pt x 1216.545pt>
 File: logobk.png Graphic file (type png)
 <use logobk.png>
 Package pdftex.def Info: logobk.png  used on input line 34.
 (pdftex.def)             Requested size: 120.45705pt x 121.66162pt.
  [1
 
-{C:/Users/ASUS/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./logobk.png>] (report.toc)
+{C:/Users/ASUS/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./logobk.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[1
+
+
+] (report.toc)
 \tf@toc=\write7
 \openout7 = `report.toc'.
 
@@ -1694,9 +1705,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[1
-
-
+[2
 
 ] (report.lof)
 \tf@lof=\write8
@@ -1710,7 +1719,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[2
+[3
 
 ] (report.lot)
 \tf@lot=\write9
@@ -1724,7 +1733,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[3
+[4
 
 ]
 Ch\uhorn \ohorn ng 1.
@@ -1739,7 +1748,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.73     \item M
+l.80     \item M
                 áº·c dÃ¹ Ä‘Ã£ cÃ³ má»™t sá»‘ Ã­t cÃ¡c cÃ´ng trÃ¬nh nghiÃªn c... [1
 
 
@@ -1788,10 +1797,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 Ch\uhorn \ohorn ng 3.
-<./images/FPGA LDPC decoder.png, id=221, 957.5775pt x 415.5525pt>
+<./images/FPGA LDPC decoder.png, id=342, 957.5775pt x 415.5525pt>
 File: ./images/FPGA LDPC decoder.png Graphic file (type png)
 <use ./images/FPGA LDPC decoder.png>
-Package pdftex.def Info: ./images/FPGA LDPC decoder.png  used on input line 337.
+Package pdftex.def Info: ./images/FPGA LDPC decoder.png  used on input line 344.
 (pdftex.def)             Requested size: 409.71692pt x 177.80272pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1803,10 +1812,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [7
 
  <./images/FPGA LDPC decoder.png (PNG copy)>]
-<./images/LDP_DECODER-BRAM_APP.drawio.png, id=227, 549.252pt x 205.2468pt>
+<./images/LDP_DECODER-BRAM_APP.drawio.png, id=348, 549.252pt x 205.2468pt>
 File: ./images/LDP_DECODER-BRAM_APP.drawio.png Graphic file (type png)
 <use ./images/LDP_DECODER-BRAM_APP.drawio.png>
-Package pdftex.def Info: ./images/LDP_DECODER-BRAM_APP.drawio.png  used on input line 355.
+Package pdftex.def Info: ./images/LDP_DECODER-BRAM_APP.drawio.png  used on input line 363.
 (pdftex.def)             Requested size: 409.71692pt x 153.10477pt.
 
 
@@ -1817,10 +1826,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
 [8 <./images/LDP_DECODER-BRAM_APP.drawio.png>]
-<./images/LDP_DECODER-BRAM_CTV.drawio.png, id=234, 549.252pt x 204.5241pt>
+<./images/LDP_DECODER-BRAM_CTV.drawio.png, id=355, 549.252pt x 204.5241pt>
 File: ./images/LDP_DECODER-BRAM_CTV.drawio.png Graphic file (type png)
 <use ./images/LDP_DECODER-BRAM_CTV.drawio.png>
-Package pdftex.def Info: ./images/LDP_DECODER-BRAM_CTV.drawio.png  used on input line 377.
+Package pdftex.def Info: ./images/LDP_DECODER-BRAM_CTV.drawio.png  used on input line 385.
 (pdftex.def)             Requested size: 409.71692pt x 152.56567pt.
 
 
@@ -1831,10 +1840,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
 [9 <./images/LDP_DECODER-BRAM_CTV.drawio.png>]
-<./images/LDP_DECODER-ITER COUNTER.drawio.png, id=242, 881.694pt x 291.2481pt>
+<./images/LDP_DECODER-ITER COUNTER.drawio.png, id=361, 881.694pt x 291.2481pt>
 File: ./images/LDP_DECODER-ITER COUNTER.drawio.png Graphic file (type png)
 <use ./images/LDP_DECODER-ITER COUNTER.drawio.png>
-Package pdftex.def Info: ./images/LDP_DECODER-ITER COUNTER.drawio.png  used on input line 399.
+Package pdftex.def Info: ./images/LDP_DECODER-ITER COUNTER.drawio.png  used on input line 407.
 (pdftex.def)             Requested size: 409.71692pt x 135.34007pt.
 
 
@@ -1845,11 +1854,44 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
 [10 <./images/LDP_DECODER-ITER COUNTER.drawio.png>]
-<./images/LDP_DECODER-VTC_CALC.drawio.png, id=248, 1011.78pt x 263.0628pt>
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 428.
+ (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `T5/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T5/cmtt/m/n' tried instead on input line 430.
+<./images/LDP_DECODER-MODE_SELECT.drawio (1).png, id=367, 838.332pt x 161.8848pt>
+File: ./images/LDP_DECODER-MODE_SELECT.drawio (1).png Graphic file (type png)
+<use ./images/LDP_DECODER-MODE_SELECT.drawio (1).png>
+Package pdftex.def Info: ./images/LDP_DECODER-MODE_SELECT.drawio (1).png  used on input line 438.
+(pdftex.def)             Requested size: 409.71692pt x 79.11922pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[11 <./images/LDP_DECODER-MODE_SELECT.drawio (1).png>]
+<./images/LDP_DECODER-MODE_SELECT.drawio.png, id=376, 433.62pt x 117.8001pt>
+File: ./images/LDP_DECODER-MODE_SELECT.drawio.png Graphic file (type png)
+<use ./images/LDP_DECODER-MODE_SELECT.drawio.png>
+Package pdftex.def Info: ./images/LDP_DECODER-MODE_SELECT.drawio.png  used on input line 451.
+(pdftex.def)             Requested size: 364.19667pt x 98.9442pt.
+<./images/LDP_DECODER-MODE_SELECT.drawio (2).png, id=377, 910.602pt x 247.8861pt>
+File: ./images/LDP_DECODER-MODE_SELECT.drawio (2).png Graphic file (type png)
+<use ./images/LDP_DECODER-MODE_SELECT.drawio (2).png>
+Package pdftex.def Info: ./images/LDP_DECODER-MODE_SELECT.drawio (2).png  used on input line 459.
+(pdftex.def)             Requested size: 455.24411pt x 123.9276pt.
+<./images/LDP_DECODER-VTC_CALC.drawio.png, id=378, 1011.78pt x 263.0628pt>
 File: ./images/LDP_DECODER-VTC_CALC.drawio.png Graphic file (type png)
 <use ./images/LDP_DECODER-VTC_CALC.drawio.png>
-Package pdftex.def Info: ./images/LDP_DECODER-VTC_CALC.drawio.png  used on input line 446.
-(pdftex.def)             Requested size: 409.71692pt x 106.5278pt.
+Package pdftex.def Info: ./images/LDP_DECODER-VTC_CALC.drawio.png  used on input line 480.
+(pdftex.def)             Requested size: 455.24411pt x 118.36511pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1858,7 +1900,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[11]
+[12 <./images/LDP_DECODER-MODE_SELECT.drawio.png> <./images/LDP_DECODER-MODE_SELECT.drawio (2).png>]
+<./images/LDP_DECODER-VTC_CALC(1).drawio.png, id=388, 867.24pt x 176.3388pt>
+File: ./images/LDP_DECODER-VTC_CALC(1).drawio.png Graphic file (type png)
+<use ./images/LDP_DECODER-VTC_CALC(1).drawio.png>
+Package pdftex.def Info: ./images/LDP_DECODER-VTC_CALC(1).drawio.png  used on input line 499.
+(pdftex.def)             Requested size: 455.24411pt x 92.5658pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1866,8 +1914,93 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[12 <./images/LDP_DECODER-VTC_CALC.drawio.png>]
+[13 <./images/LDP_DECODER-VTC_CALC.drawio.png> <./images/LDP_DECODER-VTC_CALC(1).drawio.png>]
+<./images/LDP_DECODER-ABS.drawio.png, id=396, 1322.541pt x 291.9708pt>
+File: ./images/LDP_DECODER-ABS.drawio.png Graphic file (type png)
+<use ./images/LDP_DECODER-ABS.drawio.png>
+Package pdftex.def Info: ./images/LDP_DECODER-ABS.drawio.png  used on input line 527.
+(pdftex.def)             Requested size: 455.24411pt x 100.49837pt.
+<./images/LDP_DECODER-ABS.drawio (1).png, id=397, 556.479pt x 320.8788pt>
+File: ./images/LDP_DECODER-ABS.drawio (1).png Graphic file (type png)
+<use ./images/LDP_DECODER-ABS.drawio (1).png>
+Package pdftex.def Info: ./images/LDP_DECODER-ABS.drawio (1).png  used on input line 543.
+(pdftex.def)             Requested size: 364.19667pt x 210.00333pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[14 <./images/LDP_DECODER-ABS.drawio.png>]
+<./images/LDP_DECODER-ABS.drawio (2).png, id=408, 809.424pt x 233.4321pt>
+File: ./images/LDP_DECODER-ABS.drawio (2).png Graphic file (type png)
+<use ./images/LDP_DECODER-ABS.drawio (2).png>
+Package pdftex.def Info: ./images/LDP_DECODER-ABS.drawio (2).png  used on input line 554.
+(pdftex.def)             Requested size: 409.71692pt x 118.15831pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[15 <./images/LDP_DECODER-ABS.drawio (1).png> <./images/LDP_DECODER-ABS.drawio (2).png>]
+<./images/LDP_DECODER-ABS.drawio (3).png, id=417, 505.89pt x 204.5241pt>
+File: ./images/LDP_DECODER-ABS.drawio (3).png Graphic file (type png)
+<use ./images/LDP_DECODER-ABS.drawio (3).png>
+Package pdftex.def Info: ./images/LDP_DECODER-ABS.drawio (3).png  used on input line 568.
+(pdftex.def)             Requested size: 318.66948pt x 128.83524pt.
+<./images/LDP_DECODER-ABS.drawio (4).png, id=418, 925.056pt x 609.2361pt>
+File: ./images/LDP_DECODER-ABS.drawio (4).png Graphic file (type png)
+<use ./images/LDP_DECODER-ABS.drawio (4).png>
+Package pdftex.def Info: ./images/LDP_DECODER-ABS.drawio (4).png  used on input line 574.
+(pdftex.def)             Requested size: 409.71692pt x 269.84029pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[16 <./images/LDP_DECODER-ABS.drawio (3).png> <./images/LDP_DECODER-ABS.drawio (4).png>]
+<./images/LDP_DECODER-SIGN.INSERT.drawio.png, id=426, 476.982pt x 413.3844pt>
+File: ./images/LDP_DECODER-SIGN.INSERT.drawio.png Graphic file (type png)
+<use ./images/LDP_DECODER-SIGN.INSERT.drawio.png>
+Package pdftex.def Info: ./images/LDP_DECODER-SIGN.INSERT.drawio.png  used on input line 592.
+(pdftex.def)             Requested size: 409.71692pt x 355.09364pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[17 <./images/LDP_DECODER-SIGN.INSERT.drawio.png>]
+<./images/LDP_DECODER-CTV APP CALC.drawio.png, id=434, 462.528pt x 320.1561pt>
+File: ./images/LDP_DECODER-CTV APP CALC.drawio.png Graphic file (type png)
+<use ./images/LDP_DECODER-CTV APP CALC.drawio.png>
+Package pdftex.def Info: ./images/LDP_DECODER-CTV APP CALC.drawio.png  used on input line 599.
+(pdftex.def)             Requested size: 386.96027pt x 267.8643pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[18 <./images/LDP_DECODER-CTV APP CALC.drawio.png>]
 Ch\uhorn \ohorn ng 4.
+<./images/bram_app_waveform.png, id=442, 1443.89438pt x 767.86874pt>
+File: ./images/bram_app_waveform.png Graphic file (type png)
+<use ./images/bram_app_waveform.png>
+Package pdftex.def Info: ./images/bram_app_waveform.png  used on input line 690.
+(pdftex.def)             Requested size: 455.24411pt x 242.10255pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1875,9 +2008,873 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[13
+[19
 
-]
+ <./images/bram_app_waveform.png>]
+Underfull \hbox (badness 6125) in paragraph at lines 750--750
+[]|\T5/cmr/m/n/12 a_en $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX2LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR3X1LVT
+ []
+
+
+Underfull \hbox (badness 7099) in paragraph at lines 750--750
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND3X2LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI22XLLVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 6125) in paragraph at lines 750--750
+[]|\T5/cmr/m/n/12 a_en $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX2LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR3X1LVT
+ []
+
+
+Underfull \hbox (badness 7099) in paragraph at lines 750--750
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND3X2LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI22XLLVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 750--750
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI221X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI221X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--750
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI22X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 3386) in paragraph at lines 750--750
+[]|\T5/cmr/m/n/12 a_en $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX3HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR3X1HVT
+ []
+
+
+Underfull \hbox (badness 4036) in paragraph at lines 750--750
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND3X4HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI22XLHVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--750
+[]|\T5/cmr/m/n/12 a_en $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 CLK-INVX20HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--750
+\T5/cmr/m/n/12 NOR3X6HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 CLKAND2X2HVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--750
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND2X8HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX2HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 3386) in paragraph at lines 750--750
+[]|\T5/cmr/m/n/12 a_en $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX2HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2X1HVT
+ []
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 750--750
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND2X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 CLKAND2X2HVT
+ []
+
+
+Underfull \hbox (badness 1226) in paragraph at lines 750--750
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI22X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND4XLHVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 2828) in paragraph at lines 750--750
+[]|\T5/cmr/m/n/12 a_en $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX2HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2XLHVT
+ []
+
+
+Underfull \hbox (badness 5345) in paragraph at lines 750--750
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND2X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND2X2HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--750
+\T5/cmr/m/n/12 AOI222X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND4XLHVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[20]
+<./images/bram_ctv_waveform.png, id=453, 1440.88312pt x 421.575pt>
+File: ./images/bram_ctv_waveform.png Graphic file (type png)
+<use ./images/bram_ctv_waveform.png>
+Package pdftex.def Info: ./images/bram_ctv_waveform.png  used on input line 771.
+(pdftex.def)             Requested size: 455.24411pt x 133.19565pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[21 <./images/bram_ctv_waveform.png>]
+Overfull \hbox (15.2065pt too wide) in paragraph at lines 780--781
+\T5/cmr/m/n/12 1E,... vîi c¡c gi¡ trà m¨u nh÷ 0000_00000000_0000_0000_0000_0000_00009595,
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[22]
+Underfull \hbox (badness 1348) in paragraph at lines 844--844
+[]|\T5/cmr/m/n/12 rd_en $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX2HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2XLHVT
+ []
+
+
+Underfull \hbox (badness 5345) in paragraph at lines 844--844
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND2X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND2X2HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
+\T5/cmr/m/n/12 AOI222X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND4XLHVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 844--844
+[]|\T5/cmr/m/n/12 rd_en $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2X1HVT
+ []
+
+
+Underfull \hbox (badness 4217) in paragraph at lines 844--844
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND2X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 CLKAND2X2HVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
+[]|\T5/cmr/m/n/12 rd_addr[3] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2X2HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
+\T5/cmr/m/n/12 NAND2X2HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 844--844
+\T5/cmr/m/n/12 CLKAND2X3HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 CLKAND2X8HVT
+ []
+
+
+Underfull \hbox (badness 7540) in paragraph at lines 844--844
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX3HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI211X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 844--844
+[]|\T5/cmr/m/n/12 rd_en $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX3HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR3X1HVT
+ []
+
+
+Underfull \hbox (badness 4036) in paragraph at lines 844--844
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND3X4HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI22XLHVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
+\T5/cmr/m/n/12 NAND4XLHVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OR3XLHVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI22XLLVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
+\T5/cmr/m/n/12 AOI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI22XLLVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX1LLVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI22X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
+\T5/cmr/m/n/12 AOI221X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI221X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 3514) in paragraph at lines 844--844
+[]|\T5/cmr/m/n/12 rd_en $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX2LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR3X1LVT
+ []
+
+
+Underfull \hbox (badness 7099) in paragraph at lines 844--844
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND3X2LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI22XLLVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
+\T5/cmr/m/n/12 NAND4XLHVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OR3XLHVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 3514) in paragraph at lines 844--844
+[]|\T5/cmr/m/n/12 rd_en $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX2LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR3X1LVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND3X4LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI22XLLVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--844
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND4XLVLT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OR3XLVLT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[23]
+Overfull \hbox (3.64656pt too wide) in paragraph at lines 851--852
+\T5/cmr/m/n/12 NAND2X2HVT, CLKAND, OAI, OR4X1HVT) ^^_¸n ch¥n dú li»u rd_data_reg[50]/D
+ []
+
+<./images/iter_counter_waveform.png, id=467, 1440.88312pt x 402.75468pt>
+File: ./images/iter_counter_waveform.png Graphic file (type png)
+<use ./images/iter_counter_waveform.png>
+Package pdftex.def Info: ./images/iter_counter_waveform.png  used on input line 858.
+(pdftex.def)             Requested size: 455.24411pt x 127.2494pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[24 <./images/iter_counter_waveform.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+[]|\T5/cmr/m/n/12 max_iter[1] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI211X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OA21X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI2BB1XLHVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+[]|\T5/cmr/m/n/12 max_iter[1] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI211X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221XLHVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OA21X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI221X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+[]|\T5/cmr/m/n/12 iter_cnt_reg[0]/CK $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 DF-FRX1HVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2BX1HVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AND2XLHVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI2BB1X1HVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1HVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1HVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21XLHVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OA21X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+[]|\T5/cmr/m/n/12 max_iter[0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BXLHVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 AOI2BB1XLHVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI21XLHVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI22X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1HVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OA21X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+[]|\T5/cmr/m/n/12 max_iter[1] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI211X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 AOI2BB1X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OA21X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+[]|\T5/cmr/m/n/12 max_iter[1] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI211X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 AOI2BB1X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OA21X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+[]|\T5/cmr/m/n/12 max_iter[0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BXLVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AOI21X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI22X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OA21X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+[]|\T5/cmr/m/n/12 max_iter[1] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI211X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI221X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T5/cmr/m/n/12 AOI2BB1X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OA21X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[26]
+<./images/mode_select_waveform.png, id=482, 1433.355pt x 499.8675pt>
+File: ./images/mode_select_waveform.png Graphic file (type png)
+<use ./images/mode_select_waveform.png>
+Package pdftex.def Info: ./images/mode_select_waveform.png  used on input line 939.
+(pdftex.def)             Requested size: 455.24411pt x 158.75574pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[27 <./images/mode_select_waveform.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+[]|\T5/cmr/m/n/12 max_iteration[0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 OR2XLHVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 OAI2BB1X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 OAI2BB1X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+[]|\T5/cmr/m/n/12 max_iteration[0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 OR2XLHVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 OAI2BB1X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 OAI2BB1X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 8189) in paragraph at lines 1002--1002
+[]|\T5/cmr/m/n/12 max_iteration[0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 CLK-INVX12HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 NOR2X8HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 CLK-INVX6HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 NAND2X4HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2X4HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 NAND2X4HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2X4HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 NAND2X2HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 OAI2BB1X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2X8HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 AND2X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OR2X8HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 out-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+[]|\T5/cmr/m/n/12 max_iteration[0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 OR2XLHVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AO22XLHVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 OAI21X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 OAI21X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\T5/cmr/m/n/12 OAI21X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT
+ []
+
+
+Underfull \hbox (badness 5817) in paragraph at lines 1002--1002
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT
+ []
+
+
+Underfull \hbox (badness 5817) in paragraph at lines 1002--1002
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT
+ []
+
+
+Underfull \hbox (badness 5817) in paragraph at lines 1002--1002
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT
+ []
+
+
+Underfull \hbox (badness 5817) in paragraph at lines 1002--1002
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[29]
+<./images/vtc_calc_waveform.png, id=496, 1307.63531pt x 759.58781pt>
+File: ./images/vtc_calc_waveform.png Graphic file (type png)
+<use ./images/vtc_calc_waveform.png>
+Package pdftex.def Info: ./images/vtc_calc_waveform.png  used on input line 1016.
+(pdftex.def)             Requested size: 455.24411pt x 264.4457pt.
+
+Overfull \hbox (1.2346pt too wide) in paragraph at lines 1022--1023
+[]\T5/cmr/m/n/12 Lþ do l»ch pha thíi gian cõa vtc_expected: Trong kho£ng 10 ns - 20 ns, vtc_expected
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[30 <./images/vtc_calc_waveform.png>]
+Overfull \hbox (45.4721pt too wide) in paragraph at lines 1051--1052
+[]\T5/cmr/m/n/12 Di»n t½ch lîn nh§t ($\OT1/cmr/m/n/12 5283\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 174 \OML/cmm/m/it/12 ^^V[][]$\T5/cmr/m/n/12 ): Xu§t hi»n t¤i gâc k²m nh§t slow_vdd1v0_basicCells_hvt.
+ []
+
+
+Overfull \hbox (4.19606pt too wide) in paragraph at lines 1052--1053
+[]\T5/cmr/m/n/12 Di»n t½ch nhä nh§t ($\OT1/cmr/m/n/12 1567\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 728 \OML/cmm/m/it/12 ^^V[][]$\T5/cmr/m/n/12 ): ^^^¤t ^^_÷ñc t¤i cor-ner fast_vdd1v2_basicCells_lvt.
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+[]|\T5/cmr/m/n/12 ctv_i[23][0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 ADDFX1HVT ($\OMS/cmsy/m/n/12 ^^B\OT1/cmr/m/n/12 6$\T5/cmr/m/n/12 ) $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 AO21X2HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+[]|\T5/cmr/m/n/12 ctv_i[23][0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 ADDFX1HVT ($\OMS/cmsy/m/n/12 ^^B\OT1/cmr/m/n/12 6$\T5/cmr/m/n/12 ) $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 AO21X2HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+[]|\T5/cmr/m/n/12 app_i[20][0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 CLK-INVX12HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 NAND2X8HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2X4HVT ($\OMS/cmsy/m/n/12 ^^B\OT1/cmr/m/n/12 2$\T5/cmr/m/n/12 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2X2HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2X4HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 NOR2X2HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR3BX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 AOI2BB1X4HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+[]|\T5/cmr/m/n/12 app_i[23][0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 ADDFX1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND3X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 NAND2X1HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND3X1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 AND2X6HVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1HVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+[]|\T5/cmr/m/n/12 ctv_i[23][0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 ADDFX1LVT ($\OMS/cmsy/m/n/12 ^^B\OT1/cmr/m/n/12 6$\T5/cmr/m/n/12 ) $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 IN-VXL-LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 AO21X2LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+[]|\T5/cmr/m/n/12 ctv_i[23][0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 ADDFX1LVT ($\OMS/cmsy/m/n/12 ^^B\OT1/cmr/m/n/12 6$\T5/cmr/m/n/12 ) $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 IN-VXL-LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 AO21X2LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 5817) in paragraph at lines 1078--1078
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 ADDFX1LVT ($\OMS/cmsy/m/n/12 ^^B\OT1/cmr/m/n/12 4$\T5/cmr/m/n/12 ) $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NOR2X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+[]|\T5/cmr/m/n/12 app_i[23][0] $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 ADDFX1LVT ($\OMS/cmsy/m/n/12 ^^B\OT1/cmr/m/n/12 6$\T5/cmr/m/n/12 ) $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 INVX1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1078
+\T5/cmr/m/n/12 AO21X2LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 NAND2BX1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Overfull \hbox (27.02377pt too wide) in paragraph at lines 1084--1085
+[]\T5/cmr/m/n/12 Gâc Fast (FF): C£ 4 gâc fast (fast_1v0_hvt, fast_1v2_hvt, fast_1v0_lvt, fast_1v2_lvt)
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[32]
+<./images/min_submin_waveform.png, id=511, 1440.88312pt x 604.50844pt>
+File: ./images/min_submin_waveform.png Graphic file (type png)
+<use ./images/min_submin_waveform.png>
+Package pdftex.def Info: ./images/min_submin_waveform.png  used on input line 1092.
+(pdftex.def)             Requested size: 455.24411pt x 190.99306pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[33 <./images/min_submin_waveform.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[34]
+<./images/ctv_app_calc_waveform.png, id=521, 1440.88312pt x 595.47469pt>
+File: ./images/ctv_app_calc_waveform.png Graphic file (type png)
+<use ./images/ctv_app_calc_waveform.png>
+Package pdftex.def Info: ./images/ctv_app_calc_waveform.png  used on input line 1175.
+(pdftex.def)             Requested size: 455.24411pt x 188.13885pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[35 <./images/ctv_app_calc_waveform.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[36]
+Overfull \hbox (12.16808pt too wide) in paragraph at lines 1221--1222
+\OT1/cmr/m/n/12 10[]$ \T5/cmr/m/n/12 ð gâc fast_vdd1v2_basicCells_lvt do ho¤t ^^_ëng ð mùc ^^_i»n ¡p ^^_¿nh (1.2V/1.32V)
+ []
+
+
+Underfull \hbox (badness 5817) in paragraph at lines 1239--1239
+\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI21X1LVT $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 OAI2BB1X1LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 6725) in paragraph at lines 1239--1239
+\T5/cmr/m/n/12 ADDFX4LVT ($\OMS/cmsy/m/n/12 ^^B\OT1/cmr/m/n/12 3$\T5/cmr/m/n/12 ) $\OMS/cmsy/m/n/12 !$ \T5/cmr/m/n/12 AD-DHX4LVT $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.93912pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.93912pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
+
+[37]
 Ch\uhorn \ohorn ng 5.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1886,10 +2883,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[14
+[38
 
 ]
-Ch\uhorn \ohorn ng 6.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.93912pt, for example:
@@ -1897,35 +2893,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[15
-
-]
-Ch\uhorn \ohorn ng 7.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.93912pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.93912pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
-
-[16
-
-]
+[39]
 
 Package biblatex Warning: Bibliography string 'and' untranslated
-(biblatex)                at entry '1' on input line 543.
+(biblatex)                at entry '1' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'jourvol' untranslated
-(biblatex)                at entry '1' on input line 543.
+(biblatex)                at entry '1' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'number' untranslated
-(biblatex)                at entry '1' on input line 543.
+(biblatex)                at entry '1' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'pages' untranslated
-(biblatex)                at entry '1' on input line 543.
+(biblatex)                at entry '1' on input line 1288.
 
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
@@ -1934,25 +2917,26 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 (biblatex)                loaded, is faulty or does not contain a definition
 (biblatex)                for \mkbibdatelong.
 
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 543.
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
-File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
+
+Overfull \hbox (16.59555pt too wide) in paragraph at lines 1288--1288
+\T5/cmr/m/n/12 density parity-check codes within 0.0045 dB of the Shan-non limit,'' [] 5, [] 2,
+ []
+
 
 Package biblatex Warning: Bibliography string 'and' untranslated
-(biblatex)                at entry '2' on input line 543.
+(biblatex)                at entry '2' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'jourvol' untranslated
-(biblatex)                at entry '2' on input line 543.
+(biblatex)                at entry '2' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'number' untranslated
-(biblatex)                at entry '2' on input line 543.
+(biblatex)                at entry '2' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'pages' untranslated
-(biblatex)                at entry '2' on input line 543.
+(biblatex)                at entry '2' on input line 1288.
 
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
@@ -1963,11 +2947,7 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 
 
 Package biblatex Warning: Bibliography string 'and' untranslated
-(biblatex)                at entry '3' on input line 543.
-
-
-Package biblatex Warning: Bibliography string 'in' untranslated
-(biblatex)                at entry '3' on input line 543.
+(biblatex)                at entry '3' on input line 1288.
 
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
@@ -1978,15 +2958,11 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 
 
 Package biblatex Warning: Bibliography string 'pages' untranslated
-(biblatex)                at entry '3' on input line 543.
+(biblatex)                at entry '3' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'and' untranslated
-(biblatex)                at entry '4' on input line 543.
-
-
-Package biblatex Warning: Bibliography string 'in' untranslated
-(biblatex)                at entry '4' on input line 543.
+(biblatex)                at entry '4' on input line 1288.
 
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
@@ -1997,7 +2973,7 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 
 
 Package biblatex Warning: Bibliography string 'pages' untranslated
-(biblatex)                at entry '4' on input line 543.
+(biblatex)                at entry '4' on input line 1288.
 
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
@@ -2008,15 +2984,15 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 
 
 Package biblatex Warning: Bibliography string 'and' untranslated
-(biblatex)                at entry '6' on input line 543.
+(biblatex)                at entry '6' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'jourvol' untranslated
-(biblatex)                at entry '6' on input line 543.
+(biblatex)                at entry '6' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'pages' untranslated
-(biblatex)                at entry '6' on input line 543.
+(biblatex)                at entry '6' on input line 1288.
 
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
@@ -2027,23 +3003,23 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 
 
 Package biblatex Warning: Bibliography string 'url' untranslated
-(biblatex)                at entry '6' on input line 543.
+(biblatex)                at entry '6' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'and' untranslated
-(biblatex)                at entry '7' on input line 543.
+(biblatex)                at entry '7' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'jourvol' untranslated
-(biblatex)                at entry '7' on input line 543.
+(biblatex)                at entry '7' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'number' untranslated
-(biblatex)                at entry '7' on input line 543.
+(biblatex)                at entry '7' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'pages' untranslated
-(biblatex)                at entry '7' on input line 543.
+(biblatex)                at entry '7' on input line 1288.
 
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
@@ -2054,11 +3030,11 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 
 
 Package biblatex Warning: Bibliography string 'august' untranslated
-(biblatex)                at entry '7' on input line 543.
+(biblatex)                at entry '7' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'url' untranslated
-(biblatex)                at entry '7' on input line 543.
+(biblatex)                at entry '7' on input line 1288.
 
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
@@ -2069,11 +3045,11 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 
 
 Package biblatex Warning: Bibliography string 'page' untranslated
-(biblatex)                at entry '8' on input line 543.
+(biblatex)                at entry '8' on input line 1288.
 
 
 Package biblatex Warning: Bibliography string 'url' untranslated
-(biblatex)                at entry '8' on input line 543.
+(biblatex)                at entry '8' on input line 1288.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2082,10 +3058,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.93912pt}.
 
-[17
+[40
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260810103609 E98D2F001DA5678B39482EFBDF5770DC)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20260816211514 E98D2F001DA5678B39482EFBDF5770DC)...disabled (restricted).
 
  (report.aux)
  ***********
@@ -2093,23 +3069,23 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: F73D5B3730C23BE8734DB30557F43E2C;4371.
+(rerunfilecheck)             Checksum: 087BDAAF13AE145574F97E65F7F5CCFF;5753.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57172 strings out of 467510
- 1354802 string characters out of 5409281
- 2453885 words of memory out of 5000000
- 85545 multiletter control sequences out of 15000+600000
- 646437 words of font info for 75 fonts, out of 8000000 for 9000
+ 57400 strings out of 467510
+ 1361822 string characters out of 5409281
+ 2454901 words of memory out of 5000000
+ 85695 multiletter control sequences out of 15000+600000
+ 646762 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,12n,104p,1501b,1325s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\ASUS\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on report.pdf (21 pages, 1007092 bytes).
+ 90i,17n,104p,1633b,1325s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\ASUS\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnitt10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on report.pdf (45 pages, 3644342 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
- 76 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 679 PDF objects out of 1000 (max. 8388607)
+ 153 named destinations out of 1000 (max. 500000)
+ 373 words of extra memory for PDF output out of 10000 (max. 10000000)
 

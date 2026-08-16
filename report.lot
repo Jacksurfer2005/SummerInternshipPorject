@@ -9,16 +9,9 @@
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\addvspace {10\p@ }
-\babel@toc {vietnamese}{}\relax 
-\babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \addvspace {10\p@ }
-\babel@toc {vietnamese}{}\relax 
-\babel@toc {vietnamese}{}\relax 
-\babel@toc {vietnamese}{}\relax 
-\babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
@@ -32,6 +25,27 @@
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
+\addvspace {10\p@ }
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
@@ -39,12 +53,58 @@
 \addvspace {10\p@ }
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Tổng hợp thông số Diện tích và Công suất của khối BRAM APP qua các process corners.}}{20}{table.caption.21}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Thống kê độ trễ các góc phân tích (PVT corners) cho khối bram\_app.}}{20}{table.caption.22}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.3}{\ignorespaces Tổng hợp thông số Diện tích và Công suất của khối BRAM CTV qua các process corners.}}{22}{table.caption.24}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.4}{\ignorespaces Thống kê độ trễ các góc phân tích (PVT corners) cho khối bram\_ctv.}}{23}{table.caption.25}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.5}{\ignorespaces Tổng hợp thông số Diện tích và Công suất của khối Iteration Counter qua các process corners.}}{25}{table.caption.27}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.6}{\ignorespaces Thống kê độ trễ các góc phân tích (PVT corners) cho khối iteration\_counter.}}{26}{table.caption.28}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.7}{\ignorespaces Tổng hợp thông số Diện tích và Công suất của khối Mode Select qua các process corners.}}{28}{table.caption.30}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.8}{\ignorespaces Thống kê độ trễ các góc phân tích (PVT corners) cho khối mode\_select.}}{29}{table.caption.31}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.9}{\ignorespaces Tổng hợp thông số Diện tích và Công suất của khối VTC Calculation qua các process corners.}}{31}{table.caption.33}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.10}{\ignorespaces Thống kê độ trễ các góc phân tích (PVT corners) cho khối vtc\_calc.}}{32}{table.caption.34}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.11}{\ignorespaces Tổng hợp thông số Diện tích và Công suất của khối Min/Submin Calculationn qua các process corners.}}{34}{table.caption.36}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.12}{\ignorespaces Bảng tổng hợp thông số timing các góc phân tích (PVT corners) cho khối min\_submin.}}{35}{table.caption.37}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.13}{\ignorespaces Tổng hợp thông số Diện tích và Công suất của khối Min/Submin Calculationn qua các process corners.}}{36}{table.caption.39}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {4.14}{\ignorespaces Thống kê độ trễ các góc phân tích (PVT corners) cho khối ctv\_app\_calc.}}{37}{table.caption.40}%
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
 \addvspace {10\p@ }
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 
-\addvspace {10\p@ }
 \babel@toc {vietnamese}{}\relax 
 \babel@toc {vietnamese}{}\relax 

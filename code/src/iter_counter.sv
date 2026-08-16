@@ -1,10 +1,3 @@
-//============================================================================
-//  iter_counter.sv -- "Iterations counter" (Figure 1)
-//
-//  Dem so vong lap giai ma. Khi dat so vong lap cho truoc (hoac khi
-//  syndrome = 0 neu bat dung sang som) thi dua ngo ra len muc cao de
-//  khoi "Operating mode selection" chuyen sang che do xuat ket qua.
-//============================================================================
 `timescale 1ns/1ns
 
 module iter_counter #(

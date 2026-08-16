@@ -54,7 +54,6 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Communications Letters}
       \field{number}{2}
       \field{title}{On the design of low-density parity-check codes within 0.0045 dB of the Shannon limit}
       \field{volume}{5}
@@ -101,7 +100,6 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Systems Engineering and Electronics}
       \field{number}{4}
       \field{title}{Implementation of encoder and decoder for LDPC codes based on FPGA}
       \field{volume}{30}
@@ -158,7 +156,6 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{2015 36th IEEE Sarnoff Symposium}
       \field{title}{A 2.48Gb/s FPGA-based QC-LDPC decoder: An algorithmic compiler implementation}
       \field{year}{2015}
       \field{pages}{88\bibrangedash 93}
@@ -203,7 +200,6 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{2016 IEEE 19th International Symposium on Design and Diagnostics of Electronic Circuits Systems (DDECS)}
       \field{title}{FPGA architecture of multi-codeword LDPC decoder with efficient BRAM utilization}
       \field{year}{2016}
       \field{pages}{1\bibrangedash 4}
@@ -267,7 +263,6 @@
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The authors report the empirical performance of Gallager's low density parity check codes on Gaussian channels. It is shown that performance substantially better than that of standard convolutional and concatenated codes can be achieved; indeed the performance is almost as close to the Shannon limit as that of Turbo codes.}
       \field{issue}{18}
       \field{journaltitle}{Electronics Letters}
       \field{title}{Near Shannon limit performance of low density parity check codes}

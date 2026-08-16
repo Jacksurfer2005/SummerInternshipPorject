@@ -9,6 +9,6 @@ module comp_min (
 	logic co;
 	fa_calc dut (.A(A), .B(B), .Sel(1'b1), .S(temp), .Co(co), .Ov());
 	
-	assign min_o = co ? A : B;
+	assign min_o = co ? B : A;
 
 endmodule

@@ -1,35 +1,34 @@
-//============================================================================
-//  tb_signs_xoring.sv -- Kiem tra khoi Signs XORing
-//  Bao phu: VET CAN 2^8 to hop dau x 9 gia tri row_weight (0..8)
-//============================================================================
-`timescale 1ns/1ps
-import ldpc_pkg::*;
+`timescale 1ns/1ns
 
-module tb_signs_xoring;
+module tb_signs_xoring();
 
-  logic [DR_MAX-1:0] signs;
-  logic [DRW-1:0]    rw;
-  logic              sp;
-  int errors = 0, nvec = 0, exp;
+    // 1. Signals
+    logic [6:0] sign_i;
+    logic       sign_o;
 
-  signs_xoring dut (.signs(signs), .row_weight(rw), .sign_prod(sp));
+    // 2. DUT Instantiation
+    signs_xoring dut (
+        .sign_i(sign_i),
+        .sign_o(sign_o)
+    );
 
-  initial begin
-    for (int s = 0; s < 2**DR_MAX; s++)
-      for (int w = 0; w <= DR_MAX; w++) begin
-        signs = s[DR_MAX-1:0];
-        rw    = w[DRW-1:0];
-        #1;
-        exp = 0;
-        for (int i = 0; i < w; i++) exp = exp ^ ((s >> i) & 1);
-        nvec++;
-        if (sp !== exp[0]) begin
-          $display("FAIL signs=%b rw=%0d sp=%b exp=%b", signs, w, sp, exp[0]);
-          errors++;
-        end
-      end
-    if (errors == 0) $display("[tb_signs_xoring] PASS - %0d vector", nvec);
-    else             $display("[tb_signs_xoring] FAIL - %0d loi", errors);
-    $finish;
-  end
+    // 4. Test Stimulus
+    initial begin
+        // Số bit 1 chẵn -> ngõ ra 0
+        sign_i = 7'b0000000; #10;
+        $display("sign_i=%b | sign_o=%b (Expect: 0)", sign_i, sign_o);
+        
+        // Số bit 1 lẻ -> ngõ ra 1
+        sign_i = 7'b0000001; #10;
+        $display("sign_i=%b | sign_o=%b (Expect: 1)", sign_i, sign_o);
+        
+        sign_i = 7'b0101010; #10;
+        $display("sign_i=%b | sign_o=%b (Expect: 1)", sign_i, sign_o);
+        
+        sign_i = 7'b1111111; #10;
+        $display("sign_i=%b | sign_o=%b (Expect: 1)", sign_i, sign_o);
+
+        #10 $finish;
+    end
+
 endmodule

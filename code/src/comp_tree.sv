@@ -92,29 +92,13 @@ module comp_tree (
 
     assign min_o = min_all;
 
-    comp_min c19(.A(x_1), .B(x_2), .min_o(min_12));
-    comp_min c20(.A(x_3), .B(x_4), .min_o(min_34));
-    comp_min c21(.A(x_5), .B(x_6), .min_o(min_56));
-    comp_min c22(.A(x_7), .B(MAX), .min_o(min_7M));
-    
-    comp_min c23(.A(y_1), .B(y_2), .min_o(sub_12));
-    comp_min c24(.A(y_3), .B(y_4), .min_o(sub_34));
-    comp_min c25(.A(y_5), .B(y_6), .min_o(sub_56));
-    comp_min c26(.A(y_7), .B(MAX),  .min_o(sub_7M));
-
-    comp_min c27(.A(sub_12), .B(sub_34), .min_o(sub_1234));
-    comp_min c28(.A(sub_56), .B(sub_7M),  .min_o(sub_567M));
-    comp_min c29(.A(sub_1234), .B(sub_567M), .min_o(sub_left));
-
-    assign submin_o = sub_left;
-
-    assign vtc_o_1 = x_1;
-    assign vtc_o_2 = x_2;
-    assign vtc_o_3 = x_3;
-    assign vtc_o_4 = x_4;
-    assign vtc_o_5 = x_5;
-    assign vtc_o_6 = x_6;
-    assign vtc_o_7 = x_7;
+    assign vtc_o_1 = y_1;
+    assign vtc_o_2 = y_2;
+    assign vtc_o_3 = y_3;
+    assign vtc_o_4 = y_4;
+    assign vtc_o_5 = y_5;
+    assign vtc_o_6 = y_6;
+    assign vtc_o_7 = y_7;
 
     assign rowWeight = 4'd7;
 
